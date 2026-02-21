@@ -98,9 +98,28 @@
 //const
 // const age; // SyntaxError: Missing initializer in const declaration
 
-const age = 10;
-let name;
-var college;
+// const age = 10;
+// let name;
+// var college;
 
 //no reassignment
 // age = 60 // TypeError: Assignment to constant variable.
+
+// {
+//     const name = "Arko"
+// }
+
+// console.log(name) // ReferenceError: name is not defined
+
+// if(true){
+//     const name = "Arko"
+// }
+
+// console.log(name) //Output will be blank, no error
+
+//Hoisting
+
+// console.log(a)
+// let a = "Arko" // ReferenceError: Cannot access 'a' before initialization
+
+let a = 10
