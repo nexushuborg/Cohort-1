@@ -1,0 +1,27 @@
+//console.log(10-1)
+//console.log("hello world")
+//console.log(10.2)
+//console.log(true)
+//var x=10;
+//let y=10
+//const z=10//it is necessary to onitialize a constant while declaration
+// dynamic typing means data type nahi batana hota hai
+//var x; //declaration
+//x=10;//initialization
+//x=11;//reassignment
+//{
+    //let x=20;
+    //var y=10;
+   // console.log(x);
+ //   console.log(y)
+//}
+//console.log(x);
+//console.log(y)
+var x=10;
+function name (){
+    var y=10
+    console.log(x)
+    console.log(y)
+}
+//console.log(y)
+name()
