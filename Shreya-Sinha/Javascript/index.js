@@ -38,3 +38,5 @@
 // let x = 10
 //console.log(x)  //yha error nhi dega bs undefined dega
 // var x =10
+//const redeclare and reinitialize both not possible
+//reiniatlize mtlb value cannot be changed
