@@ -11,7 +11,7 @@ console.log("Second");
 
 //let
 //It properties are no-redeclaration,reassignment
-// It scopes are global scope, functional scope and block scope
+// It scopes are global scope and block scope
 
 //const
 //it properties are only declararion not allowed,no reassignment,it also has same scope as let
