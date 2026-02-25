@@ -99,9 +99,9 @@ value cannot be changed
 // print(2, "2")
 
 // //normal function
-function print( a, b) {
-    console.log(a + b)
-}    
+// function print( a, b) {
+//     console.log(a + b)
+// }    
 
 // const fn2 = function (a, b){
 //     console.log(a, b)
@@ -147,8 +147,9 @@ function print( a, b) {
 
 //     console.log("Start")
 
-//     const data = await fetch('https://jsonplaceholder.typicod.com/todos/1')
-//     .then((val) => { //resolve
+//     const data = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+//     .then(
+//         (val) => { //resolve
 //         console.log("Success")
 //         console.log(val)
 
@@ -161,14 +162,12 @@ function print( a, b) {
 //         console.log("Process completed")
 //     })
 
-
+//     // console.log(data)
 //     console.log("end")
         
 // }
 
 // asy()
-
-
 
 
 
