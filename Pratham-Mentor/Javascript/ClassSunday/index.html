@@ -38,25 +38,114 @@
         
     </table> -->
 
-    <table border="2px">
-        <!-- Row 1 -->
+    <!-- <table border="2px">
         <tr>
             <th rowspan="2">RollNo</th>
             <th rowspan="2">Name</th>
             <th colspan="2">Marks</th>
         </tr>
-        <!-- ROw 2 -->
         <tr>
             <td>Java</td>
             <td>C++</td>
         </tr>
-        <!-- Row 3 -->
+        
          <tr>
             <td>1001</td>
             <td>Sheraz</td>
             <td>70</td>
             <td>80</td>
          </tr>
+    </table>
+    <table border="1px" cellspacing="0px" style="margin: 10px;" >
+        <tr>
+            <th rowspan="2">Roll no</th>
+            <th rowspan="2">Name</th>
+            <th colspan="2">Marks</th>
+        </tr>
+        <tr>
+            <td>Java</td>
+            <td>C++</td>
+        </tr>
+        <tr>
+            <td>1001</td>
+            <td>Sheraz</td>
+            <td>70</td>
+            <td>80</td>
+        </tr>
+    </table>
+
+    <table border="1">
+        <tr>
+            <td rowspan="3">Row 1,2,3</td>
+            <td colspan="2">Column 1 & 2</td>
+        </tr>
+        <tr>
+            <td >Item A</td>
+            <td >Item B</td>
+        </tr>
+        
+    </table> -->
+
+    
+    <table border="2px" cellspacing="0px">
+        <form method="" action="">
+            <tr>
+                <td>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" required>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email Address:</label>
+                    <input type="email" required placeholder="demo@mail.com" name="email">
+                    
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td>
+                    <label for="pass">Password</label>
+                    <input name="pass" type="password">
+                    
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="number" required name="phone">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="gend">Gender:</label>
+                    <input type="radio" name="gend" >    
+                    <span>Male</span>
+                    <input type="radio" name="gend">
+                    <span>Female</span>
+                    <input type="radio" name="gend">
+                    <span>Others</span>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <label for="Date">Date:</label>
+                    <input type="date">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                    <input type="submit" name="submit">
+                </td>
+            </tr>
+        </form>
+
     </table>
 
 </body>
