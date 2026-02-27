@@ -16,6 +16,7 @@
 //var
 //globally and functional scope
 //redeclare and re-initialize
+//also var has the memory leak issue : koe block ke bahar bhi access ho jata hai 
 
 //let
 //globally and block scope
