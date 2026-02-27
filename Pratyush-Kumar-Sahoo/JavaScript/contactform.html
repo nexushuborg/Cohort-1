@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <fieldset>
+        <legend>Contact Me....</legend>
+        <label>
+            <p>Name:<input type="text" placeholder="Enter your name" required maxlenght="50"></p>
+        </label>
+        <label>
+            <p>Email:<input type="email" placeholder="Enter your mail" required ></p>
+        </label>
+        <label>
+            <p>Contact number:<input type="tel" placeholder="Enter your mobile number" required maxlenght="10"></p>
+        </label>
+        <label>
+            <p>Email:<input type="email" placeholder="Enter your mail" required ></p>
+        </label>
+        <!-- Gender -->
+        <form>
+            <label for="gender">
+                <input type="radio" name="gneder" id="male">
+                Male
+            </label>
+            <label for="gender">
+                <input type="radio" name="gneder" id="female">
+                Female
+            </label>
+        </form>
+        <!-- DROPDOWN -->
+        <select name="category" id="category" >
+            <option value="" selected disabled>Select an option</option>  <!-- DEFAULT option -->
+            <option value="1">Inquiry</option>
+            <option value="2" >Complaint</option>
+            <option value="3">Feedback</option>
+         </select>
+
+         <!-- MAKING ANY DROPDOWN SELECT FROM THE OPTION AS DEFAULT 
+         <select name="category" id="category" >
+            <option value="" selected disabled>Select an option</option>  <!-- DEFAULT option -->
+            <option value="1">Inquiry</option>
+            <option value="2" selected >Complaint</option>
+            <option value="3">Feedback</option>
+         </select>  -->
+         <!-- Message area -->
+         <form>
+            <textarea name="message" id="message" rows="10" cols="20"required maxlength="500">Write your Message here..</textarea>
+         </form>
+         <!-- submit and reset -->
+         <button type="submit">Submit</button>
+         <button type="reset">Reset</button>
+
+    </fieldset>
+    
+
+</body>
+</html>
