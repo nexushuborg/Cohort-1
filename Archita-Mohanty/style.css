@@ -1,0 +1,35 @@
+/* box{
+    background-color:chocolate;
+    height:100px
+    width: 100px;
+} */
+
+/* div{
+     background-color:rgb(210, 30, 174);
+    height:100px;
+    width: 100px;
+    border:5px solid black;
+    border-radius: 2px;
+    border-style:solid;
+    color:rgb(166, 198, 102);
+    font-size: 30px;
+    font-family:cursive;
+    font-weight:900;
+    padding:10px;
+    margin:5px;
+    margin-top:100px; 
+} */
+/* #for id and . for class*/
+.box{
+    border:5px solid black;
+    height:100px;
+    width:100px;
+    color:black;
+}
+#a{
+    background-color:aqua;
+}
+#b{
+    background-color:darkcyan;
+   
+}
