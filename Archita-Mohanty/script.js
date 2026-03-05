@@ -126,3 +126,31 @@
 // arrow("arrow1","arrow2",1)
 // const arr=[2,3,4]
 // console.log(...arr)
+
+// const element=document.getElementsByClassName('num');
+// console.log(element)
+
+// let colors=['red','yellow','blue','green'];
+// let i=0;
+// for(e of element){
+//     e.style.color=colors[i];
+//     i++;
+// }
+// const arr=[1,2,3]
+// for(let i=0;i<arr,length;i++){
+//     console.log(arr[i])
+// }
+// console.log('For each loop')
+// for(e of arr){
+//     console.log(e)
+// }
+
+
+const element=document.getElementsByClassName('num')
+console.log(element)
+let colors=['green','blue','yellow','red'];
+let i=0;
+for(e of element){
+    e.style.color=colors[i];
+    i++;
+}
