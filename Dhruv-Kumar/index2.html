@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="./style.css">
 <body>
     <h1>Hello<br>hii</h1>
     <p>hello my name is Dhruv Kumar</p>
@@ -98,6 +98,62 @@
     <div class="box" id="b">
         <h1>box</h1>
     </div>
+                <!-- forms/labels/inputs -->
+
+    <form action="text">
+        <textarea name="Message" id="Message" cols="30" rows="10"></textarea>
+        <br>
+        <select name="Category" id="category">
+            <option value="1">General</option>
+            <option value="2">Feedback</option>
+            <option value="3">Complaint</option>
+        </select>
+
+    </form>
+
+
+    <label for="name">
+        <input type="text" name="name" placeholder="Enter your name">
+    </label>
+    <br>
+    <label>
+        <input type="email" placeholder="Enter your Email">
+        <br>
+        <input type="password" placeholder="Enter the password">
+
+    </label>
+    <br>
+    <form >
+        <label for="male">
+            <input type="radio" name="gender" id="male"> Male
+        </label>
+        <label for="Female">
+            <input type="radio" name="gender" id="female"> Female
+        </label>
+        <label for="others">
+            <input type="radio" name="gender" id="others"> others
+        </label>
+    </form>
+    <input type="Submit" value="Submit login">
+
+        <!-- buttons -->
+    <br>
+    <button type="reset">Clear</button>
+    <button type="submit">Submit</button>
+    <button type="button" onclick="alert('Hello!')">Click me</button>
+
+            <!-- fieldset -->
+    <br>
+    <fieldset>
+        <legend>Personal Details</legend>
+        <label>Name: <input type="text" placeholder="Enter your name"></label> <br>
+        <label> Age: <input type="text" placeholder="Enter your age"></label>
+        <br>
+        <input type="submit" value="Submit">
+    </fieldset>
+
+    
+
 
 </body>
 </html>
