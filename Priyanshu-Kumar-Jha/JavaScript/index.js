@@ -19,14 +19,31 @@
 //     console.log(x);
 //     console.log(z);
 // console.log(x);
-{
-    // }
-    let x = 10;
-    console.log(x)
-    {
-        let x = 12*5;
-        x= x*5
-        console.log(x)
-    }
-    console.log(x)
+// {
+//     // }
+//     let x = 10;
+//     console.log(x)
+//     {
+//         let x = 12*5;
+//         x= x*5
+//         console.log(x)
+//     }
+//     console.log(x)
+// }
+//javascript mai array ka use hota hai.
+let arr = [1,2,3,4];
+let tag = document.getElementsByTagName('hi')
+for(i = 0; i<tag.length;i++){
+    console.log(tag[i].innerText);
 }
+
+//dom access
+//what is dom
+//dom manuplation
+//function js-> syncronous & asyncronous function AND arrow functions
+//
+// public int fun(){
+// }
+//table, form in html..
+let cont = document.getElementsById('div-container')
+Cont.style.backgroundColor = "yellow"
