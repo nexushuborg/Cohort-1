@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="Name">
+        <input type="text" name="Name"  placeholder="Enter your name">
+
+    </label>
+    <br>
+    <label for="Email">
+        <input type="text" name="Email"  placeholder="Enter your email">
+    </label>
+    <br>
+    <label for="PhoneNumber">
+        <input type="tel" name="PhoneNumber" pattern="[0-9]{10}">
+    </label>
+    <br>
+    dropdown menu
+    <select name="category" id="category">
+        <option value="1">Select your choice</option>
+        <option value="2"> Inquiry</option>
+        <option value="3"> Complaint</option>
+        <option value="4"> Feedback</option>
+
+    </select>
+    <textarea name="Message" id="Message"  padding="500px" placeholder="Write your message here"></textarea>
+    <br>
+    <button type="Submit"> Submit</button>
+    <button type="reset"> reset</button>
+</body>
+</html>
