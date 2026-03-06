@@ -1,0 +1,9 @@
+<!-- how the browser creat the DOM:
+
+You write HTML Code
+browser fetches the html code
+browser parses the html(reads it from top to bottom)
+browser creat a tree of nodes in memory (the DOM)
+browser renders the page based on the DOM+CSS
+Java script can now acess and modify the dom
+any changes to the dom ----browser re-renders the affected part -->
