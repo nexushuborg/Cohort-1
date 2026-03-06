@@ -1,0 +1,8 @@
+// DOM MANIPULATION(How browser creates DOM)
+1.write HTML Code
+2.Browser fetches HTML file.
+3.Browser PARSES the HTML (reads it top to bottom)
+4.Browser creates a TREE of NODES in memory(the DOM)
+5.Browser RENDERS(paints) the page based on the DOM + CSS
+6.JavaScript can now ACCESS and MODIFY the DOM
+7.Any change of the DOM -> browser RE-RENDERS the affected part
