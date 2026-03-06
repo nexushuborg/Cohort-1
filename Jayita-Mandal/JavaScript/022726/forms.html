@@ -1,0 +1,72 @@
+<!DOCTYPE html>  
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="/login" method="post">
+            <textarea name="message" id="message" cols="30" rows="10"> Write your message here... </textarea>
+            <br>
+            <!--dropdown menu-->
+            <select name="category" id="category">
+                <option value="1"> General</option>
+                <option value="2"> Feedback</option>
+                <option value="2"> Complaint</option>
+            </select>
+            <br>
+            <label for="name"> <!--name value should be same-->
+                <input type="text" name="name" placeholder="Enter name">
+                <br>
+                
+            </label>
+            <label>
+                <input type="email" placeholder="Enter Email">
+            </label>
+            <br>
+            <label>
+                <input type="Password" name="" id="">
+            </label>
+            <label><input type="submit" value="Submit login" ></label>
+        </form>
+
+        <form> <!--RADIO BUTTON-->
+            <label for="male">
+                <input type="radio" name="gender" id="male">
+                Male
+            </label>
+            <label for="female">
+                <input type="radio" name="gender" id="female">
+                Female
+            </label>
+
+        
+        <br>
+
+         <!--BUTTONS-->
+            <button type="submit">Submit</button>
+            <button type="reset">Clear</button>
+            <button type="button" onclick="alert('Hello')">Click Me</button>
+            <br><br>
+
+        <!---->
+            <fieldset>
+                <legend> Personal Details</legend>
+                <label> Name:<input type="text" name="name"></label><br>
+                <label> Age:<input type="number" name="age"></label><br>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+
+        <link rel="stylesheet" href="style.css">
+        <div id="id1" class="code"></div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, tempore.
+        <div id="id2" class="code"></div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero vel odio similique id quo dolores sequi impedit numquam sint in.
+
+        <div class="div1" id="code1">
+            <div class="nested" id="code2"
+        </div>
+    </body>
+</html>

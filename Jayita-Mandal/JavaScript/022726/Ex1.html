@@ -1,0 +1,30 @@
+<!DOCTYPE html>  
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+    </head>
+    <body>
+        <form>
+            
+                <legend>Personal Details</legend>
+                <label>Name:<input type="text" name="name"></label><br>
+                <label>Email:<input type="email" name="email"></label><br>
+                <label>Phone:<input type="tel" name="phone" pattern="[0-9]{10}"></label>
+                
+                <br>
+                Subject:
+                <select name="category" id="category">
+                <option value="1"> Inquiry</option>
+                <option value="2"> Feedback</option>
+                <option value="3"> Complaint</option>
+            </select>
+            <br>
+            <textarea name="message" id="message" cols="30" rows="10" maxlength="500" placeholder="Write your message here..." padding="500px"></textarea>
+            <br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </body>
+</html>
