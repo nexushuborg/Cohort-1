@@ -1,0 +1,22 @@
+.box{
+    height: 200px;
+    width: 200px;
+    font-size: 20px;
+    background-color: rgb(136, 201, 222);
+    border: 18px solid rgb(151, 229, 239);
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+
+}
+#a{
+    margin-bottom: 10px;
+    background-color: rgb(94, 207, 225);
+}
+#b{
+    
+    background-color: rgb(113, 175, 196);
+   
+}
+

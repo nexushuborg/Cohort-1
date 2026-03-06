@@ -1,0 +1,45 @@
+div{
+    
+   /* background-color: blueviolet;
+    height:100px;
+    width: 100px;
+    border: 5px solid rgb(244, 96, 133);
+    padding:40px;
+    color:white;
+    font-size: large;
+    font-family: fantasy;
+    font-weight:1000;
+    margin: 5px;
+    margin-top: 10px;
+    border-radius: ;
+    border-color: ;
+    border-style: ;*/
+}
+table{
+    background-color:rgb(176, 255, 133);
+    color: blueviolet;
+    padding: 5px;
+    height: auto;
+}
+/*# for id and . for class*/
+.box{
+    border: 5px solid black;
+    height:100px;
+    width:100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: inline-block;
+
+}
+#a{
+    background-color: aquamarine;
+    margin-bottom:10px ;
+}
+#b{
+    margin-top: 10px;
+    background-color: blanchedalmond;
+}
+th{
+    padding: 10px;
+    color: brown;
+    background-color: cornflowerblue;
+}

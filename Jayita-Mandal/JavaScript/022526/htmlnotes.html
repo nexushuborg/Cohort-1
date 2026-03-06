@@ -1,0 +1,70 @@
+<!DOCTYPE html>  
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Table</title>
+    </head>
+   <!-- <style src="./style.css>"></style>-->
+    <link href="style.css" rel="stylesheet"/>
+    <body>
+        <div class="box" id="a"> BOX</div>
+
+        <div class="box" id="b">BOX</div>
+
+        <div></div>
+        <p>
+            <!--align - horizontal positioning; 
+            border-provides border to each cell and whole table-->
+            <!--TABLE 1-->
+            <table cellspacing="20px"
+            align="center"border="2px" bgcolor="cyan">
+                <tr>
+                    <th colspan="2">Students</th>
+                    <th rowspan="2">Mentor</th>
+                    <th>Group</th>
+                </tr>
+                <tr>
+                    <td>Students</td>
+                    <td>Mentor</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Jayita</td>
+                    <td>Pratham</td>
+                    <td>1</td>
+                </tr>
+            </table>
+            <!--TABLE 2-->
+            <table border="2px">
+                <tr>
+                    <th rowspan="2">Roll No.</th>
+                    <th rowspan="2">Name</th>
+                    <th colspan="2">Marks</th>
+                </tr>
+                <tr>
+                    <td>Java</td>
+                    <td>C++</td>
+                </tr>
+                <tr>
+                    <td>1001</td>
+                    <td>Sheraz</td>
+                    <td>70</td>
+                    <td>80</td>
+                </tr>
+            </table>
+            <!--TABLE 3-->
+            <table border="2px" align="center">
+                <tr>
+                    <td rowspan="2">Row</td>
+                    <td colspan="2">Column</td>
+                </tr>
+                <tr>
+                    <td>Item A</td>
+                    <td>Item B</td>
+                </tr>
+            </table>
+        </p>
+        <script src="script.js"></script>
+    </body>
+</html>

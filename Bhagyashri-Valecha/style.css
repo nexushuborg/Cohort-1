@@ -1,0 +1,25 @@
+div{
+    height: 100px;
+    width: 100px ;
+    border : 5px solid black;
+    background-color:  chocolate;
+    font-size : 100%;
+    color: rgb(235, 228, 228);   
+font-family: monospace;
+
+}
+.box{
+    border : 2px solid black ;
+   
+    width: 100px;
+    color: rgb(235, 228, 228);
+    background-color: rgb(255, 0, 0);
+    height : 100px;
+}
+#a{
+    background-color: salmon;
+}
+#b{
+    background-color: rgb(255, 0, 0);
+    margin-top: 100px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style2.css">
+<body>
+    <!-- <form>
+        <textarea name = "Message" id = "Message" cols="30" rows="10">write your message here........</textarea>  this is a textarea where we can write the messages 
+        <br>
+
+        <select name = "category" id = "category">
+            <option value = "1">General</option>    this is basically for the dropdown menu where we are getting the options
+            <option value = "2">Complain</option>
+            <option value = "3">Feedback</option>
+        </select>
+    </form> -->
+
+    <label for = "name">
+        <input type = "text" name = 'name' placeholder="enter your name"> <!-- by this we can actually or -->
+    </label>
+    <br>
+
+    <label>
+        <input type = "email" placeholder="enter your Email">   <!-- this placeholder is used for the message that comes when we have the name and email varibles -->
+    </label>
+    <br>
+    <label>
+        <input type = "password" name="">   <!-- this placeholder is used for the message that comes when we have the name and email varibles -->
+    </label>
+    
+    <input type="submit" value="Submit login"> <!-- this for the submit button that is for submitting the page-->
+    <form>
+        <!--Radio Button--> <!--basically in the radio button name of the two groups are same as they belongs to the same family-->
+        <label for="male">
+            <input type="radio" name = "gender" id = "male">
+            Male
+        </label>
+        <label for="Female">
+            <input type="radio" name = "gender" id = "Female">
+            Female
+        </label>
+    </form>
+
+    <!--Button Types--> <!--this basically adds button to the file where it can perform the redirections or any other tasks that we assign to that button.-->
+    <button type = "submit">Submit</button>
+    <button type = "reset">reset</button>
+    <button type = "button" onclick = "alert('Hello')">Click me </button> <!--so here alert gives us a popup -->
+
+    <fieldset>
+        <legend>Personal Details</legend>
+        <label>Name: <input type = "text" name ="name"></label>
+        <label>Number: <input type = "number" name ="number"></label>
+        <input type="submit" value="Submit login"> 
+    </fieldset>
+    <div class = "div1" id = "code1">
+        <div class = "nested1" id ="code2">
+
+        </div>
+    </div>
+</body>
+</html>

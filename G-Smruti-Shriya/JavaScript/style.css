@@ -1,0 +1,34 @@
+.table{
+    border: 5px solid black;
+
+}
+
+/*PADDING
+Height and width do as the name claims
+Then Border gets defined with
+  --> Border-radius
+  --> border-color
+  --> border-style
+  
+  Further we learn how to read documentation using mdn
+  
+  Next question answered was the whereabouts of fonts
+  their family , weight and size(concerned about their safety I assume)
+
+  Padding is being inspected in the elements in a website
+  the heirarchy of an element goes as
+  Margin(most outside box)
+  border
+  padding
+  main element
+  This is a box structure 
+
+  Next we played around with boxes using div
+
+  (ctrl + ? )--> makes selected lines comments in the language
+
+  div element spans the entire screen width unless defined
+
+  
+  
+  */
