@@ -8,9 +8,9 @@
 <link href="style.css" rel="stylesheet"/>
 <style src="'style.css"></style>
 <body>
-    <!-- <div class="box" id="a">BOX</div>
-    <div class="box" id="b">BOX</div>
-    <table cellspacing="20px" cellpadding="10px"  align="center" border="2px" bgcolor="lightblue">
+     <!-- <div class="box" id="a">BOX</div> 
+     <div class="box" id="b">BOX</div> // classfor similar changes id for different changes -->
+    <!-- <table cellspacing="20px" cellpadding="10" align="center" border="2px" bgcolor="lightblue">
             <th rowspan="2">students</th>
             <th>mentors</th>
             <th>Group</th>
@@ -20,9 +20,9 @@
             <td>pratham</td>
             <td>archita</td>
         </tr>
-    </table> -->
+    </table> 
 
-    <!-- <table border="2px">
+    <table border="2px" cellspacing="0px" style="margin:10px">
         <tr>
             <th rowspan="2">RollNo</th>
             <th rowspan="2">Name</th>
@@ -41,10 +41,10 @@
 
         </tr>
 
-    </table> -->
+    </table> 
     <h1 align="center">HTML Table</h1>
     <h1 align="center">Colspan & Rowspan</h1>
-    <table border="1" align="center">
+    <table border="1" align="center" bgcolor="cyan">
         <tr>
             <td rowspan="3">Row 
                 1,2,3</td>
@@ -60,6 +60,86 @@
     
         </tr>
 
+    </table> -->
+
+    <table border="1" style="margin:10x">
+
+
+            <form>
+                <tr>
+                <td><label for="name">Name</label>
+                <input
+                type="text"
+                name="name"
+                required
+                minlength="5"
+                maxlength="10"
+                size="10"/>
+                <br>
+                </td>
+                </tr>
+              <tr>
+               <td>
+
+                   <label for="email">Email Address:</label>
+                   <input type="email" required placeholder="demo@gmail.com" name="email" > 
+               </td>
+                <br>
+              </tr>
+              <tr> 
+                <td>
+
+                    <label for="password">Password</label>
+                    <input type="password">
+                </td>
+              </tr>
+              <tr>
+                <td>
+
+                    <label for="phone">Phone number</label>
+                    <input type="number" required name="phone">
+                </td>
+                  <br>
+                  <br>
+              </tr>
+              <tr>
+                <td>
+
+                    <label for="gend">Gender</label>
+                    <input type="radio" name="gend">
+                </td>
+
+              </tr>
+              <tr>
+                <td>
+
+                    <span>Male</span>
+                    <input type="radio" name="gend">
+                    <span>Female</span>
+                    <input type="radio" name="gend">
+                    <span>Other</span>
+                    <input type="radio" name="gend">
+                </td>
+              </tr>
+              <tr>
+                <td>
+
+                    <label for="date">Date:</label>
+                    <input type="date">
+                </td>
+
+              </tr>
+                <br>
+                <br>
+              <tr>
+                <td>
+
+                    <label for="submit"></label>
+                    <input type="submit">
+                </td>
+              </tr>
+        
+            </form>
     </table>
     
 </body>
