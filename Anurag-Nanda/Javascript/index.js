@@ -144,7 +144,7 @@ let name1;
 // set Timeout(finally,time in ms)
 // console.log("Start")
 // const data= 
-function name(){
-    console.log(arguments[0])
-}
-name(1,"Hello",3)
+// function name(){
+//     console.log(arguments[0])
+// }
+// name(1,"Hello",3)
