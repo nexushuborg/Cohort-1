@@ -1,12 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html> <!--declaration for the webpage to expect a html page and render it continously-->
+<html lang="en"> <!--root element that contains the entire html body-->
+<head> <!--contains metadata that is not directly shown on webpage like title links etc. It is used by browser and search-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><!--defines the title bar content-->
+        My First Webpage
+    </title>
     <script src="index.js" ></script>
 </head>
-<body>
-    <h1>HELLO GUYS</h1>
+<body> <!--contains all the visible contents of the webpage that the user sees in the main web browser window-->
+    <h2>My Page</h2><!--important headings,has variations of sizes like h1,h2,h3-->
+    <p>HELLO AND WELCOME TO MY PAGE!Lets's code!
+          <a href="https://www.example.com/">Visit example</a>
+        <!--write the actual contents in form of paragraph-->
+    </p>
+
+<!--Html attributes : provide additional information about an element. Ex href,src
+Written as name="value" pairs
+customize how element behaves or display in browser-->
+
+<!--<a></a>This is called the anchor tag creates hyperlinks. Can link texts,images and buttons
+contains the text that is aimed to be converted as link.
+href attribute adds a link to the plain html text,makes it another link to webpage-->
+<p>click on the folowing link</p>
+<a href="https://www.geeksforgeeks.org" target="_blank">GeeksForGeeks</a>
+
+<!--this target blank is used to open the link in new page
+similarly, target="self is used to open the link in the same window or page"-->
+
+<!--<img> tag is used to embed an image in web page.It is defined by attributes like src,width,height 
+and alt and doesnt require a closing tag
+src attributes contains the source of the image path link or local file path
+src attributes acts as a placeholder name in case the image doesnt load
+height and width define the dimensions of the image
+to add images as links we enclose the img tag within the </a> </a> tag-->
+
+<img src="https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fmedium.com%2F%40chsiri469%2Fgfg-techfest-and-the-queue-c391ebca4465&ved=0CBYQjRxqFwoTCNi7ka-N8pIDFQAAAAAdAAAAABAJ&opi=89978449" alt="Placeholder"/>
+<a href="https://www.geeksfor geeks.org"><img src="https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fmedium.com%2F%40chsiri469%2Fgfg-techfest-and-the-queue-c391ebca4465&ved=0CBYQjRxqFwoTCNi7ka-N8pIDFQAAAAAdAAAAABAJ&opi=89978449"></a>
 </body>
 </html>

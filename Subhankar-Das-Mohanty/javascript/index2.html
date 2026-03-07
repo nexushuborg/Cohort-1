@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <link href="style.css" rel="stylesheet">
   <body>
+
+    <div class="box" id="a">Box</div>
+    <div class="box" id="b">Box</div>
     <!-- <h1>Subhankar Das Mohanty</h1>
     <p>Nice to meet you </p>
     <p>thank you for visiting</p>
@@ -81,19 +85,24 @@
     </ul>
     <p>These are links:<a href="https://www.google.com">Google Web</a></p>
     
-    <a href="https://www.facebook.com">Facebook Web</a><br />
-    <a href="https://www.instagram.com">Instagram Web</a>
+    <a href="https://www.facebook.com"target="_blank">Facebook Web</a><br />
+    <a href="https://www.instagram.com"target="_blank">Instagram Web</a>
     <p>image of a cat:</p>
     <img src="download (3).jpeg" alt="Image" width="150px" height="150px" />
     <br>
     <video controls width="600">  
       <source src="vedio" type="video/mp4">
     </video>
-    <table border="7" height="100" width="400">  
+
+    <!--align: Horizontal position of table -->
+    <!-- bgcolor: background color of table
+    border: width of border -->
+
+    <table cellspacing="10px" cellpadding="10px" align="center" border="7" bgcolor="lightblue" height="100" width="400">  
       <tr>
-        <th>Name</th>
-        <th>Age</th>
-        <th>City</th>
+        <th rowspan="1" colspan="9">Name</th>
+        <th rowspan="2" colspan="9">Age</th>
+        <th rowspan="1" colspan="9">City</th>
       </tr>
       <tr>
         <td>Subhankar Das Mohanty</td>
@@ -108,7 +117,7 @@
       <tr>
         <td>Wado</td>
         <td>19</td>
-        <tdjspur></tdjspur>
+        <td>jspur</td>
       </tr>
       <tr>
         <td>Arko</td>

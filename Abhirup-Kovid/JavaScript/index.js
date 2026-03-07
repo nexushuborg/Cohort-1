@@ -105,6 +105,7 @@
  * 
  * }
 */
+
 /* function print(a,b){
 console.log(a+b);
  }
@@ -126,12 +127,12 @@ print("hello","world") //hello world
 function print(a,b){
 console.log(a+b);
  }
-const fn - ()  ->{
+const fn = ()  ->{
 console.log("Arrow"); 
 }
 fn()
 
-const fn - (a,b) ->{
+const fn = (a,b) ->{
 console.log(a,b)
 }
 //   High order function 
@@ -145,8 +146,10 @@ ho(2,3,print)
 //need 
 javascript works on single thread 
 a process when breaks down in a smaller independent processes are threads
-
 */
+
+
+
 /** //CONTEXT SWITCHING and SYNCHRONOUS
  * console.log("Start")
  * 
@@ -222,6 +225,120 @@ a process when breaks down in a smaller independent processes are threads
  * console.log(...arr)
  * */
 
+/**        PRACTICE (Arrow function)
+ * 
+ * const greet=function(name,age){
 
+console.log(name,age);
+}
+greet("Abhi",20)
+
+const hello =(name,age)=>(console.log(`hello ${name}`))
+hello("Abhirup",25)
+
+
+const hello=function(name,age){
+    console.log(name,age)
+}
+hello("abhirup",20)
+
+const greet = (name,age) =>{
+    console.log(name,age)
+} 
+greet("Abhi",20)
+*/
+
+/* PRACTICE (CALLBACKS)
+
+hello()
+bye()
+function hello(){setTimeout(function() {
+console.log("Hello!!")    
+}, 1000);
+
+}
+
+function bye(){
+    console.log("bye bye")
+} 
+    
+const hello=function(name,age,height){
+    setTimeout(function(){
+
+    console.log(name,age,height)
+    },2000)
+}
+hello("Abhirup",20,5.5)
+
+const bye=function(education,city){
+    console.log(education,city)
+}
+bye("college","bbsr")
+
+
+const hello=(name,age,height)=>{
+    setTimeout(function(){
+        console.log(name,age,height)
+    },2000)
+}
+hello("Abhirup",20,5.5)
+
+const bye=(education,city)=>{
+    console.log(education,city)
+}
+bye("ITER","BBSR")
+
+
+
+function hello(Callback){
+    console.log("hello")
+    Callback()
+}
+hello(bye)
+
+function leave(){
+    console.log("leave")
+}
+hello(leave)
+function bye(){
+    console.log("bye")
+}
+
+
+
+function sum(callback,x,y){
+    setTimeout(function(){
+
+    console.log(x+y)
+    
+    })
+    callback()
+}
+sum(callback,2,3)
+
+function callback(){
+    console.log("Sum of x and y is")
+}
+*/
+
+
+
+
+/*       PRACTICE(Synchronous)
+does task line by line 
+console.log("task1")
+console.log("task2")
+console.log("task3")
+*/
+
+/*
+console.log("Start")
+  setTimeout(()=>
+  console.log("Milk boil")
+  ),2000
+  console.log('end')
+
+
+*/
 
 

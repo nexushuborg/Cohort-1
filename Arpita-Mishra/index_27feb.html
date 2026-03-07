@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/login" method="post">
+        <textarea name="Message" id="Message" cols="30" rows="10"> write your message here...</textarea>
+        <br>
+        dropdown menu 
+        <select name="category" id="category">
+            <option value="1"> General</option>
+            <option value="2"> Feedback</option>
+            <option value="3"> Complaint</option>
+
+        </select>
+        <br>
+
+        <label for="name">  <!-- niche line me jo name likha hai wo iss for k name ko sath link krta hai -->
+            <input type="text"name="name" placeholder="enter your name">
+        </label>
+        <br>
+        <label >
+            <input type="email" placeholder="enter your email">
+        </label>
+        <br>
+        <label>
+            <input type="password" name="" id="">
+        </label>
+        <label >
+            <input type="submit" value="submit login">
+        </label>
+    </form>
+    <form >
+        <label for="male">
+            <input type="radio" name="gender" id="male">  <!--yeh gender wale ko hai dono me same rahega becoz agrr alag alag rakhenge toh dono click ko jayega male v aur female v -->
+                Male
+        </label>
+        <label for="Female">
+            <input type="radio" name="gender" id="female">
+                Female
+        </label>
+        <br>
+        <!--button type   yeh button add kr deta hai jo ki redirect ya dusra actions perform krne me hlp krta h-->
+        <button type="submit">Submit</button>
+        <button type="clear">Submit</button>
+        <button type="button" onclick="alert('Hello !')">Click me</button>
+        
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label>Name: <input type="text" name="name"></label><br>
+             <label>Age: <input type="text" name="age"></label><br>
+        </fieldset>
+
+    </form>
+   
+    </body>
+</html>

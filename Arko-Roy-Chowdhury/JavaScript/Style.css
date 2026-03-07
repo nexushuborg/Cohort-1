@@ -1,0 +1,32 @@
+div{
+    height: 500px;
+    width: 500px;
+    background-color: rgb(17, 186, 11);
+    border: 5px solid black;
+    align-content: center; /* to align the content in the center of the div */
+    text-align: center; /* to align the text in the center of the div */
+    font-size: 200%; /* to increase the font size of the text */
+    font-family: cursive; /* to set the font family of the text */
+    font-weight: lighter; /* to set the font weight of the text to lighter */
+    padding: 20px; /* to add some padding around the text */
+    margin: 10px; /* to add some margin around the div */   
+}
+
+/* # for id and . for class*/
+
+.box{
+    border: 2px solid palegreen;
+    height: 100px;
+    width: 100px;
+    color: rgb(0,0,0);
+    font-family: cursive;
+    background-color: aquamarine;
+}
+
+#a{
+    background-color: aqua;
+}
+
+#b{
+    background-color: blueviolet;
+}

@@ -46,3 +46,50 @@
 //     }
 // }
 
+// const x=10
+// x=11; // not possible
+
+// {
+//     let x=10
+//     console.log(x)
+//     {
+//         console.log(x)
+//         let x=11
+//     }
+//     console.log(x)
+// }
+
+// let arr =[1,2,3,4]
+  
+
+
+//key value pair
+/*
+   let/const obj_name={
+      "key 1":"value1" ,
+      "key 1":"value1" ,
+      "key 1":"value1" ,
+      "key 1":"value1" ,
+    
+    }
+
+
+*/
+
+// let obj={
+//     "Student" : "himadri",
+//     "Mentor"  : "Pratham",
+// }
+// console.log(arr[0])
+// console.log(obj.Student)
+// console.log(obj["student"])
+
+function print( a,b){
+    console.log(a+b)
+}
+
+//+ number ,string consider
+//- prefernce number high ,string low
+print(2,"2")
+
+//context

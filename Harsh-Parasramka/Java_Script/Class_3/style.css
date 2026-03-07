@@ -1,0 +1,20 @@
+.box {
+    border: 2px solid black;
+    height: 100px;
+    width: 100px;
+
+    color: rgb(0, 0, 0);
+    font-family: cursive;
+
+    background-color: rgb(7, 181, 244);
+}
+
+/* Box with id="a" */
+a {
+    background-color: rgb(81, 97, 92);
+}
+
+/* Box with id="b" */
+b {
+    background-color: rgb(18, 59, 238);
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>  <!--declaration for the webpage to expect a html page and render it continuously -->
+<html lang="en"> <!-- root element that contains entire html body-->
+    <head><!--contains metadata that is not directly shown on webpage like title links etc. it is used by browser and search engines-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My First Webpage</title><!-- defines the title bar content-->
+    </head>
+    <body><!--conains all the visible contents of the webpage that the user sees in the main web browser window-->
+        <h2>My Page</h2><!--important headings, has variatioins of sizes like h1,h2,h3-->
+        <p>Hello and welcome to my page! lets code!
+            <a href="https://www.example.com/"> Visit Example</a>
+        </p><!--write the actual contents in the form. of paragraphs-->
+        <script src="script.js"></script>
+    
+<!--html attributes : provide additional information about an element. ex href, src
+written as name="value" pairs
+customizes hoe element behaves or display in browser-->
+
+<!--<a></a> this is called the anchor tag creates hyperlinks. can link texts, images and buttons
+contains the text that is aimed to be converted as link. 
+href attributes adds a link to the plain html text, making it another link to webpage-->
+<p>Click on following link</p>
+<a href="https://www.geeksforgeeks.org/" target="_blank">GeeksForGeeks</a>
+<!--this target blank is used to open the link ina new page
+similarly, target="_self" is used to open the link in the same window or page-->
+
+<!--<img> tag is used to embed a image in a web page. 
+It is defined by attributes like src, width, height, and alt and does not require a closing tag
+src attribute contains the source of the image path link or local file path
+alt attribute acts as a placeholder name in case the image does not load
+height and width define the dimensions of the image
+to add images as links we enclose the img tag within the <a></a> tag -->
+<img src="https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dfree.programming.programming%26hl%3Den_IN&ved=0CBYQjRxqFwoTCKjjz-6M8pIDFQAAAAAdAAAAABAH&opi=89978449" alt="Placeholder"/>
+<a href="https://www.geeksforgeeks.org"><img src="https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dfree.programming.programming%26hl%3Den_IN&ved=0CBYQjRxqFwoTCKjjz-6M8pIDFQAAAAAdAAAAABAH&opi=89978449"></a>
+</body>
+</html>

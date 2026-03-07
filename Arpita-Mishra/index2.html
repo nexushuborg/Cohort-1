@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    div{
+        height:10px;
+        width: 10px;
+    }
+</style>
+<link href="style.css" rel="stylesheet"/>
 <body>
    <h2>this<br>code</h2>   <!--br helps to break the line  there is no closeing of break tag-->
    <h2>paragrapgh tag</h2>   <!-- h2 or h1 etc  is heading tag-->
@@ -39,7 +46,9 @@
     <audio controls width="300">
     <source src="audio.mp3" type="audio/mp3">
     </audio> 
-    <table border="1">
+    <!--align is for horizontal position-->
+    <!--border is provide  border to each cell and whole table-->>
+    <table  cellspacing="5px" align="center" border="1" bgcolor="yellow">
         <tr>
             <th>Name</th>
             <th>Marks</th>
@@ -53,11 +62,16 @@
            <td>student2</td> 
            <td>480</td>
         </tr>
+        <tr>
+           <td>student2</td> 
+           <td>420</td>
+        </tr>
+
 
     </table>
-    
-   
+    <div class="box" id="a">BOX</div>
+    <div class="box" id="b">BOX</div>
 
-  
+
 </body>
 </html>

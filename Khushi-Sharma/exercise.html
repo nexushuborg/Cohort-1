@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <label>
+        Name:<input type="text" name="name">
+    </label>
+    <br>
+    <br>
+    <label>
+      Email:<input type="email" placeholder="enter you email">
+    </label>
+    <br>
+    <br>
+    <label>
+      Phone No.:<input type="tel" placeholder="enter your phone number" pattern="[0-9]{10}">
+    </label>
+    <br>
+    <br>
+    <select name="Category" id="Category">
+      <option value="1">Inquiry</option>
+      <option value="3">Complaint</option>
+      <option value="2">Feedback</option>
+    </select> 
+    <br>
+    <br>
+    <textarea name="message" id="message" cols="30" rows="10" maxlength="500" placeholder="Write your text"></textarea>
+    <br>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+</body>
+</html>

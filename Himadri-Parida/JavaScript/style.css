@@ -1,0 +1,33 @@
+div{
+    border : 5px solid black;/*border : border-radius style color
+    or border-radius : ....   , border-color: ..... , border-style:.... --> THESE THREE CAN BE WRITTEN BY THE SINGLE LINE border*/
+    background-color: aqua;
+    /* background-color: rgb(33,210,); */
+    color:black;
+    height: 100px;  /*this for the height*/
+    width: 100px;
+    font-size: 30px; /*this is for the size of the font*/
+    font-family: cursive; /*this for the font types */
+    font-weight: 700; /*this for the boldness of the font*/
+    padding: 10px; /*the space between boder and the div*/
+    margin:5px;/*this create the space all sides*/
+    margin-top:10px;/*this creates the spaces at the top*/
+}
+/*div elements covers left to right*/
+ .box{    /*this we are doing changes inside the box class */
+    border:2px solid black;
+    height: 100px;
+    width: 100px;
+    color:aliceblue;
+    font-family: cursive;
+}
+
+#a{          /*this we are doing changes inside the id part*/
+    background-color: aquamarine;
+    margin-bottom: 10px;
+}
+
+#b{         /*this we are doing changes inside the id part*/
+    margin-top: 10px;
+    background-color: burlywood;
+}

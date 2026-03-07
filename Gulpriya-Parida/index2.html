@@ -5,9 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<link href="style.css" rel="stylesheet" />
 <body>
-    <h1>helooo<br>world</h1>
-    <p>this is my second class</p>   
-    
+    <div class="box"> BOX</div>
+    <!-- 
+    <div class="box" id="a" > BOX</div>
+    <div class="box" id="b"> BOX</div>
+ -->
+    <!-- align: Horizontal Position -->
+    <!-- border: border provide to each cell, and whole table  -->
+
+    <!-- <table cellspacing="20px" cellpadding="5px" align="center" border="2px" bgcolor="cyan" >
+        <tr >
+            <th > Students </th>
+            <th> Mentors of builders cohort </th>
+            <th> Group </th>
+        </tr>
+        <tr>
+            <td> Gul </td>
+            <td> Shruti </td>
+            <td> 1 </td>
+        </tr>
+        <tr>
+            <td> Prachi </td>
+            <td> Sachi </td>
+            <td> 1 </td>
+        </tr>
+        
+    </table> -->
+
+
+     <table border="2px">
+        <!-- Row 1 -->
+        <tr>
+            <th rowspan="2">RollNo</th>
+            <th rowspan="2">Name</th>
+            <th colspan="2">Marks</th>
+        </tr>
+        <!-- ROw 2 -->
+        <tr>
+            <td>Java</td>
+            <td>C++</td>
+        </tr>
+        <!-- Row 3 -->
+         <tr>
+            <td>11</td>
+            <td>hahah</td>
+            <td>70</td>
+            <td>80</td>
+         </tr>
+    </table>
+    <br>
+
+    <!--ASSIGNMENT-->
+    <table border="1"  cellpadding="10" cellspacing="0">
+    <tr>
+    <th rowspan="3" >Row<br> 1,2,3</th>
+    <th colspan="2">column 1&2</th>
+    </tr>
+    <tr>
+      <td rowspan="2">item A</td>
+      <td rowspan="2">item B</td>
+    </tr>
+
+    <tr>
+
+    </tr>
+  </table>
+
+
 </body>
+<script src="script.js"></script>
 </html>

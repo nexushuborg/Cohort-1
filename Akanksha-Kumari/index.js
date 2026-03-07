@@ -111,3 +111,74 @@
 //     }
 // }
 
+
+//Array and Object
+// let arr=[1,2,3,4]
+
+// //key value pair
+// /*
+// let/const obj name={
+//     "Key 1":"Value1",
+// }
+// */
+// let obj={
+//         "Student":"Akanksha",
+//         "Mentor":"Pratham",
+
+// }
+// console.log(arr)
+// console.log(obj)
+// console.log(obj.Mentor)
+// console.log(obj["Student"])
+
+
+//function
+// function print(a,b){
+//         console.log(a-b)     //+ preference string
+//                              //- preference number (string should be valid number)
+// }
+// print("2",2)
+// print(2,"3")
+
+//normal function
+// function print(a,b){
+//         console.log(a+b)
+// }
+
+// const fn2= function(a,b){
+//         console.log("Arrow")
+// }
+
+// const fn= () => {
+//         console.log("Arrow")
+// }
+
+// fn()
+// fn(2,3)
+
+//High Order Function
+// function ho(a,b,cb){      //cb is callback function
+//         console.log(a,b,cb)
+//         cb(a,b)
+// }
+// ho(2,3,print)
+
+// //context switching and synchronous
+// console.log("Start")
+// setTimeout(() => {
+//    console.log("My Process")     
+// }, 2000);
+// console.log("end")
+
+// //setTimeout(fn.time in ms)
+
+// console.log("Start")
+// setTimeout(() => {
+//    console.log("Boiling Milk")     
+// }, 2000);
+// console.log("end")
+
+// console.log("Start")
+// const data= fetch()
+
+//24 Feb

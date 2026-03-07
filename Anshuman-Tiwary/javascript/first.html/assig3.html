@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3><legend>Contact Form</legend></h3> <br>
+    <form action="">
+         <label for=""> Name: <input type="text" name="name" placeholder="Enter your name" maxlength="50"></label><br>
+         <label for=""> Email: <input type="text" name="name" placeholder="Enter your email"></label><br>
+         <label for="">Phone No. : <input type="tel" name="name" placeholder="Enter your phone number" pattern="[0-9]{10}"></label> <br>
+           
+         <select name="category" id="category" aria-placeholder="select">
+            <option value="" selected disabled> select your option</option>
+            <option value="1">Inquiry</option>
+            <option value="2">Complain</option>
+            <option value="3">Feedback</option>
+    
+         </select>
+         <br>
+          <textarea name="message" id="message" cols="40" rows="10" maxlength="500">Write your message here</textarea>
+          <br>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        
+        </form>
+</body>
+</html>

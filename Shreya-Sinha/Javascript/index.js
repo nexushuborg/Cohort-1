@@ -49,6 +49,8 @@
 }
 javascript single threaded hai
 
+//attributes of tables in html are 
 
-
+align horizontal position
+border : border provides to each cell,&whole
 */

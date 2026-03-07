@@ -1,0 +1,9 @@
+you write HTML code
+Browser fetches the .html file
+Browser PARSES the HTML(read it top to bottom)
+Browser creates a TREE of NODES in the memory (the DOM)
+Browser RENDRS(PAINTS) the page based on the DOM + CSS
+JavaScript can now ACCESS sand MODIFY the DOM
+any change to the DOM --> Browser the re renders the affected part
+
+

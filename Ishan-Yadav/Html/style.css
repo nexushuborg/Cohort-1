@@ -1,0 +1,32 @@
+/* div{
+    border: 5px solid black;
+    margin-top: 10px;
+    background-color: orange;
+    height: 100px;
+    width: 100px;
+    font-size: 20px;
+    color: aliceblue;
+    font-family: cursive;
+    font-weight: 1000;
+    padding: 10px;
+} */
+.box{
+    border: 2px solid black;
+    height: 100px;
+    width: 100px;
+    color: black;
+    font-family: cursive;
+}
+
+#a{
+    background-color: aqua;
+}
+
+#b{
+    margin-top: 10px;
+    background-color: gray;
+}
+
+th{
+    padding: 10px;
+}

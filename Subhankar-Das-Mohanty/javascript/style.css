@@ -1,0 +1,33 @@
+/* div{
+  height:100px;
+  width:100px;
+  background-color:rgb(50, 98, 120);
+  border:5px solid black;
+  color:rgb(246, 13, 13);
+  font-size:25px;
+  font-family: cursive;
+  font-weight: bold;
+  padding: 30px;
+  margin: 5px;
+} */
+
+.box{
+  border: 2px solid black;
+  height:100px;
+  width:100px;
+  color: rgb(1, 18, 12);
+  font-family: cursive;
+}
+#a{
+  background-color: aqua;
+  margin-bottom: 10px;
+}
+#b{
+  margin-top: 100px;
+  background-color: rgb(255, 0, 0);
+}
+th{
+  
+  background-color: rgb(255, 0, 0);
+  color: white;
+}

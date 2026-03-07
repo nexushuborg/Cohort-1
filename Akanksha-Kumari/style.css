@@ -1,0 +1,26 @@
+div{
+    border: 5px solid rgb(21, 1, 1);
+    background-color: rgb(140, 140, 244);
+    height : 100px;
+    width : 100px;
+    color:aliceblue;
+    font-size:x-large;
+    font-family: cursive;
+    font-weight: 900;
+    padding: 10px;
+    margin:5px
+}
+/* # for id and . for class  */
+.box{
+    border: 2 px solid black;
+    height: 100px;
+    width: 100px;
+    color:brown;
+    font-family: cursive;
+}
+#a{
+    background-color: aquamarine;
+}
+#b{
+    background-color: burlywood;
+}

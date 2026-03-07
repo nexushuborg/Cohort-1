@@ -66,7 +66,7 @@ value can't be changed */
 
 
 // // High order function
-// function ho(a,b,cb){ // cb is acall back function
+// function ho(a,b,cb){ // cb is a call back function
 //     console.log(a,b,cb)
 // }
 

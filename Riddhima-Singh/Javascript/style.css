@@ -1,0 +1,17 @@
+div{
+    height: 10px;
+    width: 10px;
+    background-color: orangered;
+    color:antiquewhite;
+    font-size: medium;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding: 30px;
+    margin: 5px;
+    margin-top: 100px;
+    border-radius: 2px;
+    border-color: black;
+    border-style: solid;
+    border: border-radius style color;
+
+}

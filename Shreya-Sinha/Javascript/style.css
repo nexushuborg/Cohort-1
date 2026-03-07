@@ -1,0 +1,30 @@
+
+
+/* .table{
+    border:1px solid black;
+    margin-top: 10px;
+    background-color: chocolate;
+    height: 100px;
+    width: 100px;
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+} */
+ *{
+    margin: 0px;
+    padding: 0px;
+
+ }
+ html,body{
+    height: 100%;
+    width: 100%;
+ }
+ #code2{
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    border: dotted 5px blue;
+    border-radius: 10%;
+    margin: 10px;
+    
+ }

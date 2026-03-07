@@ -108,10 +108,10 @@ const d = await fetch("https://jsonplaceholder.typicode.com/todos/1")
         console.log("Sucssess")
         console.log(res)
     })
-    .catch(()=>{
+.catch(()=>{
         console.log("Failure")
     })
-    .finally(() => { // similar to finally in java
+.finally(() => { // similar to finally in java
         console.log("DOne")
     })
 console.log(d)   

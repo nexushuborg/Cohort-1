@@ -1,0 +1,40 @@
+/* .box{
+    background-color: chocolate;
+    height: 100px;
+    width: 100px;
+} */
+
+div{
+    background-color: blueviolet;
+    border: 3px solid rgb(81, 50, 5);
+    color: white;
+    font-style: italic;
+    font-family: cursive;
+    font-weight: 1000px;
+    height: 100px;
+    width: 150px;
+}
+
+
+
+/* SELECTOR TYPE: 
+    1.*{
+       }
+    2.html,body{
+             }
+    3.id1{
+          }
+    4.class{
+            }  */
+
+    code{
+        background-color: black;
+        text: white;
+        width:200px;
+        height:100px;
+        border: dottex 5px whitesmoke;
+        border-status: 10%;
+        margin: 10px;
+        margin-left: 100px;
+        
+    }

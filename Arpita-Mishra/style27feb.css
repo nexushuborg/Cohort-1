@@ -1,0 +1,27 @@
+*{     /*  this is whole selection */
+    margin:0px;
+    padding:0px;
+}
+html,body{    /* tag selection */
+    width:100%;
+    height:100%
+
+}
+#id1{   /* id selection */
+
+}
+#id2{
+
+}
+.code{   /* class selection */
+
+}
+#code1{
+    background-color:black ;
+    width: 200px;
+    height: 200px;
+    border-color: dashed 5px rgb(31, 168, 180);
+    border-radius: 10%;
+    margin: 10%;
+    
+}
