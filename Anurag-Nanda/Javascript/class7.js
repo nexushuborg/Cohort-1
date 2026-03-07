@@ -51,9 +51,17 @@
 
 
 
-/const element=document.querySelector("div")
-console.log(element.textContent)
-console.log(element.innerText)
+// /const element=document.querySelector("div")
+// console.log(element.textContent)
+// console.log(element.innerText)
+let cont=document.getElementById('div-container')
 
 cont.style.backgroundColor='yellow'
-cont.style
+ cont.style.fontSize='24px'
+ cont.style.padding='20px'
+ cont.style.margin='20px'
+ cont.style.border='50px'
+ cont.style.borderRadius="100%"
+ cont.style.display="flex"
+ cont.style.JustifyContent="center"
+ cont.style.alignItems="center"
