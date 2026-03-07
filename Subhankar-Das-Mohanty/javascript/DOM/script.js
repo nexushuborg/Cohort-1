@@ -39,6 +39,20 @@
 // // querySelectorAll: it is used to select elements by their tag name, class name, id or any other selector, it returns a node list which is an array like object
 
 
-const element = document.querySelector("div")
-console.log(element.textContent)
-console.log(element.innerText)
+// const element = document.querySelector("div")
+// console.log(element.textContent)
+// console.log(element.innerText)
+
+let c=document.getElementById("container")
+
+c.style.backgroundColor="lightblue"//to change the background color of the element
+c.style.padding="20px"//to change the padding of the element, it can take values like px, em, rem, %, etc.
+c.style.fontSize="24px"//to change the font size of the element, it can take values like px, em, rem, %, etc.
+c.style.fontFamily="Arial, sans-serif"//to change the font family of the element, it can take values like Arial, sans-serif, etc.
+c.style.border="2px solid blue"//to change the border of the element, it can take values like 2px solid blue, etc.
+c.style.margin="20px"//to change the margin of the element, it can take values like px, em, rem, %, etc.
+c.style.borderRadius="100px"//to change the border radius of the element, it can take values like px, em, rem, %, etc.
+c.style.textAlign="center" //to change the text alignment of the element, it can take values like left, right, center, justify, etc.
+c.style.display="flex"  //it is used to make the container a flex container, it allows us to align the items in the container in a flexible way
+c.style.justifyContent="center"//it is used to align the items in the container horizontally, it can take values like flex-start, flex-end, center, space-between, space-around, space-evenly
+c.style.alignItems="center"//it is used to align the items in the container vertically, it can take values like flex-start, flex-end, center, stretch, baseline
