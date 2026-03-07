@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" as="stylesheet">
+    <title>DOM manipulation</title>
+</head>
+<body>
+    <!-- DOM in browser : 
+    -- > HTML code gets fetched by browser
+    -- > PARSES the html(top to bottom)
+    -- > Creates a Tree structure (of nodes)
+    -- > Browser renders the page based on DOM and CSS
+    -- > Js can now acess and modify dom
+    -- > Any Change to DOM -- > Brower re-renders the affected part
+    This has a tree structure where document acts as the root node 
+                           
+                         [Document]
+                             |
+                             |
+                          [HTML]
+                           /   \
+                          /     \
+                    [head]        [body]
+                    /   \         /     \
+                   /     \       /       \
+                [meta]  [title] [h1]etc. [div] -- > h4 and p
+
+            
+     -->
+    <h1 id = "First-title" class = 1class>
+        Generic Title
+    </h1>
+    <h2 id = "Second-title" class = 2class>
+       1.1 Generic Subtitle
+    </h2>
+    <div id = "container">
+        <h1> Generic title inside div</h1>
+        <p>
+            Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph
+        </p>
+    </div>
+
+    <h2 class = 2class>
+       1.2 Generic Subtitle
+    </h2>
+    <div id = "container">
+        <h1> Generic title inside div</h1>
+        <p>
+            Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph Bunch of paragraph
+        </p>
+    </div>
+    <div>
+        <p>Hello World</p>
+        <p style = "display: none;" > Hidden Text </p>
+    </div>
+
+</body>
+<script src = "script.js"></script>
+</html>
