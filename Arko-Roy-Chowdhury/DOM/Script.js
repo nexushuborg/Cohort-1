@@ -6,6 +6,9 @@
 // ele.style.color = "blue";
 // ele.style.fontSize = "40px";
 // ele.style.textAlign = "center";
+// ele.style.padding = "20px";
+// ele.style.alignContent = "center";
+// ele.style.border = "5px"
 
 // let element = document.getElementsByClassName("Second");
 // console.log(element);
