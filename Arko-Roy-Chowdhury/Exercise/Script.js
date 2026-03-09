@@ -32,5 +32,17 @@
 // }
 // butg.onclick = greencolor;
 
-const butr = document.querySelector("#red");
-butr.addEventListener("click", redcolor);
+// const butr = document.querySelector("#red");
+// butr.addEventListener("click", redcolor);
+
+let colors=['green','red','blue','orange'];
+
+function colorize(){
+    const element = document.querySelector('.num');
+    for(let i=0; i<colors.length; i++){
+        element[i].className = colors[i];
+    }
+}
+
+const but = document.querySelector("#but");
+but.addEventListener("click", colorize);
