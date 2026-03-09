@@ -39,6 +39,40 @@
 //     console.log(q[i].innerText)
 // }
 
-const element = document.querySelector("div")
-console.log(element.textContent)
-console.log(element.innerText)
+// const element = document.querySelector("div")
+// console.log(element.textContent)
+// console.log(element.innerText)
+
+let colors=['red','blue','orange','green'];
+function colorise() {
+        let element=document.querySelectorAll('.num');
+        colors.reverse()
+        console.log(colors)
+        for(let i=0;i<element.length;i++){
+        element[i].id = colors[i];
+        }
+
+    }
+
+
+    const but=document.querySelector('#but');
+but.addEventListener('click',colorise)
+
+
+
+// function redcolor(){
+//     const element=document.querySelector('#three');
+//     element.className='red';
+// }
+// but.onclick=redcolor
+// but.addEventListener('click',redcolor)
+
+// const bu=document.querySelector('#blue');
+
+
+// function bluecolor(){
+//     const element=document.querySelector('#two');
+//     element.className='blue';
+// }
+// bu.onclick=bluecolor
+//but.onclick = document.querySelector('#three').classList.add('red')
