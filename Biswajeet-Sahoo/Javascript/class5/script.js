@@ -29,5 +29,7 @@
 //     console.log(q[i].innerText);
 // }
 
-const element = document.querySelector(".first");
-console.log(element.textContent);
+// const element = document.querySelector(".first");
+// console.log(element.textContent);
+
+
