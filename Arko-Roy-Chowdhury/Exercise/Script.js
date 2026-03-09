@@ -38,9 +38,10 @@
 let colors=['green','red','blue','orange'];
 
 function colorize(){
-    const element = document.querySelector('.num');
+    const element = document.querySelectorAll('.num');
+    colors.reverse();
     for(let i=0; i<colors.length; i++){
-        element[i].className = colors[i];
+        element[i].id = colors[i];
     }
 }
 
