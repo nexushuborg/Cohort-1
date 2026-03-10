@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="userForm">
+        <input type="text" id="userName" placeholder="Enter-name">
+        <br>
+        <small id="nameError" style="color: red; display:none">Name is required</small>
+        <input type="text" id="userEmail" placeholder="Enter-Email">
+        <br>
+        <button type="submit">Submit</button>
+
+    </form>
+    <br>
+    <div id="displaArea"></div>
+
+    <script>
+        //STEP1 Add an event listener to the form
+        //addeventlistener()allows javascript to listen for specific events
+        //here we listen for the "submit" event of form 
+        const form=document.getElementById('userForm');
+        const displaArea=document.getElementById('displayArea')
+
+        form.addEventListener('submit'),function(event){
+            //STEP4: prevent default form behaviour 
+            //normally when a form is submitted the page reloads
+            //preventDefault(stops the browser from reload)
+            event.preventDefault();
+            //step5: captures user input values
+            //.value retrives user typed inside the input field
+
+            //get the value from the name input field
+            const name=document.getElementById('username').value;
+            //get the value from the email input field
+            const email=document.getElementById('userEmail'.value);
+            //get the value from the nameError message
+            const nameError=document.getElementById('usernameError').value;
+
+            if(name.trim()=== ""){
+                //if the name field is empty
+                //show the error message by changing css display
+                nameError.style.display="block";
+                return;
+
+            }
+            else{
+                nameError.style.display="none";
+                //step7: display submitted data on the webpage
+                //innerhtml allows to insert html content inside a 
+            }
+            displayArea.InnerHTML=`
+            <div class="card">
+                <h3>Submission Successful</h3>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                </div>
+              `;
+              //${name and $(email)}are template literate
+              //they allow js variable to be inserted inside the html
+
+              //step8 
+              form.reset();
+
+        }
+    </script>
+</body>
+</html>

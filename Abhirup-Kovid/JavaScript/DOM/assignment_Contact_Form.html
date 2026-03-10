@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Contact form</h1>
+
+    <form id="userForm">
+        <input type="text" id="userName" placeholder="Enter-name">
+        <br>
+        <small id="nameError" style="color: red; display:none">Name is required</small>
+        <input type="text" id="userEmail" placeholder="Enter-Email">
+        <br>
+        
+        <textArea cols="20" rows="10" placeholder="enter " id="message"> </textArea>
+        <br>
+        <button type="submit">Submit</button>
+
+    </form>
+    <div id="displayArea"></div>
+    <script>
+        const form=document.getElementById('userForm')
+        const displayArea=document.getElementById('displayArea')
+
+        form.addEventListener("submit",function(event){
+
+            event.preventDefault();
+
+        const name=document.getElementById("userName").value
+        const email=document.getElementById("userEmail").value
+        const message=document.getElementById("message").value
+        const nameError=document.getElementById("nameError")
+        
+        if(name.trim()===""){
+            nameError.style.display="block";
+            return;
+        }
+        else{
+            nameError.style.display="none";
+        }
+
+         displayArea.innerHTML=`
+            <div class="card">
+                <h3>Submission was Successful</h3>
+
+                <p><strong>Name:</strong> ${name}</p>
+
+                <p><strong>Email:</strong> ${email}</p>
+                </div>
+              `;
+
+        })
+        
+    </script>
+</body>
+</html>
