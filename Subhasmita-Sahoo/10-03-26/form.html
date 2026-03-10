@@ -1,0 +1,69 @@
+<html>
+<body>
+<form id="userForm">
+    <input type="text" id="username" placeholder="Enter Name">
+    <small id="nameError" style="color:red; display:none;">
+         Name is required!
+    </small>
+    <input type="email" id="user email" placeholder="Enter Email">
+    <button type="submit">Submit data</button>
+</form>
+<br>
+<div id="displayArea"></div>
+
+<script>
+    //step 1: Select the form element from the html page
+    //document.getElements() finds an html element using its id
+    //'userForm' refers to the <form id="userForm"> elemnent in html
+    const form=document.getElementById('userForm');
+    //step 2: select the display area
+    const displayArea=document.getElementById('displayArea');
+    //step 3:Add an event listner to the form
+    //addEventListner() allows JS to listen for specific events
+    //Here we listen for the 'submit' event of the form
+    form.addEventListener('submit',function(event) {
+    //step 4: prevent default form behaviour
+    //normally when a form is submitted,this page reloads
+    //preventDefault() stops the browser from refreshing the page
+        event.preventDefault();
+    //step 5:capture user input values
+    //.value retreives what the user typed inside the input field
+    //get the value from the name input field
+
+        const name=document.getElementById('username').value;
+        //get the value from the email input field
+        const email=document.getElementById('userEmail').value;
+        //get the error msg element
+        //this is the <small> element used to show validation error
+        const nameError=document.getElementById('nameError');
+        //step 6: validate the name input
+        //trim() removes extra spaces before and after the text
+        //example: "   rahul   " gives "rahul"
+        if(name.trim()==""){
+            nameError.style.display="block";
+            return;
+        }
+        else{
+            //if the name field is valid
+            //hide the error message
+            nameError.style.display="none";
+        }
+        //step 7: display submitted data on webpage
+        //inner
+        displayArea.innerHTML=
+        <div class="card">
+        <h3>Submission Successful!</h3> 
+        <p><strong>Name:</strong>${name}</p>
+        <p><strong>Email:</strong>${email}</p>  
+        </div>;
+        //${name} and ${email} aretemplate literals
+        //they allow js variables to be inserted inside html
+
+        //step 8:
+
+        form.reset();
+    
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+what is DOM?
+Document Object Module
+Js doesnt directly manipulate the HTML.
+It uses DOM representation of HTML.
+DOM representation is the tree like structure thats created when webpage loads a HTML page.
+Before attaching events js must find elements.Two common methods for that is:
+1.getsElementById(): finds the elements of html by its id
+2.querySelector(): works like css selectors. Ex: document.querySelector("button")
+
+What is event?
+Any action that happens in the webpage is called as event.
+
+What is Event handling?
+Running js code when event occcurs.
+
+Two ways to handle event:
+1.inline --js code directly written inside html
+2.addEventListener()--js separately written
+

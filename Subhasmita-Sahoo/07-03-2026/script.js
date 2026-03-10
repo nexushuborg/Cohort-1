@@ -33,12 +33,24 @@
 //    console.log(q[i].innerText);
 //}  
 
-let p=document.querySelector('.pehla') //returns first match
-console.log(p)
-for(let i=0;i<i.length;i++){
-    console.log(p[i].innerText);
-}  
+//let p=document.querySelector('.pehla') //returns first match
+//console.log(p)
+//for(let i=0;i<i.length;i++){
+//    console.log(p[i].innerText);
+//}  
 
-const element=document.querySelector("div")
-console.log(element.textContent)
-console.log(element.innerText)
+//const element=document.querySelector("div")
+//console.log(element.textContent)
+//console.log(element.innerText)
+
+let cont= document.getElementById('div-container')
+
+cont.style.backgroundColor='yellow'
+cont.style.fontSize="24px"
+cont.style.padding="20px"
+cont.style.margin="50px"
+cont.style.border="5px solid blue"
+cont.style.borderRadius="100%"
+cont.style.display="flex"
+cont.style.justifyContent="center"
+cont.style.alignItems="center"
