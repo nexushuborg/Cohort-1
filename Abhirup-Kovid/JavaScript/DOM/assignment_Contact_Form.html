@@ -20,7 +20,7 @@
         <button type="submit">Submit</button>
 
     </form>
-    <div id="displaArea"></div>
+    <div id="displayArea"></div>
     <script>
         const form=document.getElementById('userForm')
         const displayArea=document.getElementById('displayArea')
@@ -31,15 +31,15 @@
 
         const name=document.getElementById("userName").value
         const email=document.getElementById("userEmail").value
-        const message=document.getElementById("message")
-        const nameError=document.getElementById("usernameError").value;
+        const message=document.getElementById("message").value
+        const nameError=document.getElementById("nameError")
         
         if(name.trim()===""){
-            nameError.display="block";
+            nameError.style.display="block";
             return;
         }
         else{
-            nameError.display="none";
+            nameError.style.display="none";
         }
 
          displayArea.innerHTML=`
