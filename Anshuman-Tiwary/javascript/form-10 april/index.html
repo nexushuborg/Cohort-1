@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="UserForm">
+        <small id="nameError" style="color: red; display: none;">
+            Name is required !
+        </small>
+
+        <label for=""> Name: <input type="text" name="name" placeholder="Enter your name" maxlength="50"></label><br>
+        <label for=""> Email: <input type="text" name="name" placeholder="Enter your email" ></label><br>
+        <button type="submit">Submit</button>
+
+       
+    </form>
+
+     <br>
+        
+        <div id="displayArea"></div>
+        <script>
+            const form=document.getElementById('UserForm');
+            const displayarea=document.getElementById('displayArea');
+
+            form.addEventListener('submit',function(event){
+                
+                event.preventDefault();
+              //step 5:capture user input value 
+              //.value retrieves that the user typed inside the input field
+
+
+                //GEt the value form the name input field
+                const name=document.getElementById('username').value;
+
+               //Get the value form the email input field
+                const email=document.getElementById('userEmail').value;
+
+
+                const nameError=document.getElementById('nameError');
+
+                if(name.trim()===""){
+                     nameError.style.display="block";
+                     return;
+
+                else{
+                    nameError.style.display="none"
+                }
+
+                displayArea.innerHTML= `
+                
+                <div class="card">
+                    <h3>Submission Sucessful</h3>
+                    <p><strong>Name:</strong>$(name)</p>
+                    <p><strong>Email:</strong>$(email)</p>
+
+
+                 </div>
+                 `;
+                
+                
+                
+                
+                
+                
+            
+                form.reset();
+
+                 
+                  
+
+                }
+
+
+            }
+
+
+
+
+
+        </script>
+</body>
+</html>

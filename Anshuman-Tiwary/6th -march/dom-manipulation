@@ -1,0 +1,31 @@
+<!-- how the browser creat the DOM:
+
+You write HTML Code
+browser fetches the html code
+browser parses the html(reads it from top to bottom)
+browser creat a tree of nodes in memory (the DOM)
+browser renders the page based on the DOM+CSS
+Java script can now acess and modify the dom
+any changes to the dom ----browser re-renders the affected part 
+
+what is DOM ?
+--JS soes not directly manipulate the HTML
+--It uses DOM representation of HTML
+--DOM representation is the tree like structure thats created when webpage loads a HTML page 
+
+--Before attaching event JS must find elements.The two methods for that is:
+   1.getElementById():find the elements of html by its id
+   2.querySelector():works like css selector ex: documenet.querySelector("button")
+
+What is Event ?
+--Anything that happenes in the webpage is called an event
+
+Event Handling ?
+--Running the js code when event occures
+
+    Two ways to handel a event:
+    1.inline: js code directly write in html
+    2.addEventlistener(): js is seperately written 
+
+
+-->
