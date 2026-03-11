@@ -28,7 +28,7 @@ form.addEventListener("submit", function(ele) {
 });
 
 //Form Vlidation
-if(username === "") {
-    alert("Username is required");
+if(username === "" || email === "" || password === "") {
+    alert("All fields are required");
     return;
 }
