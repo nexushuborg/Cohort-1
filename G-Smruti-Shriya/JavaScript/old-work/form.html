@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<style>
+    form{
+        border : dotted rgb(106, 162, 214);
+        border-radius: 7%;
+        padding: 40px;
+        margin-right: 50px;
+    }
+</style>
+<body>
+    <h1>Formm</h1>
+
+    <form action = " ">
+        <label for = "username">
+            Username :
+            <input type = "text" name = "username"> <!--Added for convention functions where it has to be same as the label attribute for -->
+        </label>
+        <br>
+        <label for = " user-email ">
+            Email :
+            <input type = "email" name = "user-email">
+        </label>
+        <br>
+        <label for = "user-password">
+            Password :
+            <input type = "password" name = "user-password">
+        </label>
+        <br>
+        <label for = "user-msg">
+            Message :
+            <textarea name = "user-msg" id = "">
+            </textarea>
+        </label>
+        <input type= "button" value = "Submit">
+        <br>
+        <label for = "male">
+            <input type = "radio" name = "gender" value="male">
+            male
+        </label>
+        <label for = "female">'
+            <input type = "radio" name = "gender" value="female">
+            female
+        </label>
+    </form>
+
+    <!--Checkboxx (multiple choice answer)-->
+    <form action="">
+        <input type = "checkbox" value="car1 " name="car1">
+        <label for = "Car 1">Car 1</label>
+         <input type = "checkbox" value="car2 " name="car2">
+        <label for = "Car 2">Car 2</label>
+         <input type = "checkbox" value="car3 " name="car3">
+        <label for = "Car 3">Car 1</label>
+    </form>
+
+</body>
+</html>
