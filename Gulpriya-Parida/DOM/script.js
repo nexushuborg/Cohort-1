@@ -43,20 +43,42 @@
 // console.log(element.textContent)
 // console.log(element.innerText)
 
-let colors=['red','blue','orange','green'];
-function colorise() {
-        let element=document.querySelectorAll('.num');
-        colors.reverse()
-        console.log(colors)
-        for(let i=0;i<element.length;i++){
-        element[i].id = colors[i];
-        }
+//setting a button on javascript
+// let div = documnet.getElementById("div-container")
+// const btn = document.createElement("button")
+// btn.textContent ="click me"
+// div.prepend(btn)
 
-    }
+// //Event Handling
+// const btn=document.getElementById("button");
+
+// //onClick with button
+// btn.onclick = function(){
+//     alert("hello world")
+// };
+
+// //addEventListener with all elements
+// btn.addEventListener("mouseover",function(){
+//     console.log("2nd")
+
+// })
 
 
-    const but=document.querySelector('#but');
-but.addEventListener('click',colorise)
+//main 
+// let colors=['red','blue','orange','green'];
+// function colorise() {
+//         let element=document.querySelectorAll('.num');
+//         colors.reverse()
+//         console.log(colors)
+//         for(let i=0;i<element.length;i++){
+//         element[i].id = colors[i];
+//         }
+
+//     }
+
+
+//     const but=document.querySelector('#but');
+// but.addEventListener('click',colorise)
 
 
 
@@ -76,3 +98,30 @@ but.addEventListener('click',colorise)
 // }
 // bu.onclick=bluecolor
 //but.onclick = document.querySelector('#three').classList.add('red')
+
+
+//FORM MANUPILATION/VALIDATION
+const form=document.getElementById("registrationForm")
+form.addEventListener("submit" , function(ele){
+    
+    ele.preventDefault()//prevents from losing data after refreshing
+
+
+    //values reading 
+    const username =document.getElementById("username").value.trim()
+
+    const email=document.getElementById("email").value.trim()
+
+    // console.log("Usernamae" , username)
+    // console.log("Email" , email)
+
+    //Form validation : checking the values of username and email to validate in the form
+    if(username === "" || email === ""){
+        alert("Please fill in all fields")
+    }
+
+    if(username.length<3){
+        alert("username must be atleast 3 char long")
+        this.style.border = "3px solid red"
+    }
+})
