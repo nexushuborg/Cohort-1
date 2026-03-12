@@ -46,6 +46,12 @@ btn.onclick = function(){
 btn.addEventListener('mouseover', function(){
     console.log("Mouse Hovered");
 });
+btn.addEventListener('mouseenter', function(){
+    this.style.backgroundColor = "lightblue";
+});
+btn.addEventListener('mouseleave', function(){
+    this.style.backgroundColor = "";
+});
 
 //form manipulation/validation
 const form = document.getElementById('registration-form');
@@ -66,4 +72,11 @@ form.addEventListener('submit', function(ele){
         this.style.border = "2px solid red";  //this refers to the current present element, might be a div or input field or any form element
     };
 });
+//form.reset() -> to clear the form
 
+const para = document.getElementById("para");
+para.classList.add("para-class") //adds a class name to that element
+
+//$ sign meaning
+let docs = "guys"
+console.log("Hi ",$(docs))
