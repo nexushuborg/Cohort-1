@@ -17,3 +17,11 @@ const username=document.getElementById("username").value
 const email=document.getElementById("email").value
 console.log("Username:" , username)
 console.log("Email:" , email)
+
+const para = document.getElementById("para")
+para.classList.add("para")// Adds a class name to that element
+
+//$ sign meaning: Variables value accessing
+let docs= "guyss"
+console.log("hii ", $(docs))
+
