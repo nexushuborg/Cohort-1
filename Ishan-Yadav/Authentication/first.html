@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="auth-container">
+    <form action="" id="signupform">
+        
+        <input type="text" id="username" placeholder="Username" required>
+        
+        <input type="password" name="" id="password" placeholder="Password" required>
+
+        <button type="submit">Sign Up</button>
+
+        <p>Already have an account?
+            <span onclick="toggleForm()">Login</span>
+        </p>
+    </form>
+    
+    <form id="loginform">
+        <h2>Welcome Back</h2>
+        <input type="text" id="loginUsername" placeholder="Username" required>
+        <input type="password" name="" id="loginpassword" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <p>New Here?
+            <span onclick="toggleForm()">Sign Up</span>
+        </p>
+    </form>
+
+    </div>
+    <script>
+        const signupForm=document.getElementById('signupform');
+        signupForm.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            const user=document.getElementById('username').value;
+            const pass=document.getElementById('password').value
+            const users=JSON.parse(localStorage.getItem('users')) || []
+            if (users.find(u=>u.username===user)){
+                alert("Username taken!")
+                return
+            }
+            users.push({username:user,password:pass})
+
+            localStorage.setItem('users',JSON.stringify(users))
+
+            alert("Signup Successful!")
+
+            toggleForm()
+
+        })
+
+        function toggleForm(){
+            document.getElementById('signupform').classList.toggle('hidden')
+            document.getElementById('loginform').classList.toggle('hidden')
+            
+        }
+
+
+    </script>
+
+</body>
+</html>
