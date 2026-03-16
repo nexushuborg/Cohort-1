@@ -1,26 +1,30 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .hidden{ display : none ; }
+    </style>
+</head>
+<body>
 <div class = "auth-container"></div>
 
-<form if = "signupForm">
+<form id = "signupForm">
 <h2>Create account</h2>
 
-<input>
+<input type = "text" id = "regUsername" palceholder ="Username" required>
 
-<input type = "password" id ="regpassword" placeholder ="password" required>
+<input type = "password" id ="regpassword" placeholder ="Password" required>
 <button type = "submit">Sign up</button>
 
 <p>Already have an account?
 <span on click = "teggleform()">Login</span>
 </p>
-
 </form>
-<id = "loginForm" class = "hidden">
-
+<form id = "loginForm" class = "hidden">
     <h2>Welcome Back</h2>
     <input type = "text" id = "loginUsername" placeholder="username"required>
     <input type = "password" id = "loginPassword" placeholder = "Password" required >
     <button type = "submit">Login</button>
-
     <p> New here?
         <span onclick = "toggleForm()">Sign Up</span>
     </p>
@@ -28,4 +32,25 @@
 </div>
 
 <script>
-signupForm.addEventListener" submit"</script>
+    const signupForm= document.getElementById('signupForm');
+    signupForm.addEventListener('submit', (e) =>{
+        e.preventDefault();
+        const user = document.getElementById('regUsername').value;
+        const pass = document.getElementById('regPassword').value;
+        const users = JSON.parse(localStorage.getItem('user'))|| [];
+        if(users.find(u=> u.username === user)){
+            alert("Username taken!")
+            return;
+        }
+        users.push({username:user,password : pass});
+        localStorage.setItem('user', JSON.stringfy(users));
+        alert("Signing succesfell Please Login.");
+        
+    });
+    function toggleForm(){
+        document.getElementById('signupForm').classList.toggle('hidden');
+        document.getElementById('loginForm').classList.toggle('hidden');
+    }
+</script>
+</body>
+</html>

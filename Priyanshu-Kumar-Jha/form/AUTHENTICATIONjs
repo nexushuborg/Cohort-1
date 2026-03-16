@@ -1,50 +1,50 @@
-Authentication:
-verifying the i
+// Authentication:
+// verifying the i
 
-what is local storage : allows web application ntto store data locally within the user's browser,providing a way to persist data
-acreoss sessions without needing server -side storage.
-meaning data remains ever after the browser
-is closed or restart the syastem unless  u clear catch or manually remove t 
-mmhe data .This can be usefull for storing user preferences,sessionj information ,or other data that needs to presist across 
-page relodes or browesing session ,however ,it's
-Json : its  light weight format used to write the files
-in short ,  ls is the place you save the data and json is the language to use to write it
+// what is local storage : allows web application ntto store data locally within the user's browser,providing a way to persist data
+// acreoss sessions without needing server -side storage.
+// meaning data remains ever after the browser
+// is closed or restart the syastem unless  u clear catch or manually remove t 
+// mmhe data .This can be usefull for storing user preferences,sessionj information ,or other data that needs to presist across 
+// page relodes or browesing session ,however ,it's
+// Json : its  light weight format used to write the files
+// in short ,  ls is the place you save the data and json is the language to use to write it
 
-STORES THE DATA IN KEY VALUE PARIS
-SYNTAX OF LOCALSTORAGE:
-SAVE DATA:
-localstorage.setItem('key','value');
-RETRIEVE DATA
-var value = localstorage.setItem('key');
-ex : localstorage.setItem('username','john_dev');
-var username = localstorage.getItem('username');
-remove data;
-localstorage.clear(); delete all the data from local storage
-why json is needed?
-we convert objects to strings using json. stringify() to store them in localstorage, and we can convert them back to
-objects using json. parse() when we retrieve them. This allows us to store complex data structures like arrays and objects in localstorage,
-which only supports string values.
-for example:
-{
-    username: "john does,
-    email: "h@gmail.com",
-    password: '12345'
-}
-JSON.stringify(): converts a Javascript object or value to a JSON string, which can be stored in localstorage.
-ex:
-const
-name : ("Rahul");
-JSON. stringify(user); // '("name": "Rahul")
-explanation: we have an objęct user with a property name. When we use JSON. stringify(user), it converts the object into a JSON string representation, which can be stored in localstorage.
-JSON.parse(): parses a JSON string and returns the corresponding Javascript object or value, allowing us to retrieve and use the data stored in localstorage.
+// STORES THE DATA IN KEY VALUE PARIS
+// SYNTAX OF LOCALSTORAGE:
+// SAVE DATA:
+// localstorage.setItem('key','value');
+// RETRIEVE DATA
+// var value = localstorage.setItem('key');
+// ex : localstorage.setItem('username','john_dev');
+// var username = localstorage.getItem('username');
+// remove data;
+// localstorage.clear(); delete all the data from local storage
+// why json is needed?
+// we convert objects to strings using json. stringify() to store them in localstorage, and we can convert them back to
+// objects using json. parse() when we retrieve them. This allows us to store complex data structures like arrays and objects in localstorage,
+// which only supports string values.
+// for example:
+// {
+//     username: "john does,
+//     email: "h@gmail.com",
+//     password: '12345'
+// }
+// JSON.stringify(): converts a Javascript object or value to a JSON string, which can be stored in localstorage.
+// ex:
+// const
+// name : ("Rahul");
+// JSON. stringify(user); // '("name": "Rahul")
+// explanation: we have an objęct user with a property name. When we use JSON. stringify(user), it converts the object into a JSON string representation, which can be stored in localstorage.
+// JSON.parse(): parses a JSON string and returns the corresponding Javascript object or value, allowing us to retrieve and use the data stored in localstorage.
 
 
-Layer 1:
-UI
-HTML FORMS COLLECT THE <INPUT ></INPUT>
-LOGIC :
- JS TO PROCESS THE DATA (VALIDATION , CHECK ,STORE)
+// Layer 1:
+// UI
+// HTML FORMS COLLECT THE <INPUT ></INPUT>
+// LOGIC :
+//  JS TO PROCESS THE DATA (VALIDATION , CHECK ,STORE)
 
- LAYER 3:
- STORAGE
- WE MUST STORE USER DATA SOMEWHERE (LOCALSTORAGE ,DATABASE,ETC)
+//  LAYER 3:
+//  STORAGE
+//  WE MUST STORE USER DATA SOMEWHERE (LOCALSTORAGE ,DATABASE,ETC)
