@@ -79,3 +79,6 @@ form.addEventListener("submit",function(event){
 
 //value reading
 const username = document.getElementById("usrname")
+
+
+//16/3/26;
