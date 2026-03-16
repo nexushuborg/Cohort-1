@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div class="auth-container"> <!-- Container for authentication forms -->
+
+<form id="signupForm"> <!-- Signup form starts -->
+<h2>Create Account</h2> <!-- Heading for signup -->
+
+<input type="text" id="regUsername" placeholder="Username" required> <!-- Username input field -->
+<input type="password" id="regPassword" placeholder="Username" required>
+<button type = "submit">sign up</button>
+<p>Already Have an Account
+    <span onclick="toggleForm()">Login</span>
+</p>
+</form>
+<form id="loginform" class ="hidden">
+    <h2>Welcome Back</h2>
+    <input type = "text" id="loginUsername" placeholder = "Username" required>
+    <input type="password" id="loginPassword" placeholder="Password" required>
+    <button type = "submit">Login</button>
+    
+    <p>New Here?
+        <span onclick="toggleForm()">sign up</span>
+    </p>
+</form>
+</div>
+<script>
+    const signupForm = document.getElementById('signupform');
+    signupForm.addEventListener('submit',(e)=> {   //e is the event object -- here is the event is the sign up of the form
+        e.preventDefault();
+        const user = document.getElementById('regUsername').value;
+         const pass = document.getElementById('regPassword').value;
+    // Gets the password entered by the user
+
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    // Retrieve existing users from LocalStorage
+
+    if (users.find(u => u.username === user)) {    
+        alert("Username taken!");
+        return;
+        }
+
+    users.push({ username: user, password: pass });
+    // Add new user object to array
+
+    localStorage.setItem('users', JSON.stringify(users)); // setItem is used to store
+    // Save updated users array into LocalStorage
+
+    alert("Signup Successful! Please Login.");
+    toggleForm();
+    // Switch from signup form to login form
+
+    });
+function toggleForm() {
+    // Function to toggle between signup and login forms
+    document.getElementById('signupForm').classList.toggle('hidden');
+    document.getElementById('loginForm').classList.toggle('hidden');
+}
+</script>
+</body>
+</html>
+
+<!--Notes :-
+how to build a login page using js , html , css
+
+Authentication -- verifying the identity of a user or system , often through credentials like passwords or tokens .
+
+
+three layers in our system ---
+ui/html
+js 
+Storage
+
+
+
+local storage allows web applications to store data locally within the user's browser, providing a way to persist data across sessions without needing server-side storage.
+meaning ---- data remains even after the brower is closed or restart the system unless u clear cache or manaually remove the data . This can be useful for storing user preferances,sessions information,or other data that needs to persist acrs page reloads or browser sessions . However, it's important to note that local storage is not secure for sensitive information, as it can be accessed by any script running on the same domain.
+ 
+Stores the data in the key value pair.
+
+
+Json--- is a lightweight format used to write those files 
+
+inshort, Is the place you saev the data an json is the language to use to write it .
+
+
+Layer 1 : 
+UI
+Html forms collect the <input></input>  --- taking the data as input form the user
+
+layer 2:
+logic:
+	Js to process the data(Validate , Check , Store) -- this check the data are valid or not and also the credential checking also occured here--- We used the database to store the data that is localStorage here to store the data.
+
+layer 3:
+Storage:
+we must store the user data somewhere (LocalStorage, Datastorage) --- 
+
+Syntax for the Local Storage:
+Save Data:
+localStorage.settings('key','value')
+Retrive Data:
+var value = localStorage.getItem("key")
+ex: --- localStorage.setItem("username',"Hello")   --- storing the data
+var username = localStorage.getItem("username")
+Remove data:
+localStorage.removeItem("key")
+clear storage:
+localStorage
+
+in localStorage the data can be stored in strings..... System treats everything to objects so , convert it to string we use json
+
+
+NEED of JSON:-
+we convert objects to string and store them in the local Storage.
+we convert the objects to strings using json.stringify() to store them in the local Storage, and we can convert them back to objects using json.parse() when we retrieve them. This allows us to store complex data structure like arrays and objects in localStorage, which only supports string values.
+
+{
+	username : "john Doe"
+	email : "hello@gmail.com"
+	password:"1234"
+} --- this is a json file which store the data in key value Format.
+
+JSON.stringify() --- convert the javaScript object to a JSON string , which can be stored in the localStorage.
+
+JSON.stringify(user) -- '{"name":"Rahul"}'-- we have an object user with a property name. When we use JSON.stringify(user),it converts the object into a JSOn string representation which can be stored in local storage..
+
+
+JSON.parse()--- Parse a JSON string and returns the corresponding JavaScript object or value, Allowing us to Retrieve and use data stored in localStorage.
+
+
+
+we will do the authentication using   js , pyhton 
+.find is used to search inside the array of names.
+
+
+toggleForms -- toggles between the Login form and  Signup form
+   -->
+  
