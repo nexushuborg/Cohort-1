@@ -22,13 +22,18 @@ form.addEventListener("submit", function(ele) {
     ele.preventDefault(); // Page reload prevented
     
     //Values Reading
-    const username = document.getElementById("username").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const username = document.getElementById("username").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
 });
 
 //Form Vlidation
 if(username === "" || email === "" || password === "") {
     alert("All fields are required");
     return;
+}
+
+if(username.length < 3) {
+    alert("Username must be at least 3 characters long");
+    this.style.border = "2px solid red";
 }
