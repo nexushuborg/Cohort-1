@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden{ display: none; }
+    </style>
+</head>
+<body>
+
+<div class="aut_container">
+    <form id="sign_up">
+        <h2>Create Account</h2>
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter username" required>
+        </div>
+        <br>
+        <div>
+            <label for="password">Password </label>
+            <input type="password" id="password" name="email" placeholder="Enter the Password" required>
+        </div>
+        <br>
+        <button type="submit">Sign Up</button>
+        <br>
+        <p>Already have an account? <br>
+            <button onclick="toggleForm()">Login</button>
+        </p>
+
+    </form>
+
+    <form id="login_form" class="hidden">
+        <h2>Welcome Back</h2>
+        <input type="text" id="loginUsername" placeholder="Username" required>
+        <br>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <br>
+        <button type="submit">Login</button>
+        <br>
+        <p>New here?<br>
+            <button onclick="toggleForm()">Sign Up</button>
+        </p>
+    </form>
+</div>
+<script>
+    const signupForm = document.getElementById('sign_up');
+
+signupForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // 1. Get values from inputs
+    const usernameValue = document.getElementById('username').value;
+    const passwordValue = document.getElementById('password').value;
+
+    // 2. Fetch existing users (consistent key: 'users')
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+
+    // 3. Check if user exists on the ARRAY (users), not the string
+    if (users.find(u => u.username === usernameValue)) {
+        alert("Username taken!");
+        return;
+    }
+
+    // 4. Push to the array and save
+    users.push({ username: usernameValue, password: passwordValue });
+    localStorage.setItem('users', JSON.stringify(users));
+
+    alert("Signup Successful! Please Login.");
+    signupForm.reset(); // Clear the form
+    toggleForm();
+});
+
+function toggleForm() {
+    document.getElementById('sign_up').classList.toggle('hidden');
+    document.getElementById('login_form').classList.toggle('hidden');
+}
+</script>
+
+
+</body>
+</html>
