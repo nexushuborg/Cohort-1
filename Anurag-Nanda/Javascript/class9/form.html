@@ -1,0 +1,69 @@
+<html lang="en">
+<body>
+
+<div class ="auth-container">
+    <form id="signupForm">
+    <input type="Text" id="regPassword" placeholder="UserName" required>
+    <input type="password" id="regPassword" placeholder="Password" required>
+    <button type="Submit">Sign up</button>
+    <p>Already HAve an Account </p>
+    <span oneclick="toggleForm()">Login</span>
+
+
+
+    </form>
+    <form id="Login Form" class="hidden">
+    <h2>Welcome BAck</h2>
+    <input type="text" id="LoginUsername" placeholder="Usename" required>
+     <input type="password" id="loginPassword" placeholder="Password" required>
+    <button type="submit">Login</button>     
+    <p>New here ??
+    <span onclick="toggleForm()">Sign Up</span>
+    </p>
+    </form>
+    
+</div>
+<script>
+    const signupForm=document.getElementById('signupForm')
+    //It will find the signup form from the html and store it in a variable
+
+    signupForm.addEventListener('submit',(e) => 
+    {
+        e.preventDefayult();
+        //Prevents the page from refreshing after the page submission
+
+        const user=document.getElementById('regUsername').value;
+        //Gets the Username given by the User
+
+         const pass=document.getElementById('regPassword').value;
+         //Gets the password 
+
+        const users=JSON.parse(localStorage.getItem('users')) || [];
+        //Retrive existing users from the local storage
+
+        if(users.find(u => u.username ===user))
+    {
+        alert("Username already exsits ");
+        return;
+    }
+    users.push({username:user, password:pass});
+    //Add new user objects to array
+
+    localStorage.setItem('users',JSON.stringify(users));
+    //Save updated users array into LOcalStorage
+
+    alert("Signup Successfully Please Login with your Crediantials ");
+    toggleForm();
+    //Switch from signup form to the login form 
+
+
+});
+function toggleForm(){
+    //It is the function between toggle between signup page and login forms 
+    document.getElementById('signupForm').classList.toggle('hidden');
+    document.getElementById('LoginForm').classList.toggle('hidden');
+
+}
+</script>
+</body>
+</html>
