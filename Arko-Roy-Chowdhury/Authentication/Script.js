@@ -1,4 +1,4 @@
-const signupform = document.getElementById('signupform');
+const signupform = document.getElementById('signupForm');
 // Finds the signup form from HTML and stores it in a variable
 
 // Complexity is Everything is cool
@@ -35,6 +35,6 @@ toggleForm();
     
 function toggleForm() {
     // Function to toggle between registration and login forms
-    document.getElementById('registrationForm').classList.toggle('hidden');
+    document.getElementById('signupForm').classList.toggle('hidden');
     document.getElementById('loginForm').classList.toggle('hidden');
 }
