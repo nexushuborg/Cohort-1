@@ -27,6 +27,7 @@
             <p>New here?
                 <span onclick="toggleForm()">Sign Up</span>
             </p>
+        </form>
     </div>
 
     <script>
@@ -40,7 +41,7 @@
                 alert('Username taken!');
                 return;
             }
-            users.psuh({username: user, password: pass});
+            users.push({username: user, password: pass});
             localStorage.setItem('users', JSON.stringify(users));
             alert('Signup Successful!');
             toggleForm();
