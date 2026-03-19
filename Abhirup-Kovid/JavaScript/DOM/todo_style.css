@@ -1,0 +1,26 @@
+body{
+    font-family: a;
+    background-color: wheat;
+}
+h1{
+    text-align: center;
+    color: black;
+}
+form{
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 20px;
+}
+button{
+    padding: 3px 10px;
+    border-radius: 10px;
+    color: lawngreen;
+    background-color: blueviolet;
+}
+#csstask {
+  font-size: 20px;   /* makes text bigger */
+  padding: 10px;     /* adds space inside the task box */
+  margin: 5px 0;     /* adds space between tasks */
+  background-color: #ffffff; /* optional: light background */
+}

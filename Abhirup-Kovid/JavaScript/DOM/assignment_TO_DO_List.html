@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="todo_style.css">
+   
+</head>
+
+<body>
+    <h1>To Do List</h1>
+
+    <form id="todolist">
+        <input type="text" id="task" placeholder="Enter a task">
+        <button type="submit">Add Task</button>
+        
+    </form>
+    <small id="taskError" style="color: red; display: none;">Add a Task</small>
+
+    <div id="displayArea"></div>
+
+    <ol id="list"></ol>
+    <script>
+        const form=document.getElementById('todolist')
+        const task=document.getElementById('task')
+        const list=document.getElementById('list')
+        const taskError=document.getElementById('taskError')
+
+        form.addEventListener('submit',function (event){
+            event.preventDefault()
+            
+            if(task.value.trim()===""){
+                taskError.style.display="block"
+                return;
+            }
+            else{
+                taskError.style.display="none"
+            }
+
+            const addtask=document.createElement('li')
+            addtask.textContent=task.value;
+            addtask.id="csstask";
+            
+            
+
+
+            const deleteButton=document.createElement('button')
+            deleteButton.textContent='delete';
+            deleteButton.style.marginLeft = "10px";
+            list.appendChild(addtask)
+
+            task.value="";
+
+            addtask.appendChild(deleteButton)
+            deleteButton.addEventListener('click',function(){
+                list.removeChild(addtask)
+            })
+
+        })
+
+
+    </script>
+
+</body>
+</html>
