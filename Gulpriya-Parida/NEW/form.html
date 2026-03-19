@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="auth-container">
+    <form id="signupForm">
+    <input type="password" id="regPassword" placeholder="Password" required>
+    <button type="submit">Sign up</button>
+
+    <p>Alredy have an account?
+    <span onclick="toggleForm()">Login</span>
+    </p>
+    </form>
+    <form id = "loginForm" class="hidden">
+    <h2>Welcome Back</h2>
+    <input type="text" id="loginUsername" placeholder="Username" required>
+    <input type="password" id="loginPassword" placeholder="Password" required>
+    <button type="submit">Login</button>
+
+    <p> New here?
+        <span onclick="toggleForm()">Sign up</span>
+    </p>
+    </form>
+    </div>
+<script>
+
+const signupForm = document.getElementById('signupForm');
+// Finds the signup form from HTML and stores it in a variable
+signupForm.addEventListener('submit', (e) => {
+// Listens for the "submit" event when the signup button is clicked
+    e.preventDefault();
+// Prevents the page from refreshing after form submission
+    const user = document.getElementById('regUsername').value;
+// Gets the username entered by the user
+    const pass = document.getElementById('regPassword').value;
+// Gets the password entered by the user
+    const users = JSON.parse(localstorage.getItem('users')) || [];
+// Retrieve existing users from LocalStorage
+    if (users.find(u => u.username === user)) {
+        alert("Username taken!");
+        return;
+    }
+    users.push({ username: user, password: pass });
+// Add new user object to array
+    localstorage.setItem('users', JSON.stringify(users));
+// Save updated users array into Localstorage
+    alert("Signup Successful! Please Login.");
+    toggleForm();
+})
+    function toggleForm(){
+    document.getElementById('signupForm').classList.toggle('hidden');
+     document.getElementById('loginForm').classList.toggle('hidden');
+}
+</script>
+</body>
+</html>
