@@ -1,0 +1,81 @@
+1.Authentication: verifying the identity of a user or system,often through credentials like passwords or token.
+
+2.Authorization: Determining what action or resources a user or system is allowed to access after authentication
+
+3.Access Control: the mechanisms and policies that govern who can access what resources and undder what conditions
+
+4.Architecture of the system
+Layer 1:
+UI
+HTML FORMS COLLECT THE <INPUT></INPUT>
+
+  LAYER 2:
+  LOGIC:
+   JS TO PROCESS THE DATA(VALIDATE,CHECK,STORE)
+
+LAYER 3:
+STORAGE
+WE MUST STORE USER DATA SOMEWHERE(LOCALSRORAGE,DATABASE,ETC)
+
+4.Local storage
+Local storage allows web applications to store data locally within the user's browser,providing a way to persist data across sessions without needing server-side storage.
+Meaning data remains even if the browser is clodsed or restart the system unless you clear cache or manually remove the data.This can be useful for storing user preferences,sessions,session information,or other data that needs to protect across page reloads or browser sessions.However, its important to note that local storage is not secure for sensitive information,as it can be accessed by any script running on the domain.
+
+6.Local Storage data structure
+STORES THE DATA IN KEY VALUE PAIRS
+ SYNTAX OF LOCALSTORAGE:
+ SAVE DATA:
+ localstorage.setItem('key', 'value');
+ RETRIEVE DATA:
+  var value = localStorage.getItem('key');
+  ex: localstorage.setItem('username', 'john_doe');
+  var username = localStorage.getItem('username');
+  remove data:
+  localStorage.removeItem('key'); 
+  clear storages
+  localStorage.clear(); delete all data from localStorage
+
+7.Syntax of LocalStorage
+
+⁠Save data
+⁠localStorage.setItem('key', 'value'); ⁠
+Example: ⁠ localStorage.setItem('username', 'john_doe'); ⁠
+
+⁠Retrieve data
+⁠var value = localStorage.getItem('key'); ⁠
+Example: ⁠ var username = localStorage.getItem('username'); ⁠
+
+⁠Remove data
+⁠localStorage.removeItem('key'); ⁠
+
+⁠Clear all storage
+⁠localStorage.clear(); ⁠ – deletes all data from localStorage.
+
+
+8.Why is JSON needed?
+we convert objects to strings using json.stringify() to store them in localStorage, and we can convert them back to
+objects using json.parse() when we retrieve them. This allows us to store complex data structures like arrays and objects in localStorage,which only supports string values.
+for example:
+{
+    username: 'john_doe',
+    email: 'h@gmail.com',
+    password: '12345'
+}
+
+9.JSON
+json: is a lightweight format used to write those files
+in short,ls is the place you save data and json is the language to use to write it
+
+10.JSON.stringify(): converts a javascript object or value to a JSON string, which can be stored in localStorage.
+ex:
+const user = {
+    username: 'john_doe',
+    email: ''
+}
+
+11.JSON.parse(): parses a JSON string and returns the corresponding javascript object or value, allowing us to retrieve and use the data stored
+in localStorage.
+
+12.Signup logic
+
+
