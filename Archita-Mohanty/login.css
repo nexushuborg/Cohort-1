@@ -1,3 +1,10 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif
+}
+
 body{
     font-family: Arial, sans-serif;
     background-color:rgb(21, 44, 65);
@@ -6,9 +13,10 @@ body{
     height:100vh;
     margin:0;
     padding:0;
-    background:radial-gradient(circle at top left,#384265,#0f172a);
+    background:radial-gradient(circle at top left,#171b2a,#0f172a);
     background-size:cover;
-    align-items:center;  
+    align-items:center; 
+    color:white; 
 }
 .login-container{
     border-radius:10px;
@@ -25,18 +33,93 @@ body{
     font-size:x-small;
     color:rgb(101, 101, 108)
 }
-.upper{
+.login-box{
     color:aliceblue;
     text-shadow: #0f172a;
+    width:350px;
+    padding:30px;
+    border-radius:15px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 30px rgba(0,0,0,0.5);
 }
-.password{
+.logo{
+    color:#a5b4fc;
+    margin-bottom:10px;
+    font-size:14px;
+}
+h1{
+    margin-bottom:5px;
+}
+.subtitle{
+    font-size:14px;
+    color:#94a3b8;
+    margin-bottom:20px;
+
+}
+form{
+    display:flex;
+    margin-bottom:15px;
+
+}
+label{
+    font-size:13px;
+    margin-bottom:5px;
+    color:#9a9bb4;
+
+}
+
+input{
+    padding:10px;
+    border-radius:8px;
+    border:none;
+    margin-bottom:15px;
+    background:rgba(255,255,255,0,0.8);
+    color:white;
+}
+input::placeholder{
+color:#94a3b8;
+}
+.password-row{
     display:flex;
     justify-content:space-between;
     align-items:center;
-}.forgot-password{
+    color:#9a9bb4;
+}.password-row a{
     font-size:12px;
-    color:#818cf8;
+    color:#727cd8;
     text-decoration: none;
-
-
+}
+form{
+    display:grid;
+    grid-template-columns:1fr 80px;
+    column-gap:15px;
+}
+label,input,.password-row{
+    grid-column:1;
+}
+button{
+    grid-row:2/span 3;
+    padding:12px;
+    border:none;
+    width:300px;
+    border-radius:15px;
+    background:linear-gradient(90deg,#6366f1,#8b5cf6);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    align-items:center;
+}
+button.hover{
+    opacity:0.9;
+}
+.signup{
+    text-align:center;
+    font-size:13px;
+    margin-top:15px;
+}
+.signup a{
+    color:#818cf8;
+    text-decoration:none;
 }
