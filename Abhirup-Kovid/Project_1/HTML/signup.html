@@ -15,25 +15,30 @@
             <h1>Create your account</h1>
             <p class="subtitle">Free forever - no credit card needed</p>
             <div class="form">
-                <form>
+                <form id="form">
                     <label>Username</label>
-                    <input id="username" type="email" placeholder="Your username">
+                    <input id="username" type="text" placeholder="Your username">
                     <small id="usernameError" style="color: red; display: none;">Enter the username</small>
+
                     <label>Email</label>
                     <input id="email" type="email" placeholder="your@gmail.com">
                     <small id="emailError" style="color: red; display: none;">Enter the email</small>
+
                     <label>Password</label>
                     <input id="password" type="password" placeholder="••••••••">
                     <small id="passwordError" style="color: red; display: none;">Enter the password</small>
+
                     <label>Confirm Password</label>
-                    <input id="confirm-password" type="password" placeholder="••••••••">
-                    <small id="confirm-passwordError" style="color: red; display: none;">Enter the confirm password</small>
+                    <input id="confirmPassword" type="password" placeholder="••••••••">
+                    <small id="confirmPasswordError" style="color: red; display: none;">Enter the confirm password</small>
+                    <small id="passwordMatchError" style="color: red; display: none;">Passwords do not match</small>
                     <button type="submit" id="create-account">Create Account</button>
                 </form>
             </div>
+            <div id="displayArea"></div>
             <p class="signup">Already have an account? <a href="login.html">Log in</a></p>
         </div>
     </div>
-    <script src="JS/signup.js"></script>
+    <script src="../JS/signup.js"></script>
 </body>
 </html>
