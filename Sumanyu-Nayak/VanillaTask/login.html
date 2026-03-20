@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="card">
+            <h3 class="heading">VanillaTask</h3>
+            <form id="loginForm">
+                <h2 class="title">Welcome Back</h2>
+                <p class="subtitle">Log in to access your board</p>
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <br>
+                    <input type="email" id="loginEmail" name="loginEmail" required placeholder="alex@example.com">
+                    <br><br>
+                    <div class="password-row">
+                        <label for="loginPassword">Password</label>
+                        <a class="forgot-password" href="forgot-password.html">Forgot password?</a>
+                    </div>
+
+                        <input type="password" id="loginPassword" name="loginPassword" required placeholder="Enter your password">
+                        <br><br>
+                        <button class="btn" type="submit">Log In</button>
+                </div>
+            </form>
+            <div class="bottom-text">
+                <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="login.js"></script>
+</html>
