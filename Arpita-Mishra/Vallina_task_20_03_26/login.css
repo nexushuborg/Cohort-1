@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
 html,body{
     width:100%;
@@ -15,13 +16,65 @@ html,body{
   flex-direction: column;
   align-items: center;
   padding: 100px;
-  background-color: rgb(57, 29, 79);
-  color: white;
+  background: radial-gradient(circle at top, #1a1f3c, #110b2a);
+  color: rgba(255, 255, 255, 0.603);
+}
 
+form{
+    width:350px;
+    padding:30px;
+    border-radius:20px;
+    background: rgb(38, 30, 56);
+    backdrop-filter:blur(10px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+
+#first{
+color: #7c8cff;
+font-size: 26px;
+font-weight: bold;
+
+}
+#second{
+    margin:10px 0;
+    font-size: 26px;
+    color: white;
+}
+
+input::placeholder{
+    color: #888;
+}
+label span{
+    float:right;
+    color: #7c8cff;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin-top:5px;
+    border:none;
+    border-radius:10px;
+    background: rgba(255,255,255,0.08);
+    color:white;
+    outline:none;
+}
+
+button{
+    border-radius: 12px;
+    width:100%;
+    background-color: #7c8cff;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
 
 }
 
-#first{
-color: rgb(157, 126, 184);
+.forgot{
+    color: #7c8cff;
+}
 
+.signup{
+    color: #7c8cff;
 }
