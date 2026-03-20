@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+</style>
+<link href="stylesignup.css" rel="stylesheet" />
+
+<body>
+    <div class=conatiner>
+        <h3 id="1">VanillaTask</h3>
+        <h1>Create your account</h1>
+        <p>Free forever --- no credit card needed</p>
+        <form id="signupForm">
+            <label for="">
+                <p>Username</p>
+                <input type="text" id="username" placeholder="e.g. Alex" required></br>
+            </label>
+            <p>Email</p>
+            <input type="email" id="email" placeholder="you@example.com" required><br>
+            <p>Password</p>
+            <input type="password" id="password" placeholder="At least 6 characters" required><br>
+            <p>Confirm Password</p>
+            <input type="password" id="confirmPassword" placeholder="Repeat your password" required><br>
+            <br>
+            <button type="submit">Create Account</button><br>
+            <p>Already have an account?
+                <span onclick="toggleForm()"></span>
+                <a href="login.html">Login</a>
+            </p>
+        </form>
+        <script>
+            const signupForm = document.getElementById('signupForm'); // Get the signup form element
+            signupForm.addEventListener('submit', (e) => {
+
+                e.preventDefault(); // Prevents the page from refreshing after form submission
+                console.log("Hello");
+                const user = document.getElementById('username').value; // Gets the username entered by the user
+                const pass = document.getElementById('password').value;
+                const confirmPass = document.getElementById('confirmPassword').value;
+
+
+                // Gets the password entered by the user
+
+                const users = JSON.parse(localStorage.getItem('users')) || [];
+
+                if (pass !== confirmPass) {
+                    alert("Passwords do not match! Please try again.");
+                    return;
+                }
+                if (users.find(u => u.username === user)) {
+                    alert("Username taken!");
+                    return;
+                }
+                else if (pass === confirmPass) {
+                    users.push({ username: user, password: pass });
+                    localStorage.setItem('users', JSON.stringify(users));
+                    alert("Signup Successfull Please Login.");
+                    toggleForm();
+                }
+            });
+
+            function toggleForm() {
+                document.getElementById('signupForm').classList.toggle('hidden'); // Toggle visibility of signup form
+                document.getElementById('loginForm').classList.toggle('hidden'); // Toggle visibility of login form
+            }
+        </script>
+</body>
+
+</html>
