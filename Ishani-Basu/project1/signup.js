@@ -12,7 +12,8 @@ signUpForm.addEventListener('submit', (e) =>{
         user = document.getElementById('username').value;
     }
     const emailRegex = new RegExp('^[a-zA-Z0-9._]+@[a-zA-Z]+\.[a-zA-Z]+$')
-    const email = emailRegex.test(document.getElementById('email').value);
+    const emailval = document.getElementById('email').value;
+    const email = emailRegex.test(emailval);
     if (!email){
         alert('Enter a valid E-Mail');
         return;
@@ -49,13 +50,12 @@ signUpForm.addEventListener('submit', (e) =>{
                 alert('Username taken!');
                 return;
             }
-            users.push({username: user, emailid: email});
             if(document.getElementById('password').value !== confirm_pass){
                 alert('Password incorrect. Please try again.')
                 
             }
             else if(document.getElementById('password').value === confirm_pass){
-                users.push({password: pass})
+                users.push({username: user, email: emailval, password: document.getElementById('password').value});
                 localStorage.setItem('users', JSON.stringify(users));
                 alert('Signup Successful!');
                 toggleForm();

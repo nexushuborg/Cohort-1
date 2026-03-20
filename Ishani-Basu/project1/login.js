@@ -1,21 +1,19 @@
 const loginForm = document.getElementById('login-div');
 loginForm.addEventListener('submit', function(e){
     e.preventDefault();
-    const emailid = document.getElementById('email');
-    const pass = document.getElementById('password');
+    const emailid = document.getElementById('email').value;
+    const pass = document.getElementById('password').value;
     const users = JSON.parse(localStorage.getItem('users')) || [];
-            if(users.find(u => u.email !== emailid)){
+    const user = users.find(u => u.email === emailid);
+            if(!user){
                 alert('Email not registered!');
                 return;
             }
+            if(user.password !== pass){
+                alert('Incorrect password.')
+            }
             else{
-                if(users.find(u => u.password !== pass)){
-                    alert('Password incorrect. Please try again.')
-                
-                }
-                else {
-                    alert('Login Successful!');
-                }  
+                alert('Login successful!');
             }
             
 });
