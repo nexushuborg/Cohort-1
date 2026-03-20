@@ -1,0 +1,66 @@
+Authentication:
+
+verifying the identity of a user or system, often through credentials like passwords or tokens.
+
+LocalStotage allows web applications to store data locally within the user's browser, providing a way to persist data across sessions without needing server-side storage.
+
+meaning data remains even after the browser is closed or restart the system unless u clear cache or manually remove the data. This can be useful for storing user preferences, session information, or other data that needs to persist across page reload or browser session .however,its important to note that local storage is not secure for sensetive data or info, as it can be accesed by any script running on the same domain.
+
+
+STORES THE DATA IN KEY VALUE PAIRS
+ SYNTAX OF LOCALSTORAGE:
+ SAVE DATA:
+ locxalstorage.setIteam('key','value');
+
+ RETRIEVE DATA:
+  var value=locxalstorage.getIteam('key');
+  ex:locxalstorage.setIteam('username','joe_doe');
+  var username=localStorage.getiteam('username');
+
+ remove data:
+ localstorage.removeIteam('key');
+
+ Why json is needed?
+ --We convert objects to string using json.stringigy() to store them in localStorage, we can convert them back to objects using json.parse() when we retrive them . this allows us to store complex data structure like arrays and objects which only support string value.
+ for example:
+ {
+    username:'jone_doe'
+    email:'h@email.com'
+    password:'12345'
+ }
+ JSON.stringify():convert a Javascript object orvalue to a json string ,which can be stored in local variable.
+ ex:
+
+
+
+
+
+
+
+ Json.parse():parses a JSON string and return the corresponding Javascript onj or value, allowing us to retrieve and store in local variable
+
+
+
+
+
+
+Json: is a lightweight format used to write those files
+
+in short, 1s is the place you save the data and json is the language to write the data in a structured way.
+
+
+
+Layer 1:
+UI
+HTML FORMS COLLECT THE <INPUT></INPUT>
+
+Layer 2:
+LOGIC:JS TO PROCESS THE DATA(VALIDATE,CHECK,STORE)
+
+
+Layer 3:
+
+
+Authorization:determining what actions or resources a user or system is allowed to access after authentication.
+
+Access Control:the mechanisms and policies that govern who can access what resources and under what conditions.
