@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/signup.css">
+</head>
+<body>
+    <div class="background"></div>
+
+    <div class="container">
+        <div class="card">
+            <h3 class="vanillatask">✦ VanillaTask</h3>
+            <h1>Create your account</h1>
+            <p class="subtitle">Free forever - no credit card needed</p>
+            <div class="form">
+                <form>
+                    <label>Username</label>
+                    <input id="username" type="email" placeholder="Your username">
+                    <small id="usernameError" style="color: red; display: none;">Enter the username</small>
+                    <label>Email</label>
+                    <input id="email" type="email" placeholder="your@gmail.com">
+                    <small id="emailError" style="color: red; display: none;">Enter the email</small>
+                    <label>Password</label>
+                    <input id="password" type="password" placeholder="••••••••">
+                    <small id="passwordError" style="color: red; display: none;">Enter the password</small>
+                    <label>Confirm Password</label>
+                    <input id="confirm-password" type="password" placeholder="••••••••">
+                    <small id="confirm-passwordError" style="color: red; display: none;">Enter the confirm password</small>
+                    <button type="submit" id="create-account">Create Account</button>
+                </form>
+            </div>
+            <p class="signup">Already have an account? <a href="login.html">Log in</a></p>
+        </div>
+    </div>
+    <script src="JS/signup.js"></script>
+</body>
+</html>
