@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background-image: linear-gradient(rgb(1, 1, 30),rgb(39, 6, 39));
+  background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+}
+h3{
+    font-size: 1.5rem;
+    color: rgb(18, 68, 142);
+    align-self: flex-start;
+}
+.container {
+    width: 350px;
+    padding: 25px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-image: linear-gradient(rgb(1, 1, 30),rgb(39, 6, 39));
+    align-items: baseline;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+p {
+    margin: 5px 0;
+    color: white;   
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+    margin: 8px 0;
+    border-radius: 0.8rem;
+    border: 2px solid gray;
+    height: 30px;    
+     background-image: linear-gradient(rgb(1, 1, 30),rgb(39, 6, 39))
+}
+
+button {
+    width: 95%;
+    padding: 10px;
+    background: rgb(84, 9, 150);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #333;
+}
+
+a {
+    color: purple;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.haveaccount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

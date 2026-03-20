@@ -11,27 +11,35 @@
 <link href="stylesignup.css" rel="stylesheet" />
 
 <body>
-    <div class=conatiner>
-        <h3 id="1">VanillaTask</h3>
-        <h1>Create your account</h1>
-        <p>Free forever --- no credit card needed</p>
+    <div class=container>
         <form id="signupForm">
+            <h3 id="1">✦  VanillaTask</h3>
+            <h1>Create your account</h1>
+            <p>Free forever --- no credit card needed</p>
             <label for="">
                 <p>Username</p>
                 <input type="text" id="username" placeholder="e.g. Alex" required></br>
             </label>
+            <label for="">
             <p>Email</p>
             <input type="email" id="email" placeholder="you@example.com" required><br>
+            </label>
+            <label for="">
             <p>Password</p>
             <input type="password" id="password" placeholder="At least 6 characters" required><br>
+            </label>
+            <label for="">
             <p>Confirm Password</p>
             <input type="password" id="confirmPassword" placeholder="Repeat your password" required><br>
+            </label>
             <br>
             <button type="submit">Create Account</button><br>
+            <div class= haveaccount>
             <p>Already have an account?
                 <span onclick="toggleForm()"></span>
                 <a href="login.html">Login</a>
             </p>
+            </div>
         </form>
         <script>
             const signupForm = document.getElementById('signupForm'); // Get the signup form element

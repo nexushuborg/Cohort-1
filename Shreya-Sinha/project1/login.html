@@ -5,21 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<link href="stylelogin.css" rel="stylesheet" />
 <body>
+    <div class=container>
     <form id = loginForm class = "hidden">
-        <h3>VanillaTask</h3>
+        <h3>✦ VanillaTask</h3>
         <h1>Welcome Back</h1>
-        <p>Log in to access your board</p>
+        <p>Log in to access your board</p><br>
         <p>Email</p>
         <input type="Email" id="loginEmail" placeholder="you@example.com" required><br>
+        <br>
         <p>Password <span onclick="toggleForm()"></span>
            <a href ="forgotpassword.html">Forgot Password?</a></span><br></p> 
         <input type="Password" id="loginPassword" placeholder="Enter your password" > <br>
         <br>
         <button type="submit">Login</button><br>
+        <br>
+        <div class= haveaccount>
         <p>Don't have an account?
             <span onclick="toggleForm()"></span>
             <a href ="sign_up.html">Sign up free </a>
         </p>
+        </div>
+        </form>
+    </div>
 </body>
 </html>

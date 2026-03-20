@@ -8,20 +8,91 @@ html,body{
     height: 100%;
 }
 
-#container{
+.container{
   width:100%;
   height:100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 100px;
-  background-color: rgb(57, 29, 79);
-  color: white;
+  background-image: linear-gradient(rgb(1, 1, 30),rgb(39, 6, 39));
+  background-repeat: no-repeat;
+  /* background-color: rgb(57, 29, 79); */
+    color: white;
+    
+   
+
+}
+
+.container h3{
+    font-size: 1.5rem;
+    color: rgb(18, 68, 142);
+    align-self: flex-start;
+
+}
+.container h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+    align-self: flex-start;
+}
+.container p{
+    font-size: 0.9rem;
+    color: white;
+    align-self: flex-start;
+}
+.container label{
+    font-size: 0.9rem;
+    color: rgb(188, 171, 171);
+    align-self: flex-start;
+    border-radius: 0.9rem;
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+
+}
+.container input{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.9rem;
+    border: 1px solid rgb(10, 2, 2);
+    padding: 22px;
+     background-image: linear-gradient(rgb(4, 4, 64),rgb(101, 67, 101))
+}
+.container button{
+    width: 100%;
+    height: 50px;
+    border-radius: 0.9rem;
+    border: none;
+    background-color: rgba(43, 10, 150, 0.53);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.container button:hover{
+    background-color: rgb(48, 3, 46);
+}
+.container a{
+    color: rgb(94, 147, 239);
+    text-decoration: none;
+    font-size: 0.9rem;
+    align-self: center;
+}
+.haveaccount{
+    align-self: center;
 
 
 }
 
-#first{
-color: rgb(157, 126, 184);
-
+#signupForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid rgb(84, 72, 72);
+    margin-top: 30px;
+    border-radius: 0.9rem;
+    width: 400px;
+    padding: 20px;
 }
