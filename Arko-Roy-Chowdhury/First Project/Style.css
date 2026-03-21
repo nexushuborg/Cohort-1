@@ -1,57 +1,142 @@
 .hidden {
-    display: none; /* CSS class to hide elements */
+    display: none;
 }
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+}
+
 .auth-container {
     width: 50%;
     margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 30px;
+    border: 1px solid rgba(180, 140, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(145deg, rgba(80, 40, 160, 0.45), rgba(40, 60, 180, 0.35));
+    backdrop-filter: blur(12px);
 }
+
 .form {
     display: flex;
     flex-direction: column;
 }
+
 .input {
     margin-bottom: 15px;
     padding: 10px;
     font-size: 16px;
 }
+
 .button {
     padding: 10px;
     width: 90%;
     font-size: 16px;
-    background-color: #28a745;
+    background: linear-gradient(135deg, #7c3aed, #3b82f6);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.1s ease;
 }
+
+
+/* Button hover effect */
 .button:hover {
-    background-color: #218838;
+    opacity: 0.8; /* Deepens the button color on hover */
+    transform: translateY(-1px); /* Elevation effect on hover */
 }
+
+/* Input box styling to white on click */
 .form p {
     text-align: center;
-}
-.formspan {
-    color: blue;
-    cursor: pointer;
+    color: rgba(220, 210, 255, 0.85);
 }
 
-input{
-    border-radius: 5px;
+
+/*Login and Signup form switcher*/
+.formspan {
+    color: #c4b5fd; /* A soft purple color for the text */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the element, indicating it's clickable */
+    font-weight: 500; /* Medium font weight for better readability */
+    transition: color 0.2s ease; /* Smooth transition for color change on hover */
+}
+
+.formspan:hover {
+    color: #93c5fd; /* A lighter blue color on hover to indicate interactivity */
+}
+
+
+/* Input box styling - normal */
+input {
+    border-radius: 8px;
     width: 85%;
     height: 40px;
-    padding: 4px;
+    padding: 4px 10px;
     text-align: left;
-
-
+    border: 1.5px solid rgba(180, 140, 255, 0.35);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-label{
+
+input::placeholder {
+    color: rgba(200, 190, 255, 0.5);
+}
+
+input:focus {
+    border-color: #a78bfa;
+    box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.2);
+}
+
+label {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    color: rgba(220, 210, 255, 0.9);
+    font-weight: 500;
+    font-size: 14px;
+}
 
+.auth-container h2 {
+    margin-bottom: 3px;
+}
 
+.auth-container h2 + p {
+    margin-top: 0;
+}
+.auth-container p{
+    margin-bottom: 30px;
+}
+
+p.a{
+    background: linear-gradient(135deg, #ff4d6d, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+}
+
+h2.a{
+    background: linear-gradient(25deg, #e40808, #ed3ae1, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+p.b {
+    background: linear-gradient(135deg, #ffffff, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h2.b {
+    background: linear-gradient(25deg, #ffffff, #22d3ee, #0891b2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }

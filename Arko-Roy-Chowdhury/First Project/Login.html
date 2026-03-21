@@ -9,33 +9,33 @@
   <body>
       <div class="auth-container">
           <form id="signupForm">
-              <h2>Create your account</h2>
-              <p>Free forever - no credit card needed</p>
+            <h2 class="a">Create your account</h2>
+            <p class="a">Free forever - no credit card needed</p>
               
-              <label class="a">
-                  Username<br />
-                  <input
-                  type="text"
-                  id="regUsername"
-                  placeholder="e.g. Alex"
-                  required
-                  /><br /><br />
-                </label>
-                
-                <label>
-                    Email
-                    
-                    <br />
+            <label class="a">
+                    Username<br />
                     <input
                     type="text"
-                    id="regEmail"
-                    placeholder="you@example.com"
+                    id="regUsername"
+                    placeholder="e.g. Alex"
                     required
                     /><br /><br />
-                </label>
+            </label>
+                
+            <label>
+                Email
+                    
+                <br />
+                <input
+                type="text"
+                id="regEmail"
+                placeholder="you@example.com"
+                required
+                /><br /><br />
+            </label>
 
-                <label
-                >Password
+            <label>
+                Password
                 
                 <br />
                 <input
@@ -46,17 +46,17 @@
                 /><br /><br />
             </label>
             
-            <label
-            >Confirm Password
+            <label>
+                Confirm Password
             
-            <br />
-            <input
-            type="password"
-            id="confirmPassword"
-            placeholder="Repeat your Password"
-            required
-            /><br /><br />
-        </label>
+                <br />
+                <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Repeat your Password"
+                required
+                /><br /><br />
+            </label>
         
         <button type="submit" class="button">
             Create Account
@@ -69,8 +69,9 @@
       </form>
 
       <form id="loginForm" class="hidden">
-          <h2>Welcome Back</h2>
-          <p>Login to access your board</p>
+          <h2 class="b">Welcome Back</h2>
+          <p class="b">Login to access your board</p>
+          
           <label>Email</label><br />
           <input
           type="text"
@@ -91,8 +92,8 @@
           
           <p>
               Don't have an account?
-              <span class="form span" onclick="toggleForm()">Sign up free</span>
-            </p>
+              <span class="formspan" onclick="toggleForm()">Sign up free</span>
+          </p>
         </form>
     </div>
 </body>

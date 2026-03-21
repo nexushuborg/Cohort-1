@@ -22,16 +22,29 @@ signupform.addEventListener("submit", (e) => {
   const users = JSON.parse(localStorage.getItem("users")) || [];
   // Retrieve existing users from LocalStorage
 
+
+  //Username Logic
   if (users.find((u) => u.username === user)) {
     alert("Username taken!");
     return;
   }
 
+
+  //Email Logic
+  if (email.length < 5 || !email.includes("@")) {
+    alert("Invalid email format!");
+    return;
+  }
+
+  
+  //Password Logic
   if(pass.length < 6){
     alert("Password is too short");
     return;
   }
   
+  
+  // Confirm Password Logic
   if (pass !== cpass) {
     alert("Passwords don't match!");
     return;
