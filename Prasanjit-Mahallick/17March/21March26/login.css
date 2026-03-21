@@ -1,0 +1,79 @@
+body{
+
+    margin:0;
+    font-family: Arial;
+
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    radial-gradient(
+        circle at top,
+        #1a1f3c,
+        #050816
+    );
+}
+
+.container{
+
+    width:100%;
+    display:flex;
+    justify-content:center;
+
+}
+
+.card{
+
+    width:350px;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    background:
+    rgba(20,20,40,0.8);
+
+        color:white;
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,0.5);
+}
+
+.logo{
+
+    color:#7aa2ff;
+}
+
+.sub{
+
+    color:gray;
+    font-size:12px;
+    margin-bottom:20px;
+}
+
+label{
+
+    display:block;
+    margin-top:15px;
+    font-size:14px;
+}
+
+input{
+
+    width:100%;
+
+    padding:10px;
+
+    border-radius:8px;
+
+    border:none;
+
+    margin-top:5px;
+
+    background:#2a2f55;
+
+    color:white;
+}
