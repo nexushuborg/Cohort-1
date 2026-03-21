@@ -42,8 +42,15 @@ signupform.addEventListener("submit", (e) => {
     alert("Password is too short");
     return;
   }
-  
-  
+  if(!pass.match(/[A-Z]/)){
+    alert("Password must contain at least one uppercase letter");
+    return;
+  }
+  if(!pass.match(/[0-9]/)){ 
+    alert("Password must contain at least one digit");
+    return;
+  }
+
   // Confirm Password Logic
   if (pass !== cpass) {
     alert("Passwords don't match!");
