@@ -1,0 +1,57 @@
+.hidden {
+    display: none; /* CSS class to hide elements */
+}
+.auth-container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+}
+.button {
+    padding: 10px;
+    width: 90%;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #218838;
+}
+.form p {
+    text-align: center;
+}
+.formspan {
+    color: blue;
+    cursor: pointer;
+}
+
+input{
+    border-radius: 5px;
+    width: 85%;
+    height: 40px;
+    padding: 4px;
+    text-align: left;
+
+
+}
+label{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+
+}
