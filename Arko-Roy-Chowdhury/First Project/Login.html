@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <link rel="stylesheet" href="Style.css" />
+  <body>
+      <div class="auth-container">
+          <form id="signupForm">
+              <h2>Create your account</h2>
+              <p>Free forever - no credit card needed</p>
+              
+              <label class="a">
+                  Username<br />
+                  <input
+                  type="text"
+                  id="regUsername"
+                  placeholder="e.g. Alex"
+                  required
+                  /><br /><br />
+                </label>
+                
+                <label>
+                    Email
+                    
+                    <br />
+                    <input
+                    type="text"
+                    id="regEmail"
+                    placeholder="you@example.com"
+                    required
+                    /><br /><br />
+                </label>
+
+                <label
+                >Password
+                
+                <br />
+                <input
+                type="password"
+                id="regPassword"
+                placeholder="At least 6 characters"
+                required
+                /><br /><br />
+            </label>
+            
+            <label
+            >Confirm Password
+            
+            <br />
+            <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Repeat your Password"
+            required
+            /><br /><br />
+        </label>
+        
+        <button type="submit" class="button">
+            Create Account
+        </button>
+        
+        <p>
+            Already have an account?
+            <span class="formspan" onclick="toggleForm()">Log in</span>
+        </p>
+      </form>
+
+      <form id="loginForm" class="hidden">
+          <h2>Welcome Back</h2>
+          <p>Login to access your board</p>
+          <label>Email</label><br />
+          <input
+          type="text"
+          id="loginEmail"
+          placeholder="you@example.com"
+          required
+          /><br /><br />
+          
+          <label>Password</label><br />
+          <input
+          type="password"
+          id="loginPassword"
+          placeholder="Enter your Password"
+          required
+          /><br /><br />
+          
+          <button type="submit" class="button">Login</button>
+          
+          <p>
+              Don't have an account?
+              <span class="form span" onclick="toggleForm()">Sign up free</span>
+            </p>
+        </form>
+    </div>
+</body>
+<script src="./Auth.js"></script>
+</html>
