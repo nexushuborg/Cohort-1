@@ -1,0 +1,33 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.container {
+  width: 300px;
+  margin: 500px auto;
+  padding: 20px;
+  border: 1px solid;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.box {
+  padding: 12px;
+}
+.top {
+  padding: 2px;
+}
+.input {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+#account-create{
+  padding: 12px;
+}
+.end{
+  padding: 12px;
+}
