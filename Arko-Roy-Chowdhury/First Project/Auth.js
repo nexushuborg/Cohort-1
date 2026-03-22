@@ -28,6 +28,10 @@ signupform.addEventListener("submit", (e) => {
     alert("Username taken!");
     return;
   }
+  if (users.find((u) => u.email === email)) {
+    alert("Email already registered!");
+    return;
+  }
 
 
   //Email Logic
@@ -42,14 +46,6 @@ signupform.addEventListener("submit", (e) => {
     alert("Password is too short");
     return;
   }
-  if(!pass.match(/[A-Z]/)){
-    alert("Password must contain at least one uppercase letter");
-    return;
-  }
-  if(!pass.match(/[0-9]/)){ 
-    alert("Password must contain at least one digit");
-    return;
-  }
 
   // Confirm Password Logic
   if (pass !== cpass) {
@@ -57,7 +53,7 @@ signupform.addEventListener("submit", (e) => {
     return;
   }
 
-  users.push({ username: user, password: pass });
+  users.push({ username: user, email: email, password: pass });
   // Add new user object to array
 
   localStorage.setItem("users", JSON.stringify(users));
@@ -72,4 +68,48 @@ function toggleForm() {
   // Function to toggle between registration and login forms
   document.getElementById("signupForm").classList.toggle("hidden");
   document.getElementById("loginForm").classList.toggle("hidden");
+}
+
+
+function viewPassword(inputId, eyeIcon) {
+    // Get the password input by its id
+    const input = document.getElementById(inputId);
+ 
+    if (input.type === "password") {
+        // Password is hidden → show it
+        input.type = "text";
+        eyeIcon.textContent = "🙈"; // closed eye = password visible (toggle icon)
+    } else {
+        // Password is visible → hide it
+        input.type = "password";
+        eyeIcon.textContent = "👁"; // open eye = password hidden
+    }
+}
+
+function StrengthCheck() {
+    const password = document.getElementById("regPassword").value;
+    const bars = document.querySelectorAll(".barstrength");
+    const label = document.getElementById("strength-label");
+    const colors = ["#ef4444", "#06b6d4", "#3b82f6", "#7c3aed"];
+    const strengthText = ["Weak", "Good", "Great", "Perfect"];
+    let strength = 0;
+    if (password.match(/[a-z]/)) strength++;
+    if (password.match(/[A-Z]/)) strength++;
+    if (password.match(/[0-9]/)) strength++;
+    if (password.match(/[!@#$%^&*()-+]/)) strength++;
+    
+    bars.forEach((bar, index) => {
+        if (index < strength) {
+            bar.style.backgroundColor = colors[strength - 1];
+        } else {
+            bar.style.backgroundColor = "lightgray";
+            // bar.style.display = "none";
+        }
+        if (password.length === 0) {
+          label.textContent = "";           // empty when no input
+        } else {
+          label.textContent = strengthText[strength - 1];
+          label.style.color = colors[strength - 1];
+        }
+    });
 }
