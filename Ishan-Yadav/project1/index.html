@@ -8,24 +8,26 @@
 </head>
 <link rel="stylesheet" href="style.css">
 <body>
-    <div id="login">
-        <h1>Welcome Back</h1>
-        <h4>Log in to access your board</h4>
-        <form action="" id="loginform">
+    <div class="container">
+        <div id="login">
+            <h1>Welcome Back</h1>
+            <p>Log in to access your board</p>
+            <form action="" id="loginform">
             <label for="email">Email</label>
-            <br>
             <input type="email" id="useremail" placeholder="you@example.com" required>
-            <br>
+            <div class="password-row">
             <label for="password">Password</label>
-            <br>
+            <a href="#">Forgot password?</a>
+            </div>
             <input type="password" id="userpassword" placeholder="Enter your password" required>
-            <br>
+
             <button type="submit" id="login-btn">Log In</button>
-            <p>Don't have an account?<span onclick="toggleForm()">Sign up free</span>
+            <p class="signup">Don't have an account?<span onclick="toggleForm()">Sign up free</span>
             </p>
         </form>
+        </div>
     </div>
-    <script src="./login.js"></script>
-</body>
 
+</body>
+<script src="./login.js"></script>
 </html>

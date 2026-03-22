@@ -3,7 +3,6 @@ loginform.addEventListener('submit',(e)=>{
     e.preventDefault()
     console.log("Hello")
     const emailElemnt = document.getElementById("useremail")
-
     const useremail=document.getElementById('useremail').value
     const userpassword=document.getElementById('userpassword').value
 
@@ -19,6 +18,12 @@ loginform.addEventListener('submit',(e)=>{
         return;
 
      }
+     if (userpassword === "") {
+        alert("Please enter password");
+        return;
+    }
+
+    alert("Login successful!");
 
 })
 
