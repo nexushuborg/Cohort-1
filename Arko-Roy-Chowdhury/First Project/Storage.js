@@ -6,13 +6,11 @@ loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const users = JSON.parse(localStorage.getItem("users")) || [];
   // Retrieve existing users from LocalStorage
-  if (
-    users.find(
-      (u) => u.email === emailInput.value && u.password === passwordInput.value,
-    )
-  ) {
+  const matchedUser = users.find((u) => u.email === emailInput.value);
+
+  if (matchedUser && matchedUser.password === passwordInput.value) {
     alert("Login successful!");
-  } else if (users.find((u) => u.email === emailInput.value)) {
+  } else if (matchedUser) {
     alert("Incorrect password!");
   } else {
     alert("User not found!");
