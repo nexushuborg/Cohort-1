@@ -16,26 +16,27 @@
                 <h2 class="title">Create Your Account</h2>
                 <p class="subtitle">Free forever-no credit card required</p>
                 <div class="form-group">
-                    <label for="username">Username</label>
-                    
+                    <label for="username">Username</label>                    
                     <input type="text" id="username" name="username" required placeholder="Alex">
-                    
-
-                    <label for="email">Email</label>
-                    
+                    <div class="field-error" id="username-error">Username is required</div>
+                    <label for="email">Email</label>           
                     <input type="email" id="email" name="email" required placeholder="alex@example.com">
-                    
-
-                    <label for="password">Password</label>
-                    
+                    <div class="field-error" id="email-error">Email is required</div>
+                    <label for="password">Password</label>   
                     <input type="password" id="password" name="password" required placeholder="Atleast 6 characters">
-                    
-
-                    <label for="confirmPassword">Confirm Password</label>
-                    
-                    
-                    <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Repeat your password">
-                    
+                    <div class="field-error" id="password-error">Password is required</div>
+                    <div class="password-box">
+                        <!-- <input type="checkbox" id="showPassword"> -->
+                        <span class="toggle" onclick="togglePassword()">Show</span>
+                    </div>
+                    <!--Strength Bar-->
+                    <div class="strength-container">
+                        <div class="strength-bar" id="strengthBar"></div>
+                    </div>
+                    <div class="strength-text" id="strengthText"></div>
+                    <label for="confirmPassword">Confirm Password</label>                    
+                    <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Repeat your password">                    
+                    <div class="error" id="error-message"></div>
                     <button class="btn" type="submit">Create Account</button>
                 </div>
             </form>
