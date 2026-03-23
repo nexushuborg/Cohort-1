@@ -22,14 +22,19 @@ signupform.addEventListener("submit", (e) => {
   const users = JSON.parse(localStorage.getItem("users")) || [];
   // Retrieve existing users from LocalStorage
 
+  const noUser = document.getElementById("noUser");
+
+  //Empty Field Logic
+  if(user===""){
+    // document.getElementById("noUser").textContent = "Username is required";
+    alert("No user entered");
+
+  }
+
 
   //Username Logic
   if (users.find((u) => u.username === user)) {
     alert("Username taken!");
-    return;
-  }
-  if (users.find((u) => u.email === email)) {
-    alert("Email already registered!");
     return;
   }
 
@@ -37,6 +42,10 @@ signupform.addEventListener("submit", (e) => {
   //Email Logic
   if (email.length < 5 || !email.includes("@")) {
     alert("Invalid email format!");
+    return;
+  }
+  if (users.find((u) => u.email === email)) {
+    alert("Email already registered!");
     return;
   }
 
@@ -49,7 +58,8 @@ signupform.addEventListener("submit", (e) => {
 
   // Confirm Password Logic
   if (pass !== cpass) {
-    alert("Passwords don't match!");
+    document.getElementById("passMismatch").classList.toggle("hidden");
+    // alert("Passwords don't match!");
     return;
   }
 

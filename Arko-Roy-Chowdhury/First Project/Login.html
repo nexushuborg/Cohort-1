@@ -8,7 +8,10 @@
   <link rel="stylesheet" href="Style.css" />
   <body>
     <div class="auth-container">
+      <h1>👾ARC🤖</h1>
+      
       <form id="signupForm">
+
         <h2 class="a">Create your account</h2>
         <p class="a">Free forever - no credit card needed</p>
 
@@ -19,7 +22,9 @@
             id="regUsername"
             placeholder="e.g. Alex"
             required
-          /><br /><br />
+          />
+          <div id= "noUser"></div>
+          <br /><br />
         </label>
 
         <label>
@@ -31,7 +36,9 @@
             id="regEmail"
             placeholder="you@example.com"
             required
-          /><br /><br />
+          />
+          <div id= "noEmail"></div>
+          <br /><br />
         </label>
 
         <label>
@@ -57,6 +64,7 @@
             <div class="barstrength"></div>
             <div class="barstrength"></div>
           </div>
+          <div id= "noPass"></div>
           <br /><br />
         </label>
 
@@ -69,7 +77,9 @@
             id="confirmPassword"
             placeholder="Repeat your Password"
             required
-          /><br /><br />
+          />
+          <div id= "passMismatch" class="hidden">Passwords don't match</div>
+          <br /><br />
         </label>
 
         <button type="submit" class="button">Create Account</button>
@@ -78,9 +88,11 @@
           Already have an account?
           <span class="formspan" onclick="toggleForm()">Log in</span>
         </p>
+      
       </form>
 
       <form id="loginForm" class="hidden">
+        
         <h2 class="b">Welcome Back</h2>
         <p class="b">Login to access your board</p>
 
@@ -109,12 +121,14 @@
           </div>
           <br /><br />
         </label>
+        
         <button type="submit" class="button">Login</button>
 
         <p>
           Don't have an account?
           <span class="formspan" onclick="toggleForm()">Sign up free</span>
         </p>
+      
       </form>
     </div>
   </body>

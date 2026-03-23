@@ -1,3 +1,31 @@
+h1 {
+  background: linear-gradient(
+    25deg,
+    #f9bf1f,
+    #cc14f1,
+    #0e6bf6,
+    #e40808,
+    #ed3ae1,
+    #f9bf1f,
+    #3b82f6
+  );
+  text-align: center;
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
 .hidden {
   display: none;
 }
@@ -168,16 +196,32 @@ h2.b {
 }
 
 #bar {
-    display: flex;
-    gap: 6px;
-    margin-top: 6px;
-    width: 85%;
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+  width: 85%;
 }
 
 .barstrength {
-    flex: 1;
-    height: 2px;
-    border-radius: 4px;
-    background: lightgray;
-    transition: background-color 0.3s ease;
+  flex: 1;
+  height: 2px;
+  border-radius: 4px;
+  background: lightgray;
+  transition: background-color 0.3s ease;
+}
+
+#noUser {
+  background: solid red;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+#passMismatch{
+  background: linear-gradient(#eae5e5, #df0d1f, #e4dddd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  ;
 }

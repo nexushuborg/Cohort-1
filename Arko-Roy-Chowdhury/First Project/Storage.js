@@ -10,9 +10,7 @@ loginForm.addEventListener("submit", (e) => {
 
   if (matchedUser && matchedUser.password === passwordInput.value) {
     alert("Login successful!");
-  } else if (matchedUser) {
-    alert("Incorrect password!");
   } else {
-    alert("User not found!");
+    alert("Username or password is incorrect!");
   }
 });
