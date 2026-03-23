@@ -1,0 +1,45 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg,#ff7e00,#ff3c00);
+  font-family: Arial, sans-serif;
+}
+.container {
+  width: 350px;
+  margin: 500px auto;
+  padding: 30px;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+.box {
+  padding: 12px;
+}
+.top {
+  padding: 2px;
+}
+.input {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+#account-create{
+  padding: 12px;
+}
+.end{
+  padding: 12px;
+}
+h1 {
+  margin-bottom: 5px;
+  color: #222;
+}
+  h2 {
+  margin-bottom:20px;
+  color: #222;
+}
