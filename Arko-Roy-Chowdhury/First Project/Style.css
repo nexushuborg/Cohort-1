@@ -209,19 +209,33 @@ h2.b {
   background: lightgray;
   transition: background-color 0.3s ease;
 }
-
+/* 
 #noUser {
-  background: solid red;
+  background: linear-gradient(135deg, #ef4444, #f87171);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
+} */
 
-
+/*
 #passMismatch{
   background: linear-gradient(#eae5e5, #df0d1f, #e4dddd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   ;
+} */
+
+.errors{
+  display: block;
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.success{
+  display: block;
+  color: #22c55e;
+  font-size: 12px;
+  margin-top: 4px;
 }

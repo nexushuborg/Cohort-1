@@ -6,11 +6,33 @@ loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const users = JSON.parse(localStorage.getItem("users")) || [];
   // Retrieve existing users from LocalStorage
+
+  document.querySelectorAll(".errors").forEach(e => e.classList.add("hidden"));
+  // Hides all error messages before validating the form again
+
+  //Empty Field Logics
+  if(emailInput.value === ""){
+    document.getElementById("logNoEmail").classList.remove("hidden");
+    return;
+  } else {
+    document.getElementById("logNoEmail").classList.add("hidden");
+  }
+  if(passwordInput.value === ""){
+    document.getElementById("logNoPass").classList.remove("hidden");
+    return;
+  } else {
+    document.getElementById("logNoPass").classList.add("hidden");
+  }
+
+  // Find user with matching email and password Logic
   const matchedUser = users.find((u) => u.email === emailInput.value);
 
   if (matchedUser && matchedUser.password === passwordInput.value) {
-    alert("Login successful!");
+    document.getElementById("loginSuccess").classList.remove("hidden");
+    // alert("Login successful!");
+    // Can redirect to another page or perform other actions here
   } else {
-    alert("Username or password is incorrect!");
+    document.getElementById("loginError").classList.remove("hidden");
+    // alert("Invalid email or password");
   }
 });

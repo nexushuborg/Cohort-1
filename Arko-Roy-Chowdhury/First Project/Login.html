@@ -23,7 +23,8 @@
             placeholder="e.g. Alex"
             required
           />
-          <div id= "noUser"></div>
+          <span id= "noUser" class="hidden errors">Username is required</span>
+          <span id= "userTaken" class="hidden errors">Username is already taken</span>
           <br /><br />
         </label>
 
@@ -37,7 +38,9 @@
             placeholder="you@example.com"
             required
           />
-          <div id= "noEmail"></div>
+          <span id= "noEmail" class="hidden errors">Email is required</span>
+          <span id= "emailInvalid" class="hidden errors">Invalid email format</span>
+          <span id= "emailTaken" class="hidden errors">Email is already registered</span>
           <br /><br />
         </label>
 
@@ -64,7 +67,8 @@
             <div class="barstrength"></div>
             <div class="barstrength"></div>
           </div>
-          <div id= "noPass"></div>
+          <span id= "noPass" class="hidden errors">Password is required</span>
+          <span id= "passShort" class="hidden errors">Password is too short</span>
           <br /><br />
         </label>
 
@@ -78,12 +82,14 @@
             placeholder="Repeat your Password"
             required
           />
-          <div id= "passMismatch" class="hidden">Passwords don't match</div>
+          <span id= "passMismatch" class="hidden errors">Passwords don't match</span>
           <br /><br />
         </label>
 
         <button type="submit" class="button">Create Account</button>
 
+        <span id="registerSuccess" class="hidden success">Registration successful!</span>
+        
         <p>
           Already have an account?
           <span class="formspan" onclick="toggleForm()">Log in</span>
@@ -103,7 +109,9 @@
             id="loginEmail"
             placeholder="you@example.com"
             required
-          /><br /><br />
+          />
+          <span id= "logNoEmail" class="hidden errors">Email is required</span>
+          <br /><br />
         </label>
 
         <label
@@ -119,10 +127,14 @@
               &#128065;
             </span>
           </div>
+          <span id="logNoPass" class="hidden errors">Password is required</span>
           <br /><br />
         </label>
         
         <button type="submit" class="button">Login</button>
+
+        <span id="loginSuccess" class="hidden success">Login successful!</span>
+        <span id="loginError" class="hidden errors">Invalid email or password</span>
 
         <p>
           Don't have an account?

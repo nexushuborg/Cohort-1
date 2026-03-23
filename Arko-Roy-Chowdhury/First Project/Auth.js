@@ -7,6 +7,9 @@ signupform.addEventListener("submit", (e) => {
   e.preventDefault();
   // Prevents the page from refreshing after form submission
 
+  document.querySelectorAll(".errors").forEach(e => e.classList.add("hidden"));
+  // Hides all error messages before validating the form again
+
   const user = document.getElementById("regUsername").value;
   // Gets the username entered by the user
 
@@ -22,44 +25,54 @@ signupform.addEventListener("submit", (e) => {
   const users = JSON.parse(localStorage.getItem("users")) || [];
   // Retrieve existing users from LocalStorage
 
-  const noUser = document.getElementById("noUser");
-
-  //Empty Field Logic
+  //Empty Field Logics
   if(user===""){
-    // document.getElementById("noUser").textContent = "Username is required";
-    alert("No user entered");
-
+    document.getElementById("noUser").classList.remove("hidden");
+    return;
+  } else {
+    document.getElementById("noUser").classList.add("hidden");
+  }
+  if(email===""){
+    document.getElementById("noEmail").classList.remove("hidden");
+    return;
+  } else {
+    document.getElementById("noEmail").classList.add("hidden");
+  }
+  if(pass===""){
+    document.getElementById("noPass").classList.remove("hidden");
+    return;
+  } else {
+    document.getElementById("noPass").classList.add("hidden");
   }
 
 
   //Username Logic
   if (users.find((u) => u.username === user)) {
-    alert("Username taken!");
+    document.getElementById("userTaken").classList.remove("hidden");
     return;
   }
 
 
   //Email Logic
   if (email.length < 5 || !email.includes("@")) {
-    alert("Invalid email format!");
+    document.getElementById("emailInvalid").classList.remove("hidden");
     return;
   }
   if (users.find((u) => u.email === email)) {
-    alert("Email already registered!");
+    document.getElementById("emailTaken").classList.remove("hidden");
     return;
   }
 
   
   //Password Logic
   if(pass.length < 6){
-    alert("Password is too short");
+    document.getElementById("passShort").classList.remove("hidden");
     return;
   }
 
   // Confirm Password Logic
   if (pass !== cpass) {
-    document.getElementById("passMismatch").classList.toggle("hidden");
-    // alert("Passwords don't match!");
+    document.getElementById("passMismatch").classList.remove("hidden");
     return;
   }
 
@@ -69,9 +82,12 @@ signupform.addEventListener("submit", (e) => {
   localStorage.setItem("users", JSON.stringify(users));
   // save updated users array into LocalStorage
 
-  alert("Signup Successful! Please login.");
-  toggleForm();
-  // switch from signup form to login form
+  setTimeout(() => {
+    document.getElementById("registerSuccess").classList.add("hidden");
+    toggleForm();
+  }, 3000);
+  // Hide success message and switch to login form after 3 seconds
+  document.getElementById("registerSuccess").classList.remove("hidden");
 });
 
 function toggleForm() {
