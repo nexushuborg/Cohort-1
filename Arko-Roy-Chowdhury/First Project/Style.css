@@ -1,57 +1,264 @@
+h1 {
+  background: linear-gradient(
+    25deg,
+    #f9bf1f,
+    #cc14f1,
+    #0e6bf6,
+    #e40808,
+    #ed3ae1,
+    #f9bf1f,
+    #3b82f6
+  );
+  text-align: center;
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
 .hidden {
-    display: none; /* CSS class to hide elements */
+  display: none;
 }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+}
+
 .auth-container {
-    width: 50%;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 50%;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid rgba(180, 140, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(
+    145deg,
+    rgba(80, 40, 160, 0.45),
+    rgba(40, 60, 180, 0.35)
+  );
+  backdrop-filter: blur(12px);
 }
+
 .form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
+
 .input {
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 16px;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
 }
+
 .button {
-    padding: 10px;
-    width: 90%;
-    font-size: 16px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 10px;
+  width: 90%;
+  font-size: 16px;
+  background: linear-gradient(135deg, #7c3aed, #3b82f6);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    opacity 0.2s ease,
+    transform 0.1s ease;
 }
+
+/* Button hover effect */
 .button:hover {
-    background-color: #218838;
+  opacity: 0.8; /* Deepens the button color on hover */
+  transform: translateY(-1px); /* Elevation effect on hover */
 }
+
+/* Input box styling to white on click */
 .form p {
-    text-align: center;
+  text-align: center;
+  color: rgba(220, 210, 255, 0.85);
 }
+
+/*Login and Signup form switcher*/
 .formspan {
-    color: blue;
-    cursor: pointer;
+  color: #c4b5fd; /* A soft purple color for the text */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the element, indicating it's clickable */
+  font-weight: 500; /* Medium font weight for better readability */
+  transition: color 0.2s ease; /* Smooth transition for color change on hover */
 }
 
-input{
-    border-radius: 5px;
-    width: 85%;
-    height: 40px;
-    padding: 4px;
-    text-align: left;
-
-
+.formspan:hover {
+  color: #93c5fd; /* A lighter blue color on hover to indicate interactivity */
 }
-label{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
 
+/* Input box styling - normal */
+input {
+  border-radius: 8px;
+  width: 85%;
+  height: 40px;
+  padding: 4px 10px;
+  text-align: left;
+  border: 1.5px solid rgba(180, 140, 255, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
 
+input::placeholder {
+  color: rgba(200, 190, 255, 0.5);
+}
+
+input:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.2);
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: rgba(220, 210, 255, 0.9);
+  font-weight: 500;
+  font-size: 14px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.auth-container h2 {
+  margin-bottom: 3px;
+}
+
+.auth-container h2 + p {
+  margin-top: 0;
+}
+.auth-container p {
+  margin-bottom: 30px;
+}
+
+p.a {
+  background: linear-gradient(135deg, #ff4d6d, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2.a {
+  background: linear-gradient(25deg, #e40808, #ed3ae1, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+p.b {
+  background: linear-gradient(135deg, #ffffff, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2.b {
+  background: linear-gradient(25deg, #ffffff, #22d3ee, #0891b2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Wraps the input + eye icon together in a row */
+.pw-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Eye icon sits inside the input on the right */
+.eye-btn {
+  position: absolute;
+  right: 14%; /* keeps it inside the input boundary */
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.4; /* Dims the ususal visibility of the eye icon*/
+  transition: opacity 0.2s ease;
+}
+
+.eye-btn:hover {
+  opacity: 0.9; /* Highlights the visibility of the eye icon on hover*/
+}
+
+#bar {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+  width: 85%;
+}
+
+.barstrength {
+  flex: 1;
+  height: 2px;
+  border-radius: 4px;
+  background: lightgray;
+  transition: background-color 0.3s ease;
+}
+/* 
+#noUser {
+  background: linear-gradient(135deg, #ef4444, #f87171);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+} */
+
+/*
+#passMismatch{
+  background: linear-gradient(#eae5e5, #df0d1f, #e4dddd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  ;
+} */
+
+.errors{
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.success{
+  color: #22c55e;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+#loginSuccess {
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #34d39933, #05966933);
+    border: 1px solid #059669;
+    width: 40%;
+}
+
+#loginError {
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ee5c7e33, #bd242933);
+    border: 1px solid #bd2429;
+    width: 40%;
+}
+
+#redirecting {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#logredirecting {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-indent: 5px;
 }

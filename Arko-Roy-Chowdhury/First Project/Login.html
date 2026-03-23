@@ -7,94 +7,143 @@
   </head>
   <link rel="stylesheet" href="Style.css" />
   <body>
-      <div class="auth-container">
-          <form id="signupForm">
-              <h2>Create your account</h2>
-              <p>Free forever - no credit card needed</p>
-              
-              <label class="a">
-                  Username<br />
-                  <input
-                  type="text"
-                  id="regUsername"
-                  placeholder="e.g. Alex"
-                  required
-                  /><br /><br />
-                </label>
-                
-                <label>
-                    Email
-                    
-                    <br />
-                    <input
-                    type="text"
-                    id="regEmail"
-                    placeholder="you@example.com"
-                    required
-                    /><br /><br />
-                </label>
+    <div class="auth-container">
+      <h1>👾ARC🤖</h1>
+      
+      <form id="signupForm">
 
-                <label
-                >Password
-                
-                <br />
-                <input
-                type="password"
-                id="regPassword"
-                placeholder="At least 6 characters"
-                required
-                /><br /><br />
-            </label>
-            
-            <label
-            >Confirm Password
-            
-            <br />
+        <h2 class="a">Create your account</h2>
+        <p class="a">Free forever - no credit card needed</p>
+
+        <label for = "regUsername">
+          Username<br />
+          <input
+            type="text"
+            id="regUsername"
+            placeholder="e.g. Alex"
+          />
+          <span id= "noUser" class="hidden errors">Username is required</span>
+          <span id= "userTaken" class="hidden errors">Username is already taken</span>
+          <br /><br />
+        </label>
+
+        <label for = "regEmail">
+          Email
+
+          <br />
+          <input
+            type="text"
+            id="regEmail"
+            placeholder="you@example.com"
+          />
+          <span id= "noEmail" class="hidden errors">Email is required</span>
+          <span id= "emailInvalid" class="hidden errors">Invalid email format</span>
+          <span id= "emailTaken" class="hidden errors">Email is already registered</span>
+          <br /><br />
+        </label>
+
+        <label for = "regPassword">
+          Password
+
+          <br />
+          <div class="pw-wrapper">
             <input
+              type="password"
+              id="regPassword"
+              placeholder="At least 6 characters"
+              oninput="StrengthCheck()"
+            />
+            <span class="eye-btn" onclick="viewPassword('regPassword', this)">
+              &#128065;
+            </span>
+          </div>
+          <span id="strength-label"></span>
+          <div id="bar">
+            <div class="barstrength"></div>
+            <div class="barstrength"></div>
+            <div class="barstrength"></div>
+            <div class="barstrength"></div>
+          </div>
+          <span id= "noPass" class="hidden errors">Password is required</span>
+          <span id= "passShort" class="hidden errors">Password is too short</span>
+          <br /><br />
+        </label>
+
+        <label for="confirmPassword">
+          Confirm Password
+
+          <br />
+          <input
             type="password"
             id="confirmPassword"
             placeholder="Repeat your Password"
-            required
-            /><br /><br />
+          />
+          <span id= "passMismatch" class="hidden errors">Passwords don't match</span>
+          <br /><br />
         </label>
-        
-        <button type="submit" class="button">
-            Create Account
-        </button>
+
+        <button type="submit" class="button">Create Account</button>
+
+        <span id="registerSuccess" class="hidden success">Registration successful!</span>
+        <br>
+        <span id="redirecting" class="hidden">Redirecting...</span>
         
         <p>
-            Already have an account?
-            <span class="formspan" onclick="toggleForm()">Log in</span>
+          Already have an account?
+          <span class="formspan" onclick="toggleForm()">Log in</span>
         </p>
+      
       </form>
 
       <form id="loginForm" class="hidden">
-          <h2>Welcome Back</h2>
-          <p>Login to access your board</p>
-          <label>Email</label><br />
+        
+        <h2 class="b">Welcome Back</h2>
+        <p class="b">Login to access your board</p>
+
+        <label for="loginEmail">
+          Email <br />
           <input
-          type="text"
-          id="loginEmail"
-          placeholder="you@example.com"
-          required
-          /><br /><br />
-          
-          <label>Password</label><br />
-          <input
-          type="password"
-          id="loginPassword"
-          placeholder="Enter your Password"
-          required
-          /><br /><br />
-          
-          <button type="submit" class="button">Login</button>
-          
-          <p>
-              Don't have an account?
-              <span class="form span" onclick="toggleForm()">Sign up free</span>
-            </p>
-        </form>
+            type="text"
+            id="loginEmail"
+            placeholder="you@example.com"
+          />
+          <span id= "logNoEmail" class="hidden errors">Email is required</span>
+          <br /><br />
+        </label>
+
+        <label for="loginPassword">
+          Password <br />
+          <div class="pw-wrapper">
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Enter your password"
+            />
+            <span class="eye-btn" onclick="viewPassword('loginPassword', this)">
+              &#128065;
+            </span>
+          </div>
+          <span id="logNoPass" class="hidden errors">Password is required</span>
+          <br /><br />
+        </label>
+        
+        <button type="submit" class="button">Login</button>
+        <br /><br />
+
+        <div style="display: flex; flex-direction: column;">
+          <span id="loginSuccess" class="hidden success">Login successful! </span>
+          <span id="loginError" class="hidden errors">Invalid email or password</span>
+          <span id="logredirecting" class="hidden">Redirecting...</span>
+        </div>
+
+        <p>
+          Don't have an account?
+          <span class="formspan" onclick="toggleForm()">Sign up free</span>
+        </p>
+      
+      </form>
     </div>
-</body>
-<script src="./Auth.js"></script>
+  </body>
+  <script src="./Auth.js"></script>
+  <script src="./Storage.js"></script>
 </html>
