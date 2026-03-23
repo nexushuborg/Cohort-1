@@ -15,20 +15,19 @@
         <h2 class="a">Create your account</h2>
         <p class="a">Free forever - no credit card needed</p>
 
-        <label>
+        <label for = "regUsername">
           Username<br />
           <input
             type="text"
             id="regUsername"
             placeholder="e.g. Alex"
-            required
           />
           <span id= "noUser" class="hidden errors">Username is required</span>
           <span id= "userTaken" class="hidden errors">Username is already taken</span>
           <br /><br />
         </label>
 
-        <label>
+        <label for = "regEmail">
           Email
 
           <br />
@@ -36,7 +35,6 @@
             type="text"
             id="regEmail"
             placeholder="you@example.com"
-            required
           />
           <span id= "noEmail" class="hidden errors">Email is required</span>
           <span id= "emailInvalid" class="hidden errors">Invalid email format</span>
@@ -44,7 +42,7 @@
           <br /><br />
         </label>
 
-        <label>
+        <label for = "regPassword">
           Password
 
           <br />
@@ -54,7 +52,6 @@
               id="regPassword"
               placeholder="At least 6 characters"
               oninput="StrengthCheck()"
-              required
             />
             <span class="eye-btn" onclick="viewPassword('regPassword', this)">
               &#128065;
@@ -72,7 +69,7 @@
           <br /><br />
         </label>
 
-        <label>
+        <label for="confirmPassword">
           Confirm Password
 
           <br />
@@ -80,7 +77,6 @@
             type="password"
             id="confirmPassword"
             placeholder="Repeat your Password"
-            required
           />
           <span id= "passMismatch" class="hidden errors">Passwords don't match</span>
           <br /><br />
@@ -89,6 +85,8 @@
         <button type="submit" class="button">Create Account</button>
 
         <span id="registerSuccess" class="hidden success">Registration successful!</span>
+        <br>
+        <span id="redirecting" class="hidden">Redirecting...</span>
         
         <p>
           Already have an account?
@@ -102,26 +100,24 @@
         <h2 class="b">Welcome Back</h2>
         <p class="b">Login to access your board</p>
 
-        <label
-          >Email <br />
+        <label for="loginEmail">
+          Email <br />
           <input
             type="text"
             id="loginEmail"
             placeholder="you@example.com"
-            required
           />
           <span id= "logNoEmail" class="hidden errors">Email is required</span>
           <br /><br />
         </label>
 
-        <label
-          >Password <br />
+        <label for="loginPassword">
+          Password <br />
           <div class="pw-wrapper">
             <input
               type="password"
               id="loginPassword"
               placeholder="Enter your password"
-              required
             />
             <span class="eye-btn" onclick="viewPassword('loginPassword', this)">
               &#128065;
@@ -132,9 +128,13 @@
         </label>
         
         <button type="submit" class="button">Login</button>
+        <br /><br />
 
-        <span id="loginSuccess" class="hidden success">Login successful!</span>
-        <span id="loginError" class="hidden errors">Invalid email or password</span>
+        <div style="display: flex; flex-direction: column;">
+          <span id="loginSuccess" class="hidden success">Login successful! </span>
+          <span id="loginError" class="hidden errors">Invalid email or password</span>
+          <span id="logredirecting" class="hidden">Redirecting...</span>
+        </div>
 
         <p>
           Don't have an account?

@@ -227,15 +227,38 @@ h2.b {
 } */
 
 .errors{
-  display: block;
   color: #ef4444;
   font-size: 12px;
   margin-top: 4px;
 }
 
 .success{
-  display: block;
   color: #22c55e;
   font-size: 12px;
   margin-top: 4px;
+}
+
+#loginSuccess {
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #34d39933, #05966933);
+    border: 1px solid #059669;
+    width: 40%;
+}
+
+#loginError {
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ee5c7e33, #bd242933);
+    border: 1px solid #bd2429;
+    width: 40%;
+}
+
+#redirecting {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#logredirecting {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-indent: 5px;
 }

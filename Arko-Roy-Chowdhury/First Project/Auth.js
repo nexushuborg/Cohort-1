@@ -84,10 +84,12 @@ signupform.addEventListener("submit", (e) => {
 
   setTimeout(() => {
     document.getElementById("registerSuccess").classList.add("hidden");
+    document.getElementById("redirecting").classList.add("hidden");
     toggleForm();
   }, 3000);
   // Hide success message and switch to login form after 3 seconds
   document.getElementById("registerSuccess").classList.remove("hidden");
+  document.getElementById("redirecting").classList.remove("hidden");
 });
 
 function toggleForm() {

@@ -28,11 +28,15 @@ loginForm.addEventListener("submit", (e) => {
   const matchedUser = users.find((u) => u.email === emailInput.value);
 
   if (matchedUser && matchedUser.password === passwordInput.value) {
-    document.getElementById("loginSuccess").classList.remove("hidden");
-    // alert("Login successful!");
-    // Can redirect to another page or perform other actions here
+    setTimeout(() => {
+      document.getElementById("loginSuccess").classList.remove("hidden");
+      document.getElementById("logredirecting").classList.remove("hidden");
+      // alert("Login successful!");
+      // toggleDashboard();
+  }, 3000);
   } else {
     document.getElementById("loginError").classList.remove("hidden");
+    document.getElementById("logredirecting").classList.add("hidden");
     // alert("Invalid email or password");
   }
 });
