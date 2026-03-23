@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-up</title>
+  </head>
+  <link href="signup.css" rel="stylesheet" />
+  <body>
+    
+    <div class="container">
+      <div class="box">
+        
+        <h1>Create your account</h1>
+        <p>Free forever — no credit card needed</p>
+
+        <form id="signupForm">
+          <label>Username</label>
+          <input type="text" placeholder="e.g. Alex" required />
+
+          <label>Email</label>
+          <input type="email" placeholder="you@example.com" required />
+
+          <label>Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="At least 6 characters"
+            required
+          />
+
+          <label>Confirm Password</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Repeat your password"
+            required
+          />
+
+          <button type="submit">Create Account</button>
+        </form>
+
+        <div class="bottom">
+          Already have an account? <a href="login.html">Log in</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="signup.js"></script>
+  </body>
+</html>
