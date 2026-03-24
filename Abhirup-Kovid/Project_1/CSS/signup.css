@@ -109,3 +109,19 @@ button:hover {
   color: #8ab4ff;
   text-decoration: none;
 }
+
+.strength-Bar {
+  margin-top: -5px;
+  margin-bottom: 15px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  width: 100%;
+}
+
+.strength-Bar-fill {
+  height: 100%;
+  width: 0%; 
+  border-radius: 3px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}

@@ -5,6 +5,48 @@ const emailError = document.getElementById("emailError");
 const passwordError = document.getElementById("passwordError");
 const confirmPasswordError = document.getElementById("confirmPasswordError");
 const passwordMatchError = document.getElementById("passwordMatchError");
+const passwordStrengthBar=document.getElementById('strengthBar-bar')
+
+.addEventListener
+const strengthBarFill = document.getElementById('strength-Bar').value;
+
+
+function calculateStrength(password) {
+    if (password.length < 4){
+         return 1;
+        }
+
+    let strength = 1;
+    if (password.length >= 8) strength++;
+    if ([A-Z].test(password)) strength++;
+    if ([0-9].test(password)) strength++;
+
+    return Math.min(strength, 4);
+}
+
+function strengthBar() {
+    const password = document.getElementById('password').value;
+    const score = calculateStrength(password);
+    const fill = strengthBarFill;
+
+    fill.style.width = '0%';
+    fill.style.backgroundColor = 'transparent';
+
+    if (score === 1) {
+        fill.style.width = '25%';
+        fill.style.backgroundColor = '#ff4d4d';
+    } else if (score === 2) {
+        fill.style.width = '50%';
+        fill.style.backgroundColor = '#ffb300';
+    } else if (score === 3) {
+        fill.style.width = '75%';
+        fill.style.backgroundColor = '#1c49dc';
+    } 
+    else if(score === 4){
+        fill.style.width='100%';
+        fill.style.backgroundColor='#4caf01';
+    }else if()
+}
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -53,4 +95,5 @@ form.addEventListener("submit", function(event) {
 
     displayArea.innerHTML = `<p style="color: green;">Account created successfully!</p>`;
     form.reset();
-});
+});  
+
