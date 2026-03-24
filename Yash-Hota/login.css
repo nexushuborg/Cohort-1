@@ -45,8 +45,11 @@ button:hover {
 }
 
 .error {
-  color: red;
+  color: #ff4d4d;
   font-size: 13px;
+  margin: 5px 0;
+  text-align: left;
+  display: none;
 }
 
 .strength {
