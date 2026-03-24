@@ -1,7 +1,7 @@
 const loginform=document.getElementById('loginform')
+const display=document.getElementById('incorrect')
 loginform.addEventListener('submit',(e)=>{
     e.preventDefault()
-    console.log("Hello")
     const emailElemnt = document.getElementById("useremail")
     const useremail=document.getElementById('useremail').value
     const userpassword=document.getElementById('userpassword').value
@@ -15,13 +15,24 @@ loginform.addEventListener('submit',(e)=>{
     if(!validateEmail(useremail)){
         alert("Please enter valid email")
         emailElemnt.value = ""
+        display.innerHTML=`
+        <div id="text">
+                    <p>Invaid email or password</p>
+                </div>
+        `
         return;
 
      }
      if (userpassword === "") {
         alert("Please enter password");
+        display.innerHTML=`
+        <div id="text">
+                    <p>Invaid email or password</p>
+                </div>
+                `
         return;
     }
+
 
     alert("Login successful!");
 
@@ -32,6 +43,7 @@ function toggleForm(){
             document.getElementById('loginform').classList.toggle('hidden')
             
         }
+
 
 
 

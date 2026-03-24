@@ -13,6 +13,8 @@
             <h1>Welcome Back</h1>
             <p>Log in to access your board</p>
             <form action="" id="loginform">
+            <div id="incorrect">
+            </div>
             <label for="email">Email</label>
             <input type="email" id="useremail" placeholder="you@example.com" required>
             <div class="password-row">
@@ -22,7 +24,7 @@
             <input type="password" id="userpassword" placeholder="Enter your password" required>
 
             <button type="submit" id="login-btn">Log In</button>
-            <p class="signup">Don't have an account?<span onclick="toggleForm()">Sign up free</span>
+            <p class="signup">Don't have an account?<a href="signup.html">Sign up free</a>
             </p>
         </form>
         </div>

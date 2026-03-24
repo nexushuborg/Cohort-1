@@ -83,8 +83,24 @@ button:hover {
     font-size: 13px;
 }
 
-.signup span {
+.signup a {
     color: #7a82ff;
     cursor: pointer;
 }
+
+/* #incorrect{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px;
+    border-radius: 8px;
+    border: solid;
+    border-color: rgb(169, 69, 69);
+    background: rgb(94, 39, 39) ;
+}
+#incorrect p{
+    font-weight: 500;
+    color: red;
+    display: flex;
+    justify-content: left;
+} */
 
