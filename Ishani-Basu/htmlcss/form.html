@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth Form</title>
+    <style>
+        .hidden{display: none; } /*Simple css to hide forns*/
+    </style>
+</head>
+<body>
+    <div class = "auth-container"> 
+        <form id = "signupForm">
+            <h2>Create account</h2>
+            <input type="text" placeholder="Username" required id="regUsername">
+            <input type="password" placeholder="Password" required id="regPassword">
+            <button type="submit">Sign Up</button>
+            <p>Already have an account?
+                <span onclick="toggleForm()">Login</span>
+            </p>
+        </form>
+        <form id = "loginForm" class="hidden">
+            <h2>Welcome Back</h2>
+            <input type="text" placeholder="Username" required id="loginUsername">
+            <input type="password" placeholder="Password" required id="loginPassword">
+            <button type="submit">Login</button>
+            <p>New here?
+                <span onclick="toggleForm()">Sign Up</span>
+            </p>
+        </form>
+    </div>
+
+    <script>
+        const signupForm = document.getElementById('signupForm'); 
+        signupForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const user = document.getElementById('regUsername').value;
+            const pass = document.getElementById('regPassword').value;
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            if(users.find(u => u.username === user)){
+                alert('Username taken!');
+                return;
+            }
+            users.push({username: user, password: pass});
+            localStorage.setItem('users', JSON.stringify(users));
+            alert('Signup Successful!');
+            toggleForm();
+        });
+        function toggleForm(){
+            document.getElementById('signupForm').classList.toggle('hidden');
+            document.getElementById('loginForm').classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
