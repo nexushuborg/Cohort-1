@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sign_up.css">
+</head>
+
+<body>
+    <div id="container">
+        <form actions="" id="signupForm">
+            <h1 id="first">VanillaTask</h1>
+            <br>
+            <h1 id="second">Create your account</h1>
+            <p> Free forever-no credit card needed </p>
+            <br>
+            <label for="username">Username</label>
+            <br>
+            <input type="text" id="regUsername" placeholder="e.g. Alex" required>
+            <br>
+            <br>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" id="regemail" placeholder="you@example.com" required>
+            <br>
+            <br>
+            <label for="password">Password</label>
+            <br>
+            <input type="password" id="regPassword" placeholder="At least 6 characters" required>
+            <br>
+            <br>
+            <label for="confirmpassword"> Confirm Password</label>
+            <br>
+            <input type="password" id="ConfirmPassword" placeholder="Repeat your Password" required>
+            <br>
+            <br>
+            <button type="submit"> Create Account</button>
+            <br>
+            <br>
+            <p>Already have an account?
+                <span onclick="toggleForm()"></span>
+                <a href="Login.html" class="login">Log in</a>
+            </p>
+        </form>
+
+    </div>
+
+</body>
+
+<script>
+    const signupForm = document.getElementById('signupForm');
+    signupForm.addEventListener('submit', (e) => {
+
+
+        e.preventDefault();
+
+        const user = document.getElementById('regUsername').value;
+        const confirmPass = document.getElementById('ConfirmPassword').value
+
+        const pass = document.getElementById('regPassword').value;
+
+
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+
+        if (pass !== confirmPass) {
+            console.log("Hello")
+            alert("Passwords do not match") 
+            return;
+        }
+
+        if (users.find(u => u.username === user)) {
+            alert("Username taken!");
+            return;
+        }
+        else if (pass === confirmPass) {
+            users.push({ username: user, password: pass });
+
+
+            localStorage.setItem('users', JSON.stringify(users));
+            alert("Signup Successful! Please Login.");
+            toggleForm();
+        }
+
+
+
+
+    });
+    function toggleForm() {
+
+        document.getElementById('signupForm').classList.toggle('hidden');
+        document.getElementById('loginForm').classList.toggle('hidden');
+    }
+</script>
+
+</html>
