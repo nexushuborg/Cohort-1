@@ -20,6 +20,7 @@ h3{
     border-radius: 10px;
     background-image: linear-gradient(rgb(1, 1, 30),rgb(39, 6, 39));
     align-items: baseline;
+    color: white;
 }
 
 h1 {
@@ -33,13 +34,15 @@ p {
 }
 
 input {
+    color: white;
     width: 90%;
     padding: 8px;
     margin: 8px 0;
     border-radius: 0.8rem;
     border: 2px solid gray;
     height: 30px;    
-     background-image: linear-gradient(rgb(1, 1, 30),rgb(39, 6, 39))
+    background-image: linear-gradient(rgb(1, 1, 30),rgb(39, 6, 39))
+    
 }
 
 button {
@@ -53,19 +56,26 @@ button {
 }
 
 button:hover {
-    background: #333;
+    background: palevioletred;
 }
 
 a {
-    color: purple;
+    color: burlywood;
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
+    color: blueviolet;
 }
 .haveaccount{
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+label span{
+    float: right;
+    color: blue
+    ;
 }
