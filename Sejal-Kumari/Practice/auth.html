@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth Form</title>
+    <style>.hidden{display:none}
+    </style>
+</head>
+<body>
+    <div class="auth-comtainer">
+        <form id="signupForm">
+        <h2>Create Account</h2>
+        <input type="text" name="name" id="regUsername", placeholder="username" required>
+        <input type="password" name="" id="regPassword", placeholder="password" required>
+        <button type="submit">Sign Up</button>
+        <p>Already have an Account?
+        <span onclick="toggleForm()">Login</span>
+        </p>
+    </form>
+        <form id="loginForm" class="hidden">
+            <h2>Welcome Back</h2>
+            <input type="text" name="" id="loginUsername" placeholder="Username" required>
+            <input type="password" name="" id="loginPassword" placeholder="password" required>
+            <button type="submit">Login</button>
+            <p>New here?
+            <span onclick="toggleForm()">Sign Up</span>
+            </p>
+        </form>
+    </div>
+    <script>
+        const signupForm=document.getElementById('signupForm');
+        signupForm.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        const user=document.getElementById('regUsername').value;
+        const pass=document.getElementById('regPassword').value;
+        const users=JSON.parse(localStorage.getItem('users'))||[]
+        if(users.find(u=> u.username=== user))
+        {
+        alert("Username Taken");
+        return;
+        }
+        user.push({username: user , password: pass});
+        localStorage.setItem('users',JSON.stringify(users))
+
+        alert("Signup Successful! please Login.")
+        toggleForm();
+    })
+        function toggleForm(){
+            document.getElementById('signupForm').classList.toggle('hidden');
+            document.getElementById('loginForm').classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
