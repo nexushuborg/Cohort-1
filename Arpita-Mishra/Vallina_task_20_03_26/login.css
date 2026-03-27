@@ -31,9 +31,10 @@ form{
 
 
 #first{
-color: #7c8cff;
+color: #6673d4;
 font-size: 26px;
 font-weight: bold;
+
 
 }
 #second{
@@ -57,7 +58,7 @@ input{
     border:none;
     border-radius:10px;
     background: rgba(255,255,255,0.08);
-    color:white;
+    color:rgb(255, 255, 255);
     outline:none;
 }
 
