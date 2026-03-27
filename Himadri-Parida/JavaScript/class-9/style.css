@@ -1,0 +1,21 @@
+body{
+    display: flex; /*so this is usedd for the elements */
+    justify-content: center;
+    margin-top: 50px;
+    font-family: Arial;
+}
+.container{
+    width:200px;
+    height: 200px;
+    border: 2px dashed black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Item{
+    padding: 10px 20px;
+    background-color: lightblue;
+    cursor: grab;
+    margin: 5px;
+}

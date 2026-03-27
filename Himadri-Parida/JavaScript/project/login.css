@@ -1,0 +1,24 @@
+#h1{
+    color: rgb(111, 85, 158);
+    font-size: xx-large;
+    text-align: left;
+
+}
+body{
+    color:whitesmoke;
+}
+html{
+    background-color:  rgb(11, 11, 39) ;
+}
+.Login{
+    height: 400px;
+    width : 300px;
+    border: solid 5px rgb(11, 11, 39);
+    border-radius :10%;
+    padding: 5px;
+    margin :auto;
+    margin-top: 100px;
+    text-align: center;
+    background: rgb(15, 15, 15);
+    text-indent: 20px;
+}
