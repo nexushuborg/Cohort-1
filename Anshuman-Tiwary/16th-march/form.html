@@ -1,0 +1,36 @@
+<div class="auth-container"> <1-- Container for authentication forms -->
+
+<form id="signupForm"> <!-- signup form starts -->
+<h2>Creat Account</h2> <!-- Heading for sigup -->
+
+<input type="text" id="regUsername" placeholder="Username" required> <!-- Username input field -->
+<input type="password" id="regPassword" placeholder="Password" required> <!-- Password input field -->
+
+<button type="submit">Sign Up</button> <!-- Signup button -->
+
+ <p>Already have an account? 
+<span onclick="toggleForm()">Login</span> <1-- Link to switch to login form --> 
+
+</p>
+
+</form> <!-- signup form ends -->
+
+
+ <form id="loginForm" class="hidden"> <1-- Login form starts (hidden by default) -->
+
+ <h2>elcome Back</h2> <1-- Heading for login -->
+
+<input type="text" id="loginUsername" placeholder="Username" required> <!-- Username input field -->
+
+<input type="password" id="loginPassword" placeholder="Password" required> <!-- Password input field -->
+
+ <button type="submit">Login</button> <!-- Login button -->
+
+
+<p>New here?
+<span onclick="toggleForm()">Sign Up</span> <!-- Link to switch to signup form -->
+ </p>
+
+</form> <!-- Login form ends -->
+
+</div> <!-- End of authentication container -->
