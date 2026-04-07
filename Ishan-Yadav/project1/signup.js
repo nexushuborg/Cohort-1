@@ -25,10 +25,10 @@ signupform.addEventListener('submit',(e)=>{
     localStorage.setItem('users',JSON.stringify('users'))
     alert("Signup successful! Now please login")
 })
-function toggleForm(){
-            document.getElementById('signupform').classList.toggle('hidden')
-            document.getElementById('loginform').classList.toggle('hidden')
-        }
+// function toggleForm(){
+//             document.getElementById('signupform').classList.toggle('hidden')
+//             document.getElementById('loginform').classList.toggle('hidden')
+//         }
 
 
 

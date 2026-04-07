@@ -38,11 +38,11 @@ loginform.addEventListener('submit',(e)=>{
 
 })
 
-function toggleForm(){
-            document.getElementById('signupform').classList.toggle('hidden')
-            document.getElementById('loginform').classList.toggle('hidden')
+// function toggleForm(){
+//             document.getElementById('signupform').classList.toggle('hidden')
+//             document.getElementById('loginform').classList.toggle('hidden')
             
-        }
+//         }
 
 
 
