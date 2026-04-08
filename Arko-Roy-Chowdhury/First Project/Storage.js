@@ -1,5 +1,6 @@
 const emailInput = document.getElementById("loginEmail");
 const passwordInput = document.getElementById("loginPassword");
+const login = document.getElementById("Logbtn");
 
 const loginForm = document.getElementById("loginForm");
 loginForm.addEventListener("submit", (e) => {
@@ -31,6 +32,7 @@ loginForm.addEventListener("submit", (e) => {
     setTimeout(() => {
       document.getElementById("loginSuccess").classList.remove("hidden");
       document.getElementById("logredirecting").classList.remove("hidden");
+      login.addEventListener("click", window.location.href = "Dashboard.html");
       // alert("Login successful!");
       // toggleDashboard();
   }, 3000);
@@ -40,3 +42,4 @@ loginForm.addEventListener("submit", (e) => {
     // alert("Invalid email or password");
   }
 });
+

@@ -1,0 +1,369 @@
+/* body {
+    font-family: 'Inter', sans-serif;
+    padding: 20px;
+    background: #f5f5f5;
+  }
+  
+  .input-section {
+    margin-bottom: 20px;
+  }
+  
+  input {
+    padding: 8px;
+    width: 200px;
+  }
+  
+  button {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .board {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .container {
+    width: 30%;
+    min-height: 300px;
+    border: 2px dashed black;
+    padding: 10px;
+    background: white;
+  }
+  
+  .container h3 {
+    text-align: center;
+  }
+  
+  .item {
+    background: lightblue;
+    padding: 10px;
+    margin: 8px 0;
+    cursor: grab;
+    border-radius: 5px;
+  } */
+
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ── CSS Variables ── */
+:root {
+  --bg-deep:       #0a0008;
+  --bg-mid:        #110014;
+  --purple-vivid:  #7b2fff;
+  --purple-soft:   #a855f7;
+  --blue-vivid:    #2563eb;
+  --blue-soft:     #60a5fa;
+  --red-vivid:     #dc2626;
+  --red-soft:      #f87171;
+  --white-pure:    #ffffff;
+  --white-muted:   rgba(255,255,255,0.72);
+  --white-ghost:   rgba(255,255,255,0.08);
+  --glow-purple:   0 0 24px rgba(123, 47, 255, 0.55);
+  --glow-blue:     0 0 24px rgba(37,  99, 235, 0.55);
+  --glow-red:      0 0 24px rgba(220, 38,  38, 0.55);
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--bg-deep);
+  color: var(--white-pure);
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  /* Atmospheric mesh background */
+  background-image:
+    radial-gradient(ellipse 60% 50% at 10% 20%,  rgba(123, 47,255,0.22) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 60% at 85% 75%,  rgba(37,  99,235,0.18) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 35% at 50% 100%, rgba(220, 38, 38,0.15) 0%, transparent 60%);
+}
+
+/* ── Grain Overlay ── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 180px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+/* ── Input Section ── */
+.input-section {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 36px 40px 28px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Decorative title strip */
+.input-section::before {
+  content: "DASH BOARD";
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  letter-spacing: 0.18em;
+  position: absolute;
+  top: -8px;
+  left: 40px;
+  background: linear-gradient(105deg, var(--white-pure) 0%, var(--purple-soft) 40%, var(--blue-soft) 70%, var(--red-soft) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+#taskInput {
+  flex: 1;
+  margin-top: 52px;
+  padding: 14px 20px;
+  border: 1.5px solid rgba(123,47,255,0.4);
+  border-radius: 10px;
+  background: rgba(123,47,255,0.07);
+  color: var(--white-pure);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
+}
+
+#taskInput::placeholder { color: rgba(255,255,255,0.35); }
+
+#taskInput:focus {
+  border-color: var(--purple-vivid);
+  background: rgba(123,47,255,0.14);
+  box-shadow: var(--glow-purple);
+}
+
+#addBtn {
+  margin-top: 52px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--white-pure);
+  background: linear-gradient(130deg, var(--purple-vivid) 0%, var(--blue-vivid) 100%);
+  box-shadow: var(--glow-purple);
+  transition: transform 0.18s, box-shadow 0.22s, filter 0.22s;
+  position: relative;
+  overflow: hidden;
+}
+
+#addBtn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(130deg, rgba(255,255,255,0.18) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+#addBtn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 0 32px rgba(123,47,255,0.7), 0 0 12px rgba(37,99,235,0.5);
+  filter: brightness(1.12);
+}
+
+#addBtn:active {
+  transform: translateY(0) scale(0.97);
+  filter: brightness(0.95);
+}
+
+/* ── Board ── */
+.board {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 20px;
+  padding: 0 40px 48px;
+  max-width: 960px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+/* ── Containers (columns) ── */
+.container {
+  flex: 1;
+  min-height: 420px;
+  border-radius: 16px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shared frosted border effect */
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1.5px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ── #todo — Purple ── */
+#todo {
+  background: linear-gradient(160deg, rgba(123,47,255,0.16) 0%, rgba(10,0,8,0.6) 100%);
+  backdrop-filter: blur(12px);
+  box-shadow: inset 0 1px 0 rgba(168,85,247,0.25), 0 8px 32px rgba(0,0,0,0.4);
+}
+
+#todo::before {
+  background: linear-gradient(140deg, var(--purple-vivid), var(--purple-soft), transparent 70%);
+}
+
+#todo h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.14em;
+  background: linear-gradient(90deg, var(--white-pure), var(--purple-soft));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 6px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(168,85,247,0.25);
+}
+
+/* ── #ongoing — Blue ── */
+#ongoing {
+  background: linear-gradient(160deg, rgba(37,99,235,0.16) 0%, rgba(10,0,8,0.6) 100%);
+  backdrop-filter: blur(12px);
+  box-shadow: inset 0 1px 0 rgba(96,165,250,0.25), 0 8px 32px rgba(0,0,0,0.4);
+}
+
+#ongoing::before {
+  background: linear-gradient(140deg, var(--blue-vivid), var(--blue-soft), transparent 70%);
+}
+
+#ongoing h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.14em;
+  background: linear-gradient(90deg, var(--white-pure), var(--blue-soft));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 6px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(96,165,250,0.25);
+}
+
+/* ── #done — Red ── */
+#done {
+  background: linear-gradient(160deg, rgba(220,38,38,0.14) 0%, rgba(10,0,8,0.6) 100%);
+  backdrop-filter: blur(12px);
+  box-shadow: inset 0 1px 0 rgba(248,113,113,0.25), 0 8px 32px rgba(0,0,0,0.4);
+}
+
+#done::before {
+  background: linear-gradient(140deg, var(--red-vivid), var(--red-soft), transparent 70%);
+}
+
+#done h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.14em;
+  background: linear-gradient(90deg, var(--white-pure), var(--red-soft));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 6px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(248,113,113,0.25);
+}
+
+/* Hover glow per column */
+#todo:hover    { box-shadow: inset 0 1px 0 rgba(168,85,247,0.3), var(--glow-purple), 0 8px 32px rgba(0,0,0,0.5); }
+#ongoing:hover { box-shadow: inset 0 1px 0 rgba(96,165,250,0.3),  var(--glow-blue),   0 8px 32px rgba(0,0,0,0.5); }
+#done:hover    { box-shadow: inset 0 1px 0 rgba(248,113,113,0.3), var(--glow-red),    0 8px 32px rgba(0,0,0,0.5); }
+
+/* ── Task Items ── */
+.item {
+  padding: 12px 15px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.02) 100%);
+  border: 1px solid rgba(255,255,255,0.09);
+  color: var(--white-muted);
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.5;
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.18s, background 0.18s, border-color 0.18s, box-shadow 0.18s, color 0.18s;
+  position: relative;
+  word-break: break-word;
+}
+
+/* Left accent bar — inherits column colour via sibling selectors */
+.item::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 20%; bottom: 20%;
+  width: 3px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, var(--purple-soft), var(--blue-soft));
+  opacity: 0.7;
+  transition: opacity 0.2s, height 0.2s;
+}
+
+/* Column-specific accent bars */
+#todo    .item::before { background: linear-gradient(180deg, var(--purple-vivid), var(--purple-soft)); }
+#ongoing .item::before { background: linear-gradient(180deg, var(--blue-vivid),   var(--blue-soft));   }
+#done    .item::before { background: linear-gradient(180deg, var(--red-vivid),     var(--red-soft));    }
+
+.item:hover {
+  transform: translateY(-2px) scale(1.01);
+  color: var(--white-pure);
+  border-color: rgba(255,255,255,0.2);
+  background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.05) 100%);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+
+.item:hover::before { opacity: 1; top: 15%; bottom: 15%; }
+
+.item:active { cursor: grabbing; }
+
+/* ── Dragging state ── */
+.item.dragging {
+  opacity: 0.4;
+  transform: rotate(2deg) scale(0.97);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.5);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--purple-vivid), var(--blue-vivid));
+  border-radius: 6px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 680px) {
+  .board { flex-direction: column; padding: 0 18px 40px; }
+  .input-section { padding: 32px 18px 20px; }
+  .input-section::before { left: 18px; }
+  .container { min-height: 180px; }
+}

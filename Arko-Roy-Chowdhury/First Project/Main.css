@@ -31,24 +31,3 @@ h1 {
     flex-direction: row;
 }
 
-.todo{
-  background: linear-gradient(
-    25deg,
-    #f9bf1f,
-    #cc14f1,
-    #0e6bf6,
-    #e40808,
-    #ed3ae1,
-    #f9bf1f,
-    #3b82f6,
-    #f9bf1f
-  );
-  text-align: center;
-  background-size: 200% auto;
-  /* -webkit-background-clip: text; */
-  /* -webkit-text-fill-color: transparent; */
-  /* background-clip: text; */
-  animation: shimmer 3s linear infinite;
-  /* position: relative; */
-  /* z-index: 10; */
-}
