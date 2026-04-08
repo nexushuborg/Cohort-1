@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VanillaTask Login</title>
+  <link rel="stylesheet" href="../CSS/login.css">
+</head>
+<body>
+  <div class="background"></div>
+  <div class="container">
+    <div class="card">
+      <h3 class="vanillatask">✦ VanillaTask</h3>
+      <h1>Welcome back</h1>
+      <p class="subtitle">Log in to access your board</p>
+
+      <form id="form">
+        <label>Email</label>
+        <input id="email" type="email" placeholder="your@gmail.com">
+        <small id="emailError" style="color: red; display: none;">Enter the email</small>
+
+        <div class="passwords">
+          <label>Password</label>
+          <a href="forgot-password.html">Forgot password?</a>
+        </div>
+        <input id="password" type="password" placeholder="••••••••">
+        <small id="passwordError" style="color: red; display: none;">Enter the password</small>
+
+        <button type="submit" id="login">Log In</button>
+      </form>
+
+      <div id="displayArea"></div>
+
+      <p class="login">
+        Don’t have an account? <a href="signup.html">Sign up free</a>
+      </p>
+    </div>
+  </div>
+  <script src="../JS/login.js"></script>
+</body>
+</html>
