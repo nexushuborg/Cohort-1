@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="card">
+            <h3 class="heading" >VanillaTask</h3>
+            
+            <form id="signupForm">
+                <h2 class="title">Create Your Account</h2>
+                <p class="subtitle">Free forever-no credit card required</p>
+                <div class="form-group">
+                    <label for="username">Username</label>                    
+                    <input type="text" id="username" name="username" required placeholder="Alex">
+                    <div class="field-error" id="username-error">Username is required</div>
+                    <label for="email">Email</label>           
+                    <input type="email" id="email" name="email" required placeholder="alex@example.com">
+                    <div class="field-error" id="email-error">Email is required</div>
+                    <label for="password">Password</label>   
+                    <input type="password" id="password" name="password" required placeholder="Atleast 6 characters">
+                    <div class="field-error" id="password-error">Password is required</div>
+                    <div class="password-box">
+                        <!-- <input type="checkbox" id="showPassword"> -->
+                        <span class="toggle" onclick="togglePassword()">Show</span>
+                    </div>
+                    <!--Strength Bar-->
+                    <div class="strength-container">
+                        <div class="strength-bar" id="strengthBar"></div>
+                    </div>
+                    <div class="strength-text" id="strengthText"></div>
+                    <label for="confirmPassword">Confirm Password</label>                    
+                    <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Repeat your password">                    
+                    <div class="error" id="error-message"></div>
+                    <button class="btn" type="submit">Create Account</button>
+                </div>
+            </form>
+            <div class="bottom-text">
+                <p>Already have an account? <a href="login.html">Log in</a></p>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="signup.js"></script>
+</html>

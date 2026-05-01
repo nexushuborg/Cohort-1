@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.heading{
+    font-size: 18px;
+    background: linear-gradient(90deg,#7c3aed,#6366f1,#a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+body{
+    height: 100vh;
+    display: flex;
+    background:radial-gradient(circle at left,#0a0f2c,#050816);
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    background: #0b1225;
+    padding: 30px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+.title{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.subtitle{
+    color: grey;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+label{
+    color:rgb(198, 209, 209);
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+input{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline:none;
+    border-radius: 5px;
+    background: #1a1f3a;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+input::placeholder{
+    color: #555;
+}
+.btn{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline:none;
+    border-radius: 5px;
+    background: #1a1f3a;
+    background: linear-gradient(90deg,#6a5cff,#a855f7);
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.1s ease;
+}
+.btn:hover{
+    background: linear-gradient(90deg,#5a4bff,#9333ea);
+    box-shadow: 0 0 15px rgba(168,85,247,0.3);
+    transform: translateY(-2px);
+}
+.bottom-text{
+    margin-top: 15px;
+    text-align: center;
+    color: #aaa;
+    font-size: 12px;
+}
+.bottom-text a{
+    color: #6366f1;
+    text-decoration: none;
+}
+.error{
+    color: #f87171;
+    font-size: 11px;
+    margin-top: 5px;
+}
+.field-error{
+    color: #ff4d4d;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+/* Password Toggle */
+.password-box{
+    position: relative;
+}
+.toggle{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-160%);
+    cursor: pointer;
+    color: #818cf8;
+    font-size: 12px;
+}
+/* Strength Bar */
+.strength-container{
+    height: 5px;
+    width: 100%;
+    background: #1e293b;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+.strength-bar{
+    height: 100%;
+    width: 0%;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+}
+.strength-text{
+    font-size: 11px;
+    margin-top: 5px;
+}
