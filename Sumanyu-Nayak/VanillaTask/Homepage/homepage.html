@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla Task</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <!-- <h1>Vanilla Task</h1>
+
+    <div class="input-container">
+        <input type="text" id="taskInput" placeholder="Enter task...">
+        <button id="addBtn">Add</button>
+    </div>
+    <div class="task-container" id="task-container">
+        <div class="column" id="todo">
+                <h3>To Do</h3>
+            </div>
+        </div>
+        <div class="column" id="in-progress">
+                <h3>In Progress</h3>
+            </div>
+        </div>
+        <div class="column" id="done">
+                <h3>Done</h3>
+            </div>
+        </div>
+
+    </div> -->
+
+    <div class="header">
+        <h1>Vanilla Task</h1>
+        <button onclick="addTask()">+ Add Task</button>
+    </div>
+    <div class="board">
+        <div class="column" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <h2>To Do <span class="task-count" id="todo-count">0</span></h2>
+            <div class="task-input">
+                <input type="text"  placeholder="Task name" id="taskName">
+                <select id="taskPriority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <button onclick="addTask(this)">+ Add Task</button><!--Add button inside the task input section. this" refers to button that was clicked. When the button is clicked, the addTask function will be called with the button element as an argument, allowing you to access the input values and add the task to the appropriate column.-->
+            </div>
+            <button class="add-btn" disabled>+ Add Task</button><!-- Add button for the entire board, which is disabled. -->
+        </div>
+
+        <div class="column" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <h2>In Progress <span class="task-count" id="progress-count">0</span></h2>
+        </div>
+
+        <div class="column" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <h2>Done <span class="task-count" id="done-count">0</span></h2>
+        </div>
+    </div>
+
+</body>
+<script src="homepage.js"></script>
+</html>
