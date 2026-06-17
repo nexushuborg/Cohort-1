@@ -1,0 +1,8 @@
+- git clone <git link>
+- go to that particular folder (cd <folder name>)
+- npm create vite@latest
+- y (if comes)
+- .(when you need to work on that folder only) / <folder name>(inside which you want to work)
+- react
+- javascript
+- y
