@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="/submit.php">
+        <div>
+            Name:<input type="text" placeholder="Enter name" required>
+        </div>
+        <div>
+            Phone:<input type="tel" placeholder="Enter Phone no." required>
+        </div>
+        <div>
+            Email:<input type="email" placeholder="Enter email" required>
+        </div>
+        <div>
+            Password:<input type="password" placeholder="Enter Password" required>
+        </div>
+        <div>
+            Date of Birth:<input type="date" required>
+        </div>
+        <div>
+            Gender:<select required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div>
+            <p>Subscription Plan</p>
+            <input id="basic" type="radio" name="sub" value="basic">
+            <label for="basic">Basic</label>
+
+            <input id="prem" type="radio" name="sub" value="premium">
+            <label for="prem">Premium</label>
+
+            <input id="vip" type="radio" name="sub" value="vip">
+            <label for="vip">VIP</label>
+        </div>
+        <div><input id="terms" type="checkbox" required>
+            <label for="terms">I agree to the terms and conditions</label>
+        </div>
+
+        <div>
+            <label for="comments">Comments</label>
+            <textarea id="comments" rows="4" placeholder="Enter your comments"></textarea>
+        </div>
+
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+
+</html>

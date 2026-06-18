@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth Page</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            padding: 40px;
+        }
+        .form-section {
+            margin-bottom: 30px;
+        }
+        /* Hide the login section initially */
+        #login-section {
+            display: none;
+        }
+        input {
+            padding: 4px;
+            margin-right: 5px;
+            border: 1px solid #767676;
+        }
+        button {
+            padding: 4px 12px;
+            cursor: pointer;
+            background-color: #efefef;
+            border: 1px solid #767676;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        p {
+            margin-top: 10px;
+        }
+        a {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="signup-section" class="form-section">
+        <h2>Create Account</h2>
+        <form onsubmit="event.preventDefault(); showLogin();">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a onclick="showLogin()">Login</a></p>
+    </div>
+
+    <div id="login-section" class="form-section">
+        <h2>Welcome back</h2>
+        <form onsubmit="event.preventDefault(); alert('Logged in!');">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>New here? <a onclick="showSignup()">Sign Up</a></p>
+    </div>
+
+    <script>
+        const signup = document.getElementById('signup-section');
+        const login = document.getElementById('login-section');
+
+        function showLogin() {
+            signup.style.display = 'none';
+            login.style.display = 'block';
+        }
+
+        function showSignup() {
+            login.style.display = 'none';
+            signup.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

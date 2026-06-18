@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Signup Page</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #020617;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card */
+.container {
+    background: linear-gradient(145deg, #0f172a, #020617);
+    padding: 30px;
+    width: 380px;
+    border-radius: 18px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.7);
+    color: white;
+}
+
+/* Logo */
+.logo {
+    color: #7c8cff;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Heading */
+h2 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.subtext {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+/* Input */
+.input-group {
+    margin-bottom: 18px;
+    position: relative;
+}
+
+label {
+    font-size: 13px;
+    color: #94a3b8;
+    display: block;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #1e293b;
+    background: #0f172a;
+    color: white;
+    outline: none;
+}
+
+input::placeholder {
+    color: #64748b;
+}
+
+/* Eye icon */
+.eye {
+    position: absolute;
+    right: 10px;
+    top: 38px;
+    cursor: pointer;
+    color: #94a3b8;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+.footer a {
+    color: #6366f1;
+    text-decoration: none;
+}
+
+/* Error */
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+/* Strength bar */
+.strength-bar {
+    height: 5px;
+    border-radius: 5px;
+    margin-top: 6px;
+}
+
+.weak { background: red; width: 25%; }
+.fair { background: orange; width: 50%; }
+.good { background: blue; width: 75%; }
+.strong { background: green; width: 100%; }
+
+.strength-text {
+    font-size: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">✨ VanillaTask</div>
+
+    <h2>Create your account</h2>
+    <div class="subtext">Free forever — no credit card needed</div>
+
+    <!-- Username -->
+    <div class="input-group">
+        <label>Username</label>
+        <input type="text" id="username" placeholder="e.g. Alex">
+        <div class="error" id="usernameError"></div>
+    </div>
+
+    <!-- Email -->
+    <div class="input-group">
+        <label>Email</label>
+        <input type="email" id="email" placeholder="you@example.com">
+        <div class="error" id="emailError"></div>
+    </div>
+
+    <!-- Password -->
+    <div class="input-group">
+        <label>Password</label>
+        <input type="password" id="password" placeholder="At least 6 characters" onkeyup="checkStrength()">
+        <span class="eye" onclick="togglePassword('password')">👁</span>
+        <div class="strength-bar" id="strengthBar"></div>
+        <div class="strength-text" id="strengthText"></div>
+        <div class="error" id="passwordError"></div>
+    </div>
+
+    <!-- Confirm Password -->
+    <div class="input-group">
+        <label>Confirm Password</label>
+        <input type="password" id="confirmPassword" placeholder="Repeat your password">
+        <span class="eye" onclick="togglePassword('confirmPassword')">👁</span>
+        <div class="error" id="confirmError"></div>
+    </div>
+
+    <button onclick="validateForm()">Create Account</button>
+
+    <div class="footer">
+        Already have an account? <a href="login.html">Log in</a>
+    </div>
+
+</div>
+
+<script>
+function togglePassword(id) {
+    let input = document.getElementById(id);
+    input.type = input.type === "password" ? "text" : "password";
+}
+
+function checkStrength() {
+    let pw = document.getElementById("password").value;
+    let bar = document.getElementById("strengthBar");
+    let text = document.getElementById("strengthText");
+
+    let score = 0;
+
+    if (pw.length >= 4) score++;
+    if (pw.length >= 8) score++;
+    if (/[A-Z]/.test(pw)) score++;
+    if (/[0-9!@#$%^&*]/.test(pw)) score++;
+
+    bar.className = "strength-bar";
+
+    if (score <= 1) {
+        bar.classList.add("weak");
+        text.innerText = "Weak";
+    } else if (score == 2) {
+        bar.classList.add("fair");
+        text.innerText = "Fair";
+    } else if (score == 3) {
+        bar.classList.add("good");
+        text.innerText = "Good";
+    } else {
+        bar.classList.add("strong");
+        text.innerText = "Strong";
+    }
+}
+
+function validateForm() {
+    let username = document.getElementById("username").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let confirm = document.getElementById("confirmPassword").value;
+
+    let valid = true;
+
+    document.getElementById("usernameError").innerText = "";
+    document.getElementById("emailError").innerText = "";
+    document.getElementById("passwordError").innerText = "";
+    document.getElementById("confirmError").innerText = "";
+
+    if (username === "") {
+        document.getElementById("usernameError").innerText = "Username is required";
+        valid = false;
+    }
+
+    if (email === "") {
+        document.getElementById("emailError").innerText = "Email is required";
+        valid = false;
+    }
+
+    if (password.length < 6) {
+        document.getElementById("passwordError").innerText = "At least 6 characters required";
+        valid = false;
+    }
+
+    if (confirm !== password) {
+        document.getElementById("confirmError").innerText = "Passwords do not match";
+        valid = false;
+    }
+
+    if (valid) {
+        alert("Account Created Successfully!");
+    }
+}
+</script>
+
+</body>
+</html>
