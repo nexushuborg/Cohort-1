@@ -1,0 +1,96 @@
+
+    <h2>Registration Form</h2>
+    <form id = "registrationForm" action="/submit-registration" method="post">
+        <h2>Create Account:</h2>
+        
+        <input type="text" id="regUsername" placeholder="Username" required><br><br>
+        
+        <input type="password" id="regpassword" placeholder="Password" required><br><br>
+
+        <button type="submit">Sign Up</button><br><br>
+        
+        <p>Already have an account? 
+            <span onclick="toggleForm()">Login</span>
+        </p>
+    </form>
+
+
+
+    <h2>Login Form</h2>
+    <form id = "loginForm" class="hidden">
+        <h2>Login to Your Account</h2>
+        <input type="text" id="username" name="username" placeholder="Username" required><br><br>
+        
+        <input type="password" id="password" name="password" placeholder="Password" required><br><br>
+        
+        <button type="submit">Login</button><br><br>
+    </form>
+    
+    <script>
+        const signupform = document.getElementById('signupform');
+        // Finds the signup form from HTML and stores it in a variable
+
+        // Complexity is Everything is cool
+        signupform.addEventListener('submit', (e) => {
+        // Listens for the "submit" event when the signup button is clicked
+
+        e.preventDefault();
+        // Prevents the page from refreshing after form submission
+
+        const user = document.getElementById('regUsername').value;
+        // Gets the username entered by the user
+
+        const pass = document.getElementById('regPassword').value;
+        // Gets the password entered by the user
+
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        // Retrieve existing users from LocalStorage
+
+        if (users.find(u => u.username === user)) {
+            alert("Username taken!");
+            return;
+        }
+
+        users.push({ username: user, password: pass });
+        // Add new user object to array
+
+        localStorage.setItem('users', JSON.stringify(users));
+        // save updated users array into LocalStorage
+
+        alert("Signup Successful! Please login.");
+        toggleForm();
+        // switch from signup form to login form
+    });
+    
+    function toggleForm() {
+        // Function to toggle between registration and login forms
+        document.getElementById('registrationForm').classList.toggle('hidden');
+        document.getElementById('loginForm').classList.toggle('hidden');
+    }
+    </script>
+</div>
+
+<div class="auth-container"> <!-- Container for authentication forms -->
+    <form id="signupForm"> <!-- Signup form starts -->
+        <h2>Create Account</h2> <!-- Heading for signup -->
+        <input type="text" id="regUsername" placeholder="Username" required> <!-- Username input field -->
+        <input type="password" id="regPassword" placeholder="Password" required> <!-- Password input field -->
+        <button type="submit">Sign Up</button> <!-- Signup button -->
+        <p>Already have an account? 
+            <span onclick="toggleForm()">Login</span> <!-- Link to switch to login form --> 
+        </p>
+    </form> <!-- Signup form ends -->
+
+    <form id="loginForm" class="hidden"> <!-- Login form starts (hidden by default) -->
+        <h2>Welcome Back</h2> <!-- Heading for login -->
+        <input type="text" id="loginUsername" placeholder="Username" required> <!-- Username input field -->
+    
+        <input type="password" id="loginPassword" placeholder="Password" required> <!-- Password input field -->
+    
+        <button type="submit">Login</button> <!-- Login button -->
+    
+        <p>New here?
+            <span onclick="toggleForm()">sign up</span> <!-- Link to switch to signup form -->
+        </p>
+    </form> <!-- Login form ends -->
+</div> <!-- End of authentication container -->

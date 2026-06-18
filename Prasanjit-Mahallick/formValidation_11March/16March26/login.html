@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="auth-container"> <!-- Container for authentication forms -->
+    <form id="signupForm"> <!-- Signup form starts -->
+        <h2>Create Account</h2> <!-- Heading for signup -->
+        <input type="text" id="regUsername" placeholder="Username" required> <!-- Username input field -->
+        <input type="password" id="regPassword" placeholder="Password" required> <!-- Password input field -->
+        <button type="submit">Sign Up</button> <!-- Signup button -->
+        <p>Already have an account? 
+            <span onclick="toggleForm()">Login</span> <!-- Link to switch to login form --> 
+        </p>
+    </form> <!-- Signup form ends -->
+
+    <form id="loginForm" class="hidden"> <!-- Login form starts (hidden by default) -->
+        <h2>Welcome Back</h2> <!-- Heading for login -->
+        <input type="text" id="loginUsername" placeholder="Username" required> <!-- Username input field -->
+
+        <input type="password" id="loginPassword" placeholder="Password" required> <!-- Password input field -->
+    
+        <button type="submit">Login</button> <!-- Login button -->
+    
+        <p>New here?
+            <span onclick="toggleForm()">sign up</span> <!-- Link to switch to signup form -->
+        </p>
+    </form> <!-- Login form ends -->
+</div> <!-- End of authentication container -->
+<script src="Script.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>

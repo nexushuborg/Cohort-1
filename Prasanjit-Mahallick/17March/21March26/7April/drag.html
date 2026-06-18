@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <link rel="stylesheet" href="drag.css">
+</head>
+<body>
+    <!-- Container 1 -->
+     <div class="container" id="left-zone">
+        <h2>To do</h2>
+        <div class="item" id="task-1" draggable="true" >
+            Learn Html
+
+        </div>
+        <div class="item" id="task-2" draggable="true">Master Css
+
+        </div>
+     </div>
+     <!-- Conatainer-2
+    draggable="true" attribute makes the item draggable -->
+    <div class="container" id="right-zone">
+        <h2>Done</h2>
+        <div class="item" id="task-3" draggable="true">Install Browser</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- dragstart event: for draggable items
+drag: for dragging
+dragend: for when dragging ends
+dragenter: for when an item enters a drop zone
+dragover: for when an item is dragged over a drop zone
+dragleave: for when an item leaves a drop zone
+drop: for when an item is dropped into a drop zone 
+
+-->
