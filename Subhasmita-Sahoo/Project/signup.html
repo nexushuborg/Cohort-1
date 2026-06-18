@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SIGNUP</title>
+
+<div class="auth-container">
+
+    <div class="logo">✦ VanillaTask</div>
+    
+    <!--SIGNUP-->
+    <form id="signupForm">
+        <h2>Create Account</h2>
+     <p class = "p2">Please fill in your details to create an account</p>
+        <p class = "p1">Email</p>
+        <div class="input-group">
+            <input type="email" id="regUsername" placeholder="you@example.com" required>
+        </div>
+
+        <p class = "p1">Password</p>
+        <div class="input-group">
+            <input type="password" id="regPassword" placeholder="must be 8 characters long" required>
+        </div>
+        
+        <p class = "p1"> Confirm Password</p>
+        <div class="input-group">
+            <input type="password" id="regrePassword" placeholder="repeat your password" required>
+
+        </div>
+        <br>
+        <button type="submit">Create Account</button>
+
+        <p>Already have an account?
+            <span onclick="toggleForm()">Login</span>
+        </p>
+    </form>
+
+ 
+</div>    
+
+<script>
+const signupForm = document.getElementById('signupForm');
+const loginForm = document.getElementById('loginForm');
+
+// SIGNUP
+signupForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const user = document.getElementById('regUsername').value;
+    const pass = document.getElementById('regPassword').value;
+    const repass = document.getElementById('regrePassword').value;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(user)) {
+    alert("Please enter a valid email address.");
+    user = ""; // Clear the input field
+    return;
+
+}
+
+const passRegex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\S+$).{8,20}$/
+if (!passRegex.test(pass)) {
+    alert("Please enter a valid password. It must be 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.");
+    pass = ""; // Clear the input field
+    return;
+
+}
+if (pass !== repass) {  //Both passwords not same
+    alert("Passwords do not match. Please try again.");
+
+    return;}
+
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+
+    if (users.find(u => u.username === user)) {
+        alert("Username already exists!");
+        return;
+    }
+
+    users.push({ username: user, password: pass });
+
+
+    localStorage.setItem('users', JSON.stringify(users));
+
+    alert("Signup successful! Please login.");
+    toggleForm();
+});
+
+</script>
+
+</body>
+</html>

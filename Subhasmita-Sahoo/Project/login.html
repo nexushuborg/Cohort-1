@@ -1,274 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Modern Auth UI</title>
-
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', sans-serif;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-}
-
-/* CARD */
-.auth-container {
-    width: 300px;
-    padding: 7px;
-    border-radius: 16px;
-
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-
-    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-    color: white;
-}
-
-/* LOGO */
-.logo {
-    text-align: left;
-    color: #8b5cf6;
-    margin-bottom: 10px;
-}
-
-/* HEADINGS */
-h2 {
-    text-align: left;
-   margin-bottom: 0px;
-}
-
-/* INPUTS */
-.input-group {
-    margin-bottom: 15px;
-}
-
-input {
-    width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 10px;
-
-    border: none;
-    outline: none;
-
-    background: rgba(255,255,255,0.1);
-    color: white;
-    padding-left : 7px;
-    
-}
-
-input::placeholder {
-    color: #aaa;
-}
-
-/* BUTTON */
-button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-
-    border: none;
-    border-radius: 8px;
-
-    background: linear-gradient(90deg, #6366f1, #8b5cf6);
-    color: white;
-
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: scale(1.03);
-    opacity: 0.95;
-}
-
-/* LINKS */
-p {
-    text-align: center;
-    font-size: 10px;
-    margin-top: 5px;
-}
-
-span {
-    color: #8b5cf6;
-    cursor: pointer;
-}
-
-/* HIDDEN */
-.hidden {
-    display: none;
-}
-
-.p1{
-    text-align: left;
-    font-size: 10px;
-    margin-bottom: 5px;
-}
-.p2{
-    text-align: left;
-    font-size: 10px;
-    margin-bottom: 15px;
-    margin-top: 0px;
-   }
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
 </head>
-
 <body>
-
-<div class="auth-container">
+    <div class="auth-container">
 
     <div class="logo">✦ VanillaTask</div>
-
-    <!-- SIGNUP -->
-    <form id="signupForm">
-        <h2>Create Account</h2>
-     <p class = "p2">Please fill in your details to create an account</p>
-        <p class = "p1">Email</p>
-        <div class="input-group">
-            <input type="text" id="regUsername" placeholder="you@example.com" required>
-        </div>
-
-        <p class = "p1">Password</p>
-        <div class="input-group">
-            <input type="password" id="regPassword" placeholder="must be 8 characters long" required>
-        </div>
-        
-        <p class = "p1"> Confirm Password</p>
-        <div class="input-group">
-            <input type="password" id="regrePassword" placeholder="repeat your password" required>
-
-        </div>
-
-        <button type="submit">Create Account</button>
-
-        <p>Already have an account?
-            <span onclick="toggleForm()">Login</span>
-        </p>
-    </form>
-
-    <!-- LOGIN -->
+    
+     <!--LOGIN-->
     <form id="loginForm" class="hidden">
         <h2>Welcome Back</h2>
         <p class = "p2">Log in to access your board</p>
-
+    
          <p class = "p1">Email</p>
         <div class="input-group">
-            <input type="text" id="loginUsername" placeholder="you@example.com" required>
+            <input type="email" id="loginUsername" placeholder="you@example.com" required>
         </div>
 
-        <p class = "p1">Password</p>
+        <p class="p1">Password</p>
         <div class="input-group">
-            <input type="password" id="loginPassword" placeholder=" Enter your password" required>
+            <input type="password" id="loginPassword" placeholder="Enter your password" required>
         </div>
 
         <button type="submit">Log In</button>
-
         <p>Don't have an account?
-            <span onclick="toggleForm()">Sign Up free</span>
+          <span onclick="toggleForm()">Sign Up free</span>
         </p>
     </form>
-
-</div>
-
-<script>
-const signupForm = document.getElementById('signupForm');
-const loginForm = document.getElementById('loginForm');
-
-// SIGNUP
-signupForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const user = document.getElementById('regUsername').value;
-    const pass = document.getElementById('regPassword').value;
-    const repass = document.getElementById('regrePassword').value;
-    const emaillRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emaillRegex.test(user)) {
-    alert("Please enter a valid email address.");
-    user = ""; // Clear the input field
-    return;
-
-}
-
-const passRegex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\S+$).{8,20}$/
-if (!passRegex.test(pass)) {
-    alert("Please enter a valid password. It must be 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.");
-    pass = ""; // Clear the input field
-    return;
-
-}
-
-if (pass !== repass) {  //Both passwords not same
-    alert("Passwords do not match. Please try again.");
-
-    return;}
-
-    const users = JSON.parse(localStorage.getItem('users')) || [];
-
-    if (users.find(u => u.username === user)) {
-        alert("Username already exists!");
-        return;
-    }
-
-    users.push({ username: user, password: pass });
+</div> 
 
 
-    localStorage.setItem('users', JSON.stringify(users));
-
-    alert("Signup successful! Please login.");
-    toggleForm();
-});
-
-// LOGIN
-loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const user = document.getElementById('loginUsername').value;
-    const pass = document.getElementById('loginPassword').value;
-
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailRegex.test(user)) {
-    alert("Please enter a valid email address.");
-    user = ""; // Clear the input field
-    return;
-
-}
-
-const passRegex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\S+$).{8,20}$/
-if (!passRegex.test(pass)) {
-    alert("Please enter a valid password. It must be 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.");
-    pass = ""; // Clear the input field
-    return;
-
-}
-    const users = JSON.parse(localStorage.getItem('users')) || [];
-
-    const validUser = users.find(
-        u => u.username === user && u.password === pass
-    );
-
-    if (validUser) {
-        alert("Login successful!");
-    } else {
-        alert("Invalid credentials!");
-    }
-});
-
-// TOGGLE
-function toggleForm() {
-    signupForm.classList.toggle('hidden');
-    loginForm.classList.toggle('hidden');
-}
-</script>
 
 </body>
 </html>

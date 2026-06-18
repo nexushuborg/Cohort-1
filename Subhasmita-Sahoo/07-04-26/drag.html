@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Drag and Drop Masterclass</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Container 1 -->
+<div class="container" id="left-zone">
+<h2>To Do</h2>
+<div class="item" id="task-1" draggable="true">Learn HTML</div>
+<div class="item" id="task-2" draggable="true">Master CSS</div>
+</div>
+<!-- Container 2 -->
+<!--draggable="true" attribute makes the item draggable -->
+<div class="container" id="right-zone">
+<h2>Done</h2>
+<!-- Items can be dropped here -->
+<div class="item" id="task-3" draggable="true">Install Browser</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+<!-- dragstart event: for draggable items
+drag: for dragging
+dragend: for when dragging ends
+dragenter: for when an item enters a drop zone
+dragover: for when an item is dragged over a drop zone
+dragleave: for when an item leaves a drop zone
+drop: for when an item is dropped into a drop zone
+drop: for when an item is dropped into a drop zone
+
+We cannot move the items when we release the mouse button,
+because the browser does not automatically decide what to do
+with the drag the behavior when an item is dropped into 
+a drop zone.
+This typically involves updating the DOM to move the dragged 
+item from location to the new location in the drop zone.
+
+container.appendChild(draggedItems);
+This line of code is used to move the dragged item into
+the drop zone it as a child of the container element.
+
+3 steps are involved in the drag and drop process:
+1.What is being dragged?(dragstart event)
+2.Where is it being dragged?(dragover)
+e.preventDefault() it is used to allow dropping by preventing
+the default handle the element,which is not allow dropping.
+3.
+-->

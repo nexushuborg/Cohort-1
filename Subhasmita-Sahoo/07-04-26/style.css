@@ -1,0 +1,35 @@
+body {
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.container {
+  width: 250px;
+  min-height: 300px;
+  background-color: #f4f4f9;
+  border: 2px dashed #999;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.item {
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #4facf7;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: grab;
+}
+
+.item.dragging {
+  opacity: 0.5;
+}
+
+.container.hovered {
+  background-color: #e0f7fa;
+  border-color: #00bcd4;
+}
