@@ -1,0 +1,35 @@
+.container{
+    width: 200px;
+    height: 500px;
+    border: 2px dashed black;
+    display: flex;
+
+    align-items: center;
+    justify-content:flex-start ;
+    
+}
+
+.main-div{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.board{
+    display: flex;
+    gap: 4rem;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap:40px;
+    font-family: Arial;
+}
+.item{
+    padding: 10px 20px;
+    background-color: lightblue;
+    cursor: grab;
+    margin: 5px;
+}
