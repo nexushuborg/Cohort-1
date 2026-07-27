@@ -1,0 +1,32 @@
+export const matches = [
+  {
+    team1: "MI",
+    team2: "CSK",
+    city1: "Mumbai Indians",
+    city2: "Chennai Super Kings",
+    date: "19 Apr",
+    venue: "Wankhede",
+    price: "₹799+",
+    demand: "High Demand",
+  },
+  {
+    team1: "RCB",
+    team2: "KKR",
+    city1: "Royal Challengers",
+    city2: "Kolkata Knight",
+    date: "22 Apr",
+    venue: "M Chinnaswamy",
+    price: "₹699+",
+    demand: "Available",
+  },
+  {
+    team1: "SRH",
+    team2: "DC",
+    city1: "Sunrisers Hyderabad",
+    city2: "Delhi Capitals",
+    date: "25 Apr",
+    venue: "Rajiv Gandhi Intl",
+    price: "₹599+",
+    demand: "Available",
+  },
+];
