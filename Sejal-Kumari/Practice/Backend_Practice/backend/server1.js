@@ -10,10 +10,67 @@ const PORT= process.env.PORT;
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 
-app.get('/', (req,res)=>{
+const isAuthenticated=(req,res,next)=>{
+    console.log("Authentication Middleware")
+    req.user ={
+        name:"Sejal",
+        role:"Student"
+    }
+    next();
+}
+const isStudent=(req,res,next)=>{
+    console.log("Student checking Middleware")
+    if(!req.user){
+        res.status(401).json({
+            success:"false",
+            message:"Please Authenticate yourself!!"
+        })
+    }
+    if(req.user.role==="Student"){
+        next();
+    }
+    else{
+        res.json({
+            success:false,
+            message:"Student only route"
+        })
+    }
+}
+const isAdmin=(req,res,next)=>{
+    console.log("Admin checking Middleware")
+    if(!req.user){
+        res.status(401).json({
+            success:"false",
+            message:"Please Authenticate yourself!!"
+        })
+    }
+    if(req.user.role==="Admin"){
+        next();
+    }
+    else{
+        res.json({
+            success:false,
+            message:"Admin only route"
+        })
+    }
+}
+// app.get('/', (req,res)=>{
+//     res.status(200).json({
+//         status :"Success",
+//         message: "Welcome to the home page"
+//     })
+// })
+app.use('/',homeRoute)
+app.get('/student',isAuthenticated,isStudent, (req,res)=>{
     res.status(200).json({
         status :"Success",
-        message: "Welcome to the home page"
+        message: "Student route catched "
+    })
+})
+app.get('/admin',isAuthenticated,isAdmin, (req,res)=>{
+    res.status(200).json({
+        status :"Success",
+        message: "Admin route catched "
     })
 })
 app.get('/users',async(req,res)=>{
