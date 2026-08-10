@@ -16,8 +16,8 @@ containers.forEach(container =>{
     
     const id = e.dataTransfer.getData('text');
     const draggableElement = document.getElementById(id);
-    console.log(draggableElement)
-    console.log(container)
+    // console.log(draggableElement)
+    // console.log(container)
     container.appendChild(draggableElement);
     })
 })

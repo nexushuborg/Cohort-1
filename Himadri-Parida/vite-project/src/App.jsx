@@ -9,8 +9,9 @@ import SuccessPage from "./pages/SuccessPage";
 import MovieBookingPage from "./pages/MovieBookingPage";
 import EventBookingPage from "./pages/EventBookingPage";
 import BookingProvider from "./context/BookingContext";
-import Ref from "./components/Ref";
-import Memoization from "./components/Memoization";
+import Ref from "./component/Ref";
+import Memoization from "./component/Memoization";
+import AxiosDemo from "./component/AxiosDemo";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -46,6 +47,10 @@ const App = () => {
       {
         path:'/memo',
         element:<Memoization/>
+      },
+      {
+        path:'/axios-demo',
+        element:<AxiosDemo/>
       }
     ]
   );
