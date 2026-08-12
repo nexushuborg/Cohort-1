@@ -1,30 +1,25 @@
 // console.log("Hello World")
 // console.log(10-1)
 // console.log(true)
-
 // var x=10;
 // var x=10
 // let y=10
 // const z=10
 // var t="110"    //dynamic typing means data type specify krne ka need nahi h 
 // x=10
-// y=12       // x y me no issue
+ y=12       // x y me no issue
 // z=11      // z wale pe error aayega becoz const laga hua h z k aage const means contsant means ab usko change nhi kr skte
-
-
 // var x; //declaration
 // x=10 //initialisation
-
 // var x=10;
 // {
 // console.log(x)
 // }
-
 // {
 //     var x=10
 //     console.log(x)
 // }
-//  console.log(x)
+//   console.log(x)
 // var is global scoped and functional scoped
 // var x=10
 // function name(){
@@ -96,16 +91,16 @@ value cannot be changed
 //     console.log(x)
 // }
 
-// let arr=[1,2,3,4]
-//key value pair
-/*
- let/const obj_name={
- "key1" : " Value1",
- "key2" : " Value2",
- "key3" : " Value3",
- "key4" : " Value4",
- }
- */
+//let arr=[1,2,3,4]
+// key value pair
+
+//  let/const obj_name={
+//  "key1" : " Value1",
+//  "key2" : " Value2",
+//  "key3" : " Value3",
+//  "key4" : " Value4",
+//  }
+ 
 // let obj={
 //     "student" :"Arpita",
 //     "Mentor" : "Pratham",
@@ -118,7 +113,7 @@ value cannot be changed
 //normal function 
 //  function print(a,b){
 //   console.log(a+b)
-//}
+// }
 // const fn1 =function(a,b) {
 //     console.log(a,b)
 // }
@@ -126,12 +121,12 @@ value cannot be changed
 //     console.log("Arrow")
 // }
 
-// // print(2,"3")
+// print(2,"3")
 
 // // + toh preference string ko milta hai  but string k andar v number hona chayyee
 // //- me toh preference number  ko milta hai 
 
-// fn1(2,3)
+//  fn1(2,3)
 // fn2()
 
 
@@ -164,32 +159,32 @@ concurency
 
 // console.log("Start")
 // const data=fetch('https://jsonpaceholder.typicode.com/todos/1');
-// //setTimeout(fn,time in ms)
+// setTimeout(fn,time in ms)
 // console.log(data)
 
 // console.log("end")
 
 
-// async function asy() {
+async function asy() {
 
-//     console.log("Start")
-//     const data = await fetch("https://jsonplaceholder.typicode.com/todos/1")
-//         .then((val) => {   // resolve
-//             console.log("Success")
-//             console.log(val)
-//         })
-//         .catch((err) => {  // reject
-//             console.log("Failed")
-//             console.log(err)
-//         })
-//         .finally(() => {   // do this always
-//             console.log("Process completed")
-//         })
+    console.log("Start")
+    const data = await fetch("https://jsonplaceholder.typicode.com/todos/1")
+        .then((val) => {   // resolve
+            console.log("Success")
+            console.log(val)
+        })
+        .catch((err) => {  // reject
+            console.log("Failed")
+            console.log(err)
+        })
+        .finally(() => {   // do this always
+            console.log("Process completed")
+        })
 
-//     console.log("end")
-// }
+    console.log("end")
+}
 
-// asy()
+ asy()
 
 // const arrow = (...args) => {
 //     console.log(args)
@@ -206,3 +201,5 @@ concurency
 // const arr = [2, 3, 4]
 
 // console.log(...arr)
+
+
