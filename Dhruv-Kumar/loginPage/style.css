@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(145, 176, 203);
+    font-family:sans-serif;
+}
+html, body{
+    height: 100vh;
+    width: 100%;
+    background:linear-gradient(90deg,rgb(9, 9, 51), #0a0e1a,rgb(9, 9, 62));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#login{
+    height: 70%;
+    width: 30%;
+    background-color: #141929;
+    padding: 20px 25px;
+    border-radius: 20px ;
+    border: 1px solid #2a3351;
+}
+#SignUp{
+    height: 93%;
+    width: 30%;
+    background-color: #141929;
+    padding: 20px 25px;
+    border-radius: 20px ;
+    border: 1px solid #2a3351;
+}
+#companyHeading{
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    background:linear-gradient(90deg,#8183f3,#eb07b2);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#welcome{
+    margin-bottom: 30p;
+}
+#welcome h1 {
+    font-size: 37px;
+    color: white;
+    margin-bottom: 10px;
+}
+#welcome p {
+    font-weight: 100;
+    color: #A0AEC0;
+}
+.inputs{
+    margin-top: 20px;
+}
+.labels{
+    font-size: 15px;
+    color: #A0AEC0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -9px;
+}
+input[type="email"]{
+    width: 100%;
+    padding:12px 16px;
+    background: #1a2035;
+    border: 1px solid #2a3350;
+    border-radius: 10px;
+    color: #ffffff;   
+}
+input[type="password"]{
+    width: 100%;
+    padding:12px 16px;
+    background: #1a2035;
+    border: 1px solid #2a3350;
+    border-radius: 10px;
+    color: #ffffff;   
+    margin-bottom: 20px;
+}
+input[type="text"]{
+    width: 100%;
+    padding:12px 16px;
+    background: #1a2035;
+    border: 1px solid #2a3350;
+    border-radius: 10px;
+    color: #ffffff;   
+    margin-bottom: 20px;
+}
+
+input::placeholder{
+    color: rgb(67, 67, 86);
+}
+input{
+    color:#ffffff;
+}
+.btn{
+    width: 100%;
+    padding:12px 16px;
+    background: linear-gradient(90deg,#6366f1,#b15cf6);
+    border: 1px solid #2a3350;
+    border-radius: 10px;
+    color: #ffffff; 
+    margin-bottom: 17px;
+}
+.bt:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+.account{
+    font-size: 13px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.signup{
+    background:linear-gradient(90deg,#6366f1,#b15cf6);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
