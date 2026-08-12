@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<style>
+    #container-box{
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        margin-top: 10%;
+        border: solid black 1px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-left: 6%;
+        padding-right: 6%;   
+    }
+</style>
+<body>
+    <div id = "container-box">
+        <form class = "login-info">
+             <h3>VanillaTask</h3>
+             <h2>Welcome back</h2>
+             <p>Log in to access your board</p>
+
+            <div class = "input-group"></div>
+             <p >Email</p>
+                <input type = "email" id = "regUseremail" placeholder = "you@example" required>
+            <p>Password</p>
+            <input type = "password" id = "regPassword" placeholder = "At least 6 characters" required>
+            <br>
+            <input type = "submit" value = "Create Account">
+            <p>Dont have an account ? <span><a href = "signup.html">Sign up</a></span></p>
+        </div>
+        </form>
+    </div>
+    <script>
+        
+    const emailInput = document.getElementById("regUseremail")
+    const paswdInput = document.getElementById("regPassword")
+
+    document.getElementById("signupBtn").addEventListener("click", function () {
+
+      const email    = emailInput.value.trim();
+      const password = passwordInput.value;
+
+      let hasError = false;
+
+
+      if (email === "" || !email.includes("@")) {
+        emailError.textContent = "Enter a valid email.";
+        hasError = true;
+      }
+
+      if (password.length < 6) {
+        passwordError.textContent = "Password must be at least 6 characters.";
+        hasError = true;
+      }
+
+      if (hasError) return;  
+    });
+    </script>
+</body>
+</html>

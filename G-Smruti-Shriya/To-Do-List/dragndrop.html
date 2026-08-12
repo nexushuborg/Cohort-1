@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Drag and Drop Masterclass</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  padding: 20px;
+  display: flex;
+  justify-content: center , space-evenly;
+  
+}
+
+.container {
+  width: 250px;
+  min-height: 300px;
+  background-color: #f4f4f9;
+  border: 2px dashed #999;
+  padding: 15px;
+  border-radius: 8px;
+  margin : 40px;
+}
+
+.item {
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #4facf7;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: grab;
+}
+
+.item.dragging {
+  opacity: 0.5;
+}
+
+.container.hovered {
+  background-color: #e0f7fa;
+  border-color: #00bcd4;
+}
+</style>
+<body>
+<!-- Container 1 -->
+<div class="container" id="left-zone">
+<h2>To Do</h2>
+<div class="item" id="task-1" draggable="true">Learn HTML</div>
+<div class="item" id="task-2" draggable="true">Master CSS</div>
+</div>
+<!-- Container 2 --
+draggable="true" attribute makes the item draggable -->
+<div class="container" id="right-zone">
+<h2>Done</h2>
+<!-- Items can be dropped here -->
+<div class="item" id="task-3" draggable="true">Install Browser</div>
+</div>
+<script>
+    const items = document.querySelectorAll(".item");
+const containers = document.querySelectorAll(".container");
+//DRAG EVENTS
+items.forEach(item => {
+  item.addEventListener("dragstart", (e) => {
+    //STORE ID OF DRAGGED ELEMENT
+    e.dataTransfer.setData("text/plain", e.target.id);
+    setTimeout(() => item.classList.add("dragging"), 0);
+  });
+  item.addEventListener("dragend", () => {
+    item.classList.remove("dragging");
+  });
+});
+containers.forEach(container => {
+  container.addEventListener("dragover", (e) => {
+    e.preventDefault();
+  });
+  container.addEventListener("dragenter", (e) => {
+    e.preventDefault();
+    container.classList.add("hovered");
+  });
+  container.addEventListener("dragleave", () => {
+    container.classList.remove("hovered");
+  });
+  
+  container.addEventListener("drop", (e) => {
+  e.preventDefault();
+  container.classList.remove("hovered");           // ✅ remove highlight on drop
+  const draggedId = e.dataTransfer.getData("text/plain");
+  const draggedElement = document.getElementById(draggedId); // ✅ get the actual element
+  container.appendChild(draggedElement);           // ✅ now appending a DOM node
+});
+});
+</script>
+</body>
+</html>
+<!-- dragstart event: for draggable items
+drag: for dragging
+dragend: for when dragging ends
+dragenter: for when an item enters a drop zone
+dragover: for when an item is dragged over a drop zone
+dragleave: for when an item leaves a drop zone
+drop: for when an item is dropped into a drop zone
+drop: for when an item is dropped into a drop zone
+
+We cannot move the items when we release the mouse button,
+because the browser does not automatically decide what to do
+with the drag the behavior when an item is dropped into 
+a drop zone.
+This typically involves updating the DOM to move the dragged 
+item from location to the new location in the drop zone.
+
+container.appendChild(draggedItems);
+This line of code is used to move the dragged item into
+the drop zone it as a child of the container element.
+
+3 steps are involved in the drag and drop process:
+1.What is being dragged?(dragstart event)
+2.Where is it being dragged?(dragover)
+e.preventDefault() it is used to allow dropping by preventing
+the default handle the element,which is not allow dropping.
+3.
+-->

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<style>
+    #container-box{
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        margin-top: 10%;
+        border: solid black 1px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-left: 6%;
+        padding-right: 6%;   
+    }
+</style>
+<body>
+    <div id = "container-box">
+        <form class = "login-info">
+             <h3>VanillaTask</h3>
+             <h2>Create your account</h2>
+             <p>Free forever - no credit card needed</p>
+
+            <div class = "input-group"></div>
+            <p>Username</p>
+            <input type = "Text" id = "regUsername" placeholder = "e.g. Alex">
+             <p >Email</p>
+                <input type = "email" id = "regUseremail" placeholder = "you@example" required>
+            <p>Password</p>
+            <input type = "password" id = "regPassword" placeholder = "At least 6 characters" required>
+            <div id="repassword-section">
+                <p>Confirm Password</p>
+                <input type = "confirm-password" id = "regrePassword" placeholder = "Repeat your password" required>
+            </div>
+            <br>
+            <input type = "submit" id = "signupBtn"value = "Create Account">
+            <p>Already have an account ? <span><a href = "login.html">Log In</a></span></p>
+        </div>
+        </form>
+    </div>
+</body>
+<script>
+    const nameInput = document.getElementById("regUsername");
+    const emailInput = document.getElementById("regUseremail")
+    const paswdInput = document.getElementById("regPassword")
+    const cPaswdInput = document.getElementById("regrePassword")
+
+    document.getElementById("signupBtn").addEventListener("click", function () {
+
+      const name     = nameInput.value.trim();
+      const email    = emailInput.value.trim();
+      const password = passwordInput.value;
+
+      let hasError = false;
+
+      if (name === "") {
+        nameError.textContent = "Name is required.";
+        hasError = true;
+      }
+
+      if (email === "" || !email.includes("@")) {
+        emailError.textContent = "Enter a valid email.";
+        hasError = true;
+      }
+
+      if (password.length < 6) {
+        passwordError.textContent = "Password must be at least 6 characters.";
+        hasError = true;
+      }
+
+      if (hasError) return;  
+    });
+
+   
+</script>
+</html>
